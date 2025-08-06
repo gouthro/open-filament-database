@@ -9,6 +9,7 @@ import { refreshDatabase } from '$lib/dataCacher';
 
 export const load = async () => {
   const form = await superValidate(zod(brandSchema));
+  
   return { form };
 };
 
