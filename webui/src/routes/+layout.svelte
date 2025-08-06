@@ -100,6 +100,8 @@
         });
 
         await updateFlash(page);
+
+        location.reload();
       }}>
         Refresh DB Data
       </button>
