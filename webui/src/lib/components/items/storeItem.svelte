@@ -1,6 +1,4 @@
 <script lang="ts">
-  import { faCheck } from "@fortawesome/free-solid-svg-icons";
-  import Fa from "svelte-fa";
   import EditModal from "../editModal.svelte";
   import CountryItem from "./countryItem.svelte";
 
@@ -29,13 +27,6 @@
         </a>
       </div>
       <div class="grow-1"></div>
-      {#if storeData.affiliate}
-        <span
-          class="text-xs flex items-center bg-yellow-100 dark:bg-yellow-900 text-yellow-800 dark:text-yellow-200 w-fit px-2 py-1 rounded">
-          <Fa icon={faCheck} class="mr-1" />
-          Affiliate
-        </span>
-      {/if}
     </div>
   </div>
   <div class="flex w-1/2 md:w-4/6 justify-items-center">
