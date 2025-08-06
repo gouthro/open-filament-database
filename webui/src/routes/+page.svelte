@@ -21,7 +21,7 @@
 
     <SectionsItem
       link="/Store/"
-      title="Stores"
+      title="Storefronts"
     />
   </div>
 

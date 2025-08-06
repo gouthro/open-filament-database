@@ -15,14 +15,14 @@
 </script>
 
 <svelte:head>
-	<title>Brands</title>
-	<meta name="description" content="This is a overview of the brands"/>
+	<title>Storefronts</title>
+	<meta name="description" content="This is a overview of the storefronts"/>
 </svelte:head>
 
 <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-  <h1 class="text-3xl font-bold text-gray-900 dark:text-gray-100 mb-8 text-center">Stores</h1>
+  <h1 class="text-3xl font-bold text-gray-900 dark:text-gray-100 mb-8 text-center">Storefronts</h1>
 
-  <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+  <div class="flex flex-col space-y-4">
     {#each Object.entries(filteredStores) as [storeName, storeData]}
       <StoreItem {storeName} {storeData} />
     {/each}
