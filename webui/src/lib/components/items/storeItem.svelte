@@ -2,6 +2,7 @@
   import CountryItem from "./countryItem.svelte";
   import Fa from "svelte-fa";
   import { faPen } from "@fortawesome/free-solid-svg-icons";
+  import { stripOfIllegalChars } from "$lib/globalHelpers";
 
   let { storeName, storeData } = $props();
 </script>
@@ -10,7 +11,7 @@
   class="p-4 bg-white flex rounded-xl shadow-lg hover:shadow-xl relative transition-shadow duration-300 border border-gray-200 dark:bg-gray-900 dark:border-gray-700 dark:text-gray-100 text-gray-900">
   <div class="flex w-1/2 md:w-2/6">
     <img
-      src={storeData.logo}
+      src={`/stores/${stripOfIllegalChars(storeData.name)}/${storeData.logo}`}
       alt={storeName + ' logo'}
       class="w-30 h-30 rounded-lg object-contain bg-white dark:bg-gray-800 border border-gray-100 dark:border-gray-700"
       loading="lazy"

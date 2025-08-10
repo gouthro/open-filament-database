@@ -4,6 +4,7 @@
   import StoreForm from '$lib/components/forms/store/storeForm.svelte';
   import { faCheck } from '@fortawesome/free-solid-svg-icons';
   import Fa from 'svelte-fa';
+  import { stripOfIllegalChars } from '$lib/globalHelpers.js';
 
   const { data } = $props();
 </script>
@@ -23,7 +24,7 @@
         <div class="flex text-left gap-3">
           {#if data.storeData?.logo}
             <img
-              src={data.storeData.logo}
+              src={`/stores/${stripOfIllegalChars(data.storeData.name)}/${data.storeData.logo}`}
               alt={data.storeData.name + ' logo'}
               class="w-35 h-35 rounded-lg object-contain bg-white dark:bg-gray-800 border border-gray-100 dark:border-gray-700"
               loading="lazy"
