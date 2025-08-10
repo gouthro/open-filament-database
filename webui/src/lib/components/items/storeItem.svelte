@@ -1,6 +1,7 @@
 <script lang="ts">
-  import EditModal from "../editModal.svelte";
   import CountryItem from "./countryItem.svelte";
+  import Fa from "svelte-fa";
+  import { faPen } from "@fortawesome/free-solid-svg-icons";
 
   let { storeName, storeData } = $props();
 </script>
@@ -76,8 +77,12 @@
     </div>
   </div>
   <div class="w-fit h-fit absolute top-4 right-4">
-    <EditModal>
-      Hello
-    </EditModal>
+    <a
+      href={`/Store/${storeData.name}`}
+      class="flex items-center gap-2 p-2 rounded-lg bg-gray-100 dark:bg-gray-800 border border-gray-300 dark:border-gray-700 text-gray-600 dark:text-gray-300 hover:bg-green-100 hover:text-green-700 dark:hover:bg-green-900 dark:hover:text-green-300 shadow transition-colors"
+      title="Edit {storeData.name}">
+      <Fa icon={faPen} />
+      <span class="text-sm font-medium">Edit</span>
+    </a>
   </div>
 </div>

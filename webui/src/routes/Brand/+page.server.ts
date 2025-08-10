@@ -30,6 +30,6 @@ export const actions = {
       return fail(500, { form });
     }
 
-    redirect(stripOfIllegalChars(form.data.brand), { type: 'success', message: 'Brand created successfully!' }, cookies);
+    redirect(`/Brand/${stripOfIllegalChars(form.data.brand)}/`, { type: 'success', message: 'Brand created successfully!' }, cookies);
   },
 };

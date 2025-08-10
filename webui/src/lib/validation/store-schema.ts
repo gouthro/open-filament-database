@@ -16,7 +16,7 @@ const formatBytes = (bytes: number, decimals = 2) => {
 export const storeSchema = z.object({
   id: z.string().min(1, 'Id is required'),
   name: z.string().min(1, 'Name is required'),
-  website: z
+  storefront_url: z
     .string()
     .url('Please enter a valid URL')
     .refine((url) => {
@@ -33,5 +33,6 @@ export const storeSchema = z.object({
     })
     .optional(),
   ships_from: z.array(z.string()).default([]).or(z.string()),
-  ships_to: z.array(z.string()).default([]).or(z.string())
+  ships_to: z.array(z.string()).default([]).or(z.string()),
+  oldStoreName: z.string().optional(),
 });
