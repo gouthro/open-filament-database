@@ -41,7 +41,8 @@
         brandName={stripOfIllegalChars(data.brandData.brand)}
         materialName={data.materialData.material}
         filamentName={data.filamentData.name}
-        formType={'create'} />
+        formType={'create'}
+        stores={data.stores} />
     </EditModal>
   </div>
 

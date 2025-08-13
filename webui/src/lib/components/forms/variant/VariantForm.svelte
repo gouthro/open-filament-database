@@ -19,7 +19,7 @@
   import { stripOfIllegalChars } from '$lib/globalHelpers';
 
   type formType = 'edit' | 'create';
-  let { defaultForm, formType, brandName, materialName, filamentName, colorData = null } = $props();
+  let { defaultForm, formType, brandName, materialName, filamentName, stores, colorData = null } = $props();
 
   const {
     form,
@@ -188,6 +188,7 @@
               sizeIndex={index}
               removeSize={removeSize}
               errors={errors}
+              stores={stores}
             />
           {/each}
         </div>

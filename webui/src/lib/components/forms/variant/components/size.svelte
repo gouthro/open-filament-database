@@ -7,7 +7,7 @@
   import { faTrashCan } from "@fortawesome/free-solid-svg-icons";
   import Fa from "svelte-fa";
 
-  export let size, sizeIndex, removeSize, errors;
+  export let size, sizeIndex, removeSize, errors, stores;
   
   let tempLinks = writable([]);
   
@@ -147,6 +147,7 @@
             purchaseIndex={index}
             sizeIndex={sizeIndex}
             removePurchaseLink={() => removePurchaseLink(index)}
+            stores={stores}
           />
         {/each}
       </div>

@@ -64,7 +64,8 @@
               materialName={data.materialData.material}
               filamentName={data.filamentData.name}
               colorData={data.colorData}
-              formType={'edit'} />
+              formType={'edit'}
+              stores={data.stores} />
           </EditModal>
         {/key}
       </div>

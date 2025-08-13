@@ -80,6 +80,12 @@ export const load: PageServerLoad = async ({ params, parent }) => {
     sizes: (structuredClone(sizeData) || [])
   };
 
+  let stores: string[] = [];
+
+  Object.values(filamentData.stores).forEach((value) => {
+    stores.push(value.id);
+  });
+
   const variantForm = await superValidate(variantData, zod(filamentVariantSchema));
 
   return {
@@ -87,6 +93,7 @@ export const load: PageServerLoad = async ({ params, parent }) => {
     materialData,
     filamentData: filamentDataObj,
     colorData,
+    stores,
     variantForm,
   };
 };

@@ -5,8 +5,9 @@
   import { onMount } from "svelte";
   import { faTrashCan } from "@fortawesome/free-solid-svg-icons";
   import Fa from "svelte-fa";
+  import PurchaseDropdown from "./purchaseDropdown.svelte";
 
-  export let link, purchaseIndex, sizeIndex, removePurchaseLink, errors;
+  export let link, purchaseIndex, sizeIndex, removePurchaseLink, errors, stores;
   let localLink = writable({});
 
   onMount(() => {
@@ -36,14 +37,23 @@
 
   <div class="space-y-4">
     <!-- TODO: Replace with dropdown ones store infra exists -->
-    <PurchaseTextField
+    <PurchaseDropdown
+      id="sizes_{sizeIndex}_store_id_{purchaseIndex}"
+      title="Store ID"
+      options={stores}
+      bind:formVar={$localLink.store_id}
+      errorVar={$errors?.sizes?.[sizeIndex]?.purchase_links?.[purchaseIndex]?.store_id?.[0]}
+      required={true}
+    />
+
+    <!--<PurchaseTextField
       id="sizes_{sizeIndex}_store_id_{purchaseIndex}"
       title="Store ID"
       placeholder="amazon-us"
       bind:formVar={$localLink.store_id}
       errorVar={$errors?.sizes?.[sizeIndex]?.purchase_links?.[purchaseIndex]?.store_id?.[0]}
       required={true}
-    />
+    />-->
 
     <PurchaseTextField
       id="sizes_{sizeIndex}_url_{purchaseIndex}"

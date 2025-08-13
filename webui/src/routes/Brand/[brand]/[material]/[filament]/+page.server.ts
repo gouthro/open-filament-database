@@ -35,12 +35,19 @@ export const load: PageServerLoad = async ({ params, parent }) => {
   if (!filamentKey) throw error(404, 'Filament not found');
   const filamentDataObj = materialData.filaments[filamentKey];
 
+  let stores: string[] = [];
+
+  Object.values(filamentData.stores).forEach((value) => {
+    stores.push(value.id);
+  });
+
   const filamentForm = await superValidate(filamentDataObj, zod(filamentSchema));
   const filamentVariantForm = await superValidate(zod(filamentVariantSchema));
 
   return {
     brandData,
     materialData,
+    stores,
     filamentForm,
     filamentVariantForm,
     filamentData: filamentDataObj,
