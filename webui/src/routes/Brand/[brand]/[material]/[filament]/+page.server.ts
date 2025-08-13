@@ -7,7 +7,6 @@ import { filamentVariantSchema } from '$lib/validation/filament-variant-schema';
 import { createColorFiles, removeUndefined, updateFilament } from '$lib/server/helpers';
 import { setFlash } from 'sveltekit-flash-message/server';
 import { refreshDatabase } from '$lib/dataCacher';
-import { isValidJSON } from '$lib/globalHelpers';
 import { stripOfIllegalChars } from '$lib/globalHelpers';
 
 export const load: PageServerLoad = async ({ params, parent }) => {

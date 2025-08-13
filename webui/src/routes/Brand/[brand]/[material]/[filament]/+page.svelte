@@ -15,7 +15,7 @@
 </svelte:head>
 
 <section
-  class="max-w-4xl mt-5 mx-auto px-4 py-12 bg-white dark:bg-gray-900 rounded-xl shadow text-gray-900 dark:text-gray-100">
+  class="max-w-full mt-5 mx-auto px-4 py-12 bg-white dark:bg-gray-900 rounded-xl shadow text-gray-900 dark:text-gray-100">
   <h1 class="text-3xl font-bold mb-4">
     Filament: {data.filamentData.name}
   </h1>

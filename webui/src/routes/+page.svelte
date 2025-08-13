@@ -1,4 +1,4 @@
-<script>
+<script lang="ts">
   import SectionsItem from "$lib/components/items/sectionsItem.svelte";
   const { data } = $props();
 
@@ -10,34 +10,35 @@
     return Math.floor(Math.random() * max);
   }
 
-  function getRandomImage(dict, arr) {
-    let index = getRandomInt(Object.keys(filamentData.brands).length - 1);
-    let brandKey = Object.keys(filamentData.brands)[index];
-    let brand = filamentData.brands[brandKey];
+  type imageSourceType = "brand" | "store";
+
+  function getRandomImage(dict, arr, sourceType: imageSourceType) {
+    let index = getRandomInt(Object.keys(dict).length - 1);
+    let sourceKey = Object.keys(dict)[index];
+    let source = dict[sourceKey];
     
-    if (!arr.includes(brand.logo)) {
-      return brand.logo;
+    if (!arr.includes(source.logo)) {
+      if (sourceType == "brand") {
+        return `/data/${source.brand}/${source.logo}`;
+      } else {
+        return `/stores/${source.id}/${source.logo}`
+      }
     } else {
-      brandKey = Object.keys(filamentData.brands)[index + 1];
-      return filamentData.brands[brandKey].logo;
+      sourceKey = Object.keys(dict)[index + 1];
+      let source = dict[sourceKey];
+
+      if (sourceType == "brand") {
+        return `/data/${source.brand}/${source.logo}`;
+      } else {
+        return `/stores/${source.id}/${source.logo}`
+      }
     }
   }
 
   for(let i = 0; i < 3; i++){
-    brandImages[i] = getRandomImage(filamentData.brands, brandImages);
-    storeImages[i] = getRandomImage(filamentData.stores, storeImages);
+    brandImages[i] = getRandomImage(filamentData.brands, brandImages, "brand");
+    storeImages[i] = getRandomImage(filamentData.stores, storeImages, "store");
   }
-
-  /*let firstBrands = Object.keys(filamentData.brands).slice(0, 3);
-  firstBrands.forEach((value, index) => {
-    let brand = filamentData.brands[value];
-    brandImages[index] = brand.logo
-  });
-  let firstStores = Object.keys(filamentData.stores).slice(0, 3);
-  firstStores.forEach((value, index) => {
-    let store = filamentData.stores[value];
-    storeImages[index] = store.logo
-  });*/
 </script>
 
 <svelte:head>

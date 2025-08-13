@@ -64,10 +64,10 @@
   const generic_bt = intProxy(form, 'generic.bed_temp');
   const generic_nt = intProxy(form, 'generic.nozzle_temp');
 
-  const prusa_flbt = intProxy(form, 'prusa.first_layer_bed_temp');
-  const prusa_flnt = intProxy(form, 'prusa.first_layer_nozzle_temp');
-  const prusa_bt = intProxy(form, 'prusa.bed_temp');
-  const prusa_nt = intProxy(form, 'prusa.nozzle_temp');
+  const prusa_flbt = intProxy(form, 'prusaslicer.first_layer_bed_temp');
+  const prusa_flnt = intProxy(form, 'prusaslicer.first_layer_nozzle_temp');
+  const prusa_bt = intProxy(form, 'prusaslicer.bed_temp');
+  const prusa_nt = intProxy(form, 'prusaslicer.nozzle_temp');
 
   const bambus_flbt = intProxy(form, 'bambus.first_layer_bed_temp');
   const bambus_flnt = intProxy(form, 'bambus.first_layer_nozzle_temp');
@@ -187,7 +187,7 @@
             title="Profile Name"
             description={null}
             placeholder="profiles/filament/PLA_Basic.ini"
-            bind:formVar={$form.prusa.profile_name}
+            bind:formVar={$form.prusaslicer.profile_name}
             errorVar={null}
           />
 

@@ -130,7 +130,7 @@ export async function updateBrand(brandData: z.infer<typeof brandSchema>) {
 }
 
 export const createStore = async (storeData: z.infer<typeof storeSchema>) => {
-  let folderName = stripOfIllegalChars(storeData.name);
+  let folderName = stripOfIllegalChars(storeData.id);
 
   const storeDir = path.join(STORE_DIR, folderName);
   if (!fs.existsSync(storeDir)) {
@@ -155,7 +155,7 @@ export const createStore = async (storeData: z.infer<typeof storeSchema>) => {
     id: storeData.id,
     name: storeData.name,
     storefront_url: storeData.storefront_url,
-    affiliate: storeData.affiliate,
+    affiliate: storeData.affiliate ? storeData.affiliate : false,
     logo: logoUrl,
     ships_from: storeData.ships_from,
     ships_to: storeData.ships_to,
@@ -188,7 +188,7 @@ export async function updateStore(storeData: z.infer<typeof storeSchema>) {
     id: storeData.id,
     name: storeData.name,
     storefront_url: storeData.storefront_url,
-    affiliate: storeData.affiliate,
+    affiliate: storeData.affiliate ? storeData.affiliate : false,
     logo: storeData.logo,
     ships_from: storeData.ships_from,
     ships_to: storeData.ships_to,
@@ -271,14 +271,14 @@ function transformMaterialData(materialData: any) {
   }
 
   // Handle PrusaSlicer settings
-  if (!isEmptyObject(materialData.prusa)) {
+  if (!isEmptyObject(materialData.prusaslicer)) {
     const prusaSettings: any = {};
-    if (materialData?.prusa?.profile_name) {
-      prusaSettings.profile_name = materialData?.prusa.profile_name;
+    if (materialData?.prusaslicer?.profile_name) {
+      prusaSettings.profile_name = materialData?.prusaslicer.profile_name;
     }
 
-    // Handle prusa overrides
-    const overrides = materialData.prusa;
+    // Handle prusaslicer overrides
+    const overrides = materialData.prusaslicer;
     if (overrides.first_layer_bed_temp !== undefined) {
       prusaSettings.first_layer_bed_temp = overrides.first_layer_bed_temp;
     }
@@ -295,7 +295,7 @@ function transformMaterialData(materialData: any) {
 
     // Only add prusa object if it has properties
     if (!isEmptyObject(prusaSettings)) {
-      default_slicer_settings.prusa = prusaSettings;
+      default_slicer_settings.prusaslicer = prusaSettings;
     }
   }
 
@@ -416,9 +416,46 @@ export const createFilament = async (
   return filamentDir;
 };
 
+function transformSizes(sizeData) {
+  let tempSizes = [];
+
+  if (!Array.isArray(sizeData)) {
+    // Somewhere we broke it if the instance is single, I blame Zod
+    sizeData = [
+      sizeData
+    ];
+  }
+
+  Array.from(sizeData).forEach((value, index) => {
+    let tempData = value;
+
+    // Reinforce required data
+    tempData.diameter = tempData?.diameter ? tempData.diameter : 0;
+    tempData.filament_weight = tempData?.filament_weight ? tempData.filament_weight : 0;
+
+    if (value?.purchase_links && Array.isArray(value?.purchase_links)) {
+      let tempLinks = [];
+
+      Array.from(value.purchase_links).forEach((link, index) => {
+        let tempLink = structuredClone(link);
+
+        tempLink.affiliate = link?.affiliate ? link.affiliate : false;
+
+        tempLinks[index] = tempLink;
+      });
+
+      tempData.purchase_links = tempLinks;
+    };
+    
+    tempSizes[index] = tempData;
+  });
+
+  return tempSizes;
+}
+
 export async function createColorFiles(formData: any) {
   const DATA_DIR_FILAMENT = path.resolve(env.PUBLIC_DATA_PATH);
-  console.log(formData);
+
   const colorFolder = path.join(
     DATA_DIR_FILAMENT,
     formData.brandName,
@@ -433,8 +470,9 @@ export async function createColorFiles(formData: any) {
   // Traits are grouped under a "traits" object
   if (formData['sizes']) {
     const sizesPath = path.join(colorFolder, 'sizes.json');
-    console.log(sizesPath);
-    fs.writeFileSync(sizesPath, JSON.stringify(formData['sizes'], null, 2), 'utf-8');
+    let tempSizes = transformSizes(formData.sizes);
+
+    fs.writeFileSync(sizesPath, JSON.stringify(tempSizes, null, 2), 'utf-8');
   }
   // --- 2. Prepare variant.json (single object) ---
   // Traits are grouped under a "traits" object
@@ -669,14 +707,14 @@ export function flattenMaterialData(materialData: any) {
     nozzle_temp: materialData.generic?.nozzle_temp,
   };
 
-  flattened.prusa = {
-    prusa_profile_path: materialData.prusa?.profile_path, // This should match your JSON structure
+  flattened.prusaslicer = {
+    prusa_profile_path: materialData.prusaslicer?.profile_path, // This should match your JSON structure
     prusa_overrides: {
-      // Map the direct properties from prusa object to overrides
-      first_layer_bed_temp: materialData.prusa?.first_layer_bed_temp,
-      first_layer_nozzle_temp: materialData.prusa?.first_layer_nozzle_temp,
-      bed_temp: materialData.prusa?.bed_temp,
-      nozzle_temp: materialData.prusa?.nozzle_temp,
+      // Map the direct properties from prusaslicer object to overrides
+      first_layer_bed_temp: materialData.prusaslicer?.first_layer_bed_temp,
+      first_layer_nozzle_temp: materialData.prusaslicer?.first_layer_nozzle_temp,
+      bed_temp: materialData.prusaslicer?.bed_temp,
+      nozzle_temp: materialData.prusaslicer?.nozzle_temp,
     },
   };
 
@@ -807,29 +845,7 @@ export async function updateColorSize(
 
   try {
     const sizesPath = path.join(colorDir, 'sizes.json');
-    
-    let tempSizes = [];
-
-    if (!Array.isArray(sizeData)) {
-      // Somewhere we broke it if the instance is single, I blame Zod
-      sizeData = [
-        sizeData
-      ];
-    }
-
-    console.log(sizeData);
-
-    Array.from(sizeData).forEach((value, index) => {
-      let tempData = value;
-
-      // Reinforce required data
-      tempData.diameter = tempData?.diameter ? tempData.diameter : 0;
-      tempData.filament_weight = tempData?.filament_weight ? tempData.filament_weight : 0;
-      
-      tempSizes[index] = tempData;
-    });
-
-    console.log(tempSizes);
+    let tempSizes = transformSizes(sizeData);
 
     fs.writeFileSync(sizesPath, JSON.stringify(tempSizes, null, 2), 'utf-8');
   } catch (error) {
