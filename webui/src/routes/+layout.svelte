@@ -6,7 +6,7 @@
   import type { LayoutProps } from './$types';
   import { page } from '$app/state';
   import { env } from '$env/dynamic/public';
-  const isLocal = env.PUBLIC_IS_LOCAL === 'true';
+  const isDev = env.PUBLIC_IS_DEV === 'true';
 
   let flash = getFlash(page);
   let { children }: LayoutProps = $props();
@@ -90,7 +90,7 @@
   >
     © {currentYear} Open Filament Database – All rights reserved
 
-    {#if isLocal}
+    {#if isDev}
       <button
         style="float: right;"
         class="bg-red-900"
