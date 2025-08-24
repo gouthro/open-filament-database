@@ -26,10 +26,7 @@
     invalidateAll: false,
     clearOnSubmit: "none",
     validationMethod: 'onblur',
-    validators: zodClient(filamentSchema),
-    onResult: ({ result}) => {
-      console.log(result);
-    }
+    validators: zodClient(filamentSchema)
   });
 
   async function handleDelete() {

@@ -35,10 +35,13 @@ export const traitsSchema = z.object({
   biodegradable: z.boolean().optional(),
 });
 
+export const filamentSizesSchema = z.array(filamentSizeSchema).min(1);
+export const purchaseLinksSchema = z.array(purchaseLinkSchema);
+
 export const filamentVariantSchema = z.object({
   color_name: z.string(),
   color_hex: z.string().regex(/^#?[a-fA-F0-9]{6}$/, 'Must be a valid hex code (#RRGGBB)'),
   discontinued: z.boolean().default(false),
   traits: traitsSchema.optional(),
-  sizes: z.array(filamentSizeSchema).min(1),
+  sizes: filamentSizesSchema,
 });

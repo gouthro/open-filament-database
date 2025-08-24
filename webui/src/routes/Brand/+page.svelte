@@ -5,6 +5,7 @@
   import { browser } from '$app/environment';
   import { stripOfIllegalChars } from '$lib/globalHelpers';
   import { isItemDeleted } from '$lib/pseudoDeleter.js';
+  import { getEditItems } from '$lib/pseudoEditor.js';
   const { data } = $props();
 
   const filamentData = $derived(data.filamentData);
@@ -16,6 +17,24 @@
           Object.entries(filamentData.brands).filter(([brand]) => !isItemDeleted('brand', stripOfIllegalChars(brand))),
         ),
   );
+  let editedBrands = getEditItems("brand");
+  console.log(editedBrands);
+
+  function getConditionalBrandLogo(brandName, brandData) {
+    let inFilData = false;
+    // Remove if it exists in the DB
+    Object.entries(filamentData.brands).forEach(([brand]) => {
+      if (brandName === brand) {
+        inFilData = true;
+      }
+    });
+
+    if (inFilData) {
+      return undefined;
+    }
+
+    return `data:image/png;base64,${brandData.logoData}`
+  };
 </script>
 
 <svelte:head>
@@ -37,5 +56,14 @@
     {#each Object.entries(filteredBrands) as [brandName, brandData]}
       <BrandItem {brandName} {brandData} />
     {/each}
+    {#if editedBrands}
+      {#each editedBrands as brandData}
+        <BrandItem
+          brandName={brandData.brandName}
+          brandData={brandData.data}
+          imgOverride = {getConditionalBrandLogo(brandData.brandName, brandData.data)}
+        />
+      {/each}
+    {/if}
   </div>
 </section>

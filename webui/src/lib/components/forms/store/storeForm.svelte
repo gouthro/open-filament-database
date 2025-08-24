@@ -29,10 +29,7 @@
     invalidateAll: false,
     clearOnSubmit: "none",
     validationMethod: 'onblur',
-    validators: zodClient(storeSchema),
-    onResult: ({ result}) => {
-      console.log(result);
-    }
+    validators: zodClient(storeSchema)
   });
   
   const file = fileProxy(form, 'logo');

@@ -3,7 +3,9 @@ import type { PageServerLoad } from './$types';
 import { fail, superValidate } from 'sveltekit-superforms';
 import { zod } from 'sveltekit-superforms/adapters';
 import { brandSchema } from '$lib/validation/filament-brand-schema';
-import { createMaterial, removeUndefined, updateBrand } from '$lib/server/helpers';
+import { createMaterial } from '$lib/server/material';
+import { removeUndefined } from '$lib/globalHelpers';
+import { updateBrand } from '$lib/server/brand';
 import { stripOfIllegalChars } from '$lib/globalHelpers';
 import { filamentMaterialSchema } from '$lib/validation/filament-material-schema';
 import { refreshDatabase } from '$lib/dataCacher';
@@ -18,25 +20,33 @@ export const load: PageServerLoad = async ({ params, parent, cookies }) => {
   const brandKey = Object.keys(filamentData.brands).find(
     (key) => key.toLowerCase().replace(/\s+/g, '') === normalizedBrand,
   );
-  if (!brandKey) {
-    throw error(404, 'Brand not found');
+
+
+  let brandForm = null;
+  let brandData = null;
+
+  if (filamentData.brands?.[brandKey]) {
+    brandData = filamentData.brands?.[brandKey] || null;
+
+    const formData = {
+      brand: brandData.brand,
+      website: brandData.website || 'https://',
+      origin: brandData.origin || '',
+      oldBrandName: brandData.brand,
+    };
+
+    brandForm = await superValidate(formData, zod(brandSchema));
+  }  else {
+    brandForm = null;
+    brandData = null;
   }
 
-  const brandData = filamentData.brands[brandKey];
-
-  const formData = {
-    brand: brandData.brand,
-    website: brandData.website || 'https://',
-    origin: brandData.origin || '',
-    oldBrandName: brandData.brand,
-  };
-
-  const brandForm = await superValidate(formData, zod(brandSchema));
   const materialForm = await superValidate(zod(filamentMaterialSchema));
   return {
     brandForm,
     materialForm,
     brandData,
+    normalizedBrand,
   };
 };
 

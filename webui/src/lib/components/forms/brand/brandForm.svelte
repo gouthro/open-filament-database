@@ -12,6 +12,7 @@
   import { superForm } from 'sveltekit-superforms';
   import { zodClient } from 'sveltekit-superforms/adapters';
   import { brandSchema } from '$lib/validation/filament-brand-schema';
+  import { pseudoEdit } from '$lib/pseudoEditor';
 
   type formType = 'edit' | 'create';
   let { defaultForm, formType } = $props();
@@ -28,8 +29,13 @@
     clearOnSubmit: "none",
     validationMethod: 'onblur',
     validators: zodClient(brandSchema),
-    onResult: ({ result}) => {
-      console.log(result);
+    onResult: ({ result }) => {
+      if (result?.type === "success") {
+        if (result?.data?.data) {
+          let data = JSON.parse(result.data.data);
+          pseudoEdit("brand", "modified", data.brand, data)
+        }
+      }
     }
   });
   

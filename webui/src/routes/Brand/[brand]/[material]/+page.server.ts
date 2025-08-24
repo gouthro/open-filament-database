@@ -3,12 +3,10 @@ import type { PageServerLoad } from './$types';
 import { superValidate } from 'sveltekit-superforms';
 import { filamentMaterialSchema } from '$lib/validation/filament-material-schema';
 import { zod } from 'sveltekit-superforms/adapters';
-import {
-  createFilament,
-  flattenMaterialData,
-  removeUndefined,
-  updateMaterial,
-} from '$lib/server/helpers';
+import { createFilament } from '$lib/server/filament';
+import { flattenMaterialData } from '$lib/server/material';
+import { removeUndefined } from '$lib/globalHelpers';
+import { updateMaterial } from '$lib/server/material';
 import { stripOfIllegalChars } from '$lib/globalHelpers';
 import { filamentSchema } from '$lib/validation/filament-schema';
 import { refreshDatabase } from '$lib/dataCacher';

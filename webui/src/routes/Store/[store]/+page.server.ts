@@ -7,7 +7,7 @@ import { setFlash } from 'sveltekit-flash-message/server';
 import { filamentVariantSchema } from '$lib/validation/filament-variant-schema';
 import { refreshDatabase } from '$lib/dataCacher';
 import { stripOfIllegalChars } from '$lib/globalHelpers';
-import { updateStore } from '$lib/server/helpers';
+import { updateStore } from '$lib/server/store';
 
 export const load: PageServerLoad = async ({ params, parent }) => {
   const { store } = params;
@@ -59,7 +59,6 @@ export const load: PageServerLoad = async ({ params, parent }) => {
 export const actions = {
   store: async ({ request, cookies }) => {
     const form = await superValidate(request, zod(storeSchema));
-    console.log(form);
     
 
     if (!form.valid) {

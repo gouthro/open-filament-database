@@ -4,7 +4,7 @@ import { superValidate } from 'sveltekit-superforms';
 import { zod } from 'sveltekit-superforms/adapters';
 import { redirect, setFlash } from 'sveltekit-flash-message/server';
 import { refreshDatabase } from '$lib/dataCacher';
-import { createStore } from '$lib/server/helpers.js';
+import { createStore } from '$lib/server/store';
 import { stripOfIllegalChars } from '$lib/globalHelpers.js';
 
 export const load = async () => {

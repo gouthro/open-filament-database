@@ -4,7 +4,9 @@ import { fail, superValidate } from 'sveltekit-superforms';
 import { zod } from 'sveltekit-superforms/adapters';
 import { filamentSchema } from '$lib/validation/filament-schema';
 import { filamentVariantSchema } from '$lib/validation/filament-variant-schema';
-import { createColorFiles, removeUndefined, updateFilament } from '$lib/server/helpers';
+import { createVariant } from '$lib/server/variant';
+import { updateFilament } from '$lib/server/filament';
+import { removeUndefined } from '$lib/globalHelpers';
 import { setFlash } from 'sveltekit-flash-message/server';
 import { refreshDatabase } from '$lib/dataCacher';
 import { stripOfIllegalChars } from '$lib/globalHelpers';
@@ -88,12 +90,7 @@ export const actions = {
     try {
       let filteredData = removeUndefined(form.data);
 
-      filteredData['brandName'] = brand;
-      filteredData['materialName'] = material;
-      filteredData['filamentName'] = filament;
-      filteredData['color_name'] = filteredData.color_name;
-
-      await createColorFiles(filteredData);
+      await createVariant(brand, material, filament, filteredData);
       await refreshDatabase();
     } catch (error) {
       console.error('Failed to update color:', error);

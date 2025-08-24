@@ -26,10 +26,7 @@
     invalidateAll: false,
     clearOnSubmit: "none",
     validationMethod: 'onblur',
-    validators: zodClient(filamentMaterialSchema),
-    onResult: ({ result}) => {
-      console.log(result);
-    }
+    validators: zodClient(filamentMaterialSchema)
   });
   
   async function handleDelete() {
@@ -83,10 +80,6 @@
   const cura_flnt = intProxy(form, 'cura.first_layer_nozzle_temp');
   const cura_bt = intProxy(form, 'cura.bed_temp');
   const cura_nt = intProxy(form, 'cura.nozzle_temp');
-
-  $effect(() => {
-    console.log()
-  });
 </script>
 
 <Form

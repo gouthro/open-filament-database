@@ -32,10 +32,7 @@
     invalidateAll: false,
     clearOnSubmit: "none",
     validationMethod: 'onblur',
-    validators: zodClient(filamentVariantSchema),
-    onResult: ({ result}) => {
-      console.log(result);
-    }
+    validators: zodClient(filamentVariantSchema)
   });
 
   async function handleDelete() {

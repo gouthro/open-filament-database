@@ -1,49 +1,58 @@
 <script lang="ts">
   import BrandForm from '$lib/components/forms/brand/brandForm.svelte';
   import EditModal from '$lib/components/editModal.svelte';
-  import type { PageProps } from './$types';
   import MaterialForm from '$lib/components/forms/material/materialForm.svelte';
   import { isItemDeleted } from '$lib/pseudoDeleter';
   import { browser } from '$app/environment';
   import { stripOfIllegalChars } from '$lib/globalHelpers.js';
-  let { data }: PageProps = $props();
+  import { getEditedItem } from '$lib/pseudoEditor';
+  let { data } = $props();
 
-  let materialKeys = Object.keys(data.brandData.materials ?? {});
+  console.log("hi!");
+  /*console.log(data);
+  console.log(getEditItems("brand"));
+  console.log(getEditedItem("brand", "modified", data.normalizedBrand));*/
 
-  const websiteUrl = $derived(
-    data.brandData.website?.startsWith('http')
-      ? data.brandData.website
-      : `https://${data.brandData.website || ''}`,
-  );
-
-  const filteredMaterialKeys = $derived(
-    !browser
-      ? materialKeys
-      : materialKeys.filter(
-          (materialKey) => !isItemDeleted('material', materialKey, data.brandData.brand),
-        ),
-  );
+  let brandData = $state();
+  let materialKeys = $state();
+  let websiteUrl = $state();
+  let filteredMaterialKeys = $state();
 
   $effect(() => {
-    materialKeys = Object.keys(data.brandData.materials ?? {});
+    materialKeys = Object.keys(brandData.materials ?? {});
+
+    if (browser) {
+      brandData = data?.brandData ? data.brandData : getEditedItem("brand", "modified", data.normalizedBrand)
+
+      if (brandData) {
+        materialKeys = Object.keys(brandData.materials ?? {});
+        websiteUrl = 
+          brandData.website?.startsWith('http')
+            ? brandData.website
+            : `https://${brandData.website || ''}`;
+        filteredMaterialKeys = materialKeys.filter(
+          (materialKey) => !isItemDeleted('material', materialKey, brandData.brand),
+        );
+      }
+    }
   });
 </script>
 
 <svelte:head>
-	<title>{data?.brandData?.brand ? data.brandData.brand : "Brand"}</title>
-	<meta name="description" content="This is an overview {data?.brandData?.brand ? data.brandData.brand : "a Brand"}"/>
+	<title>{brandData?.brand ? brandData.brand : "Brand"}</title>
+	<meta name="description" content="This is an overview {brandData?.brand ? brandData.brand : "a Brand"}"/>
 </svelte:head>
 
 <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
   <div class="relative flex flex-col md:flex-row items-center md:items-start gap-6 mb-12">
     <img
-      src={`/data/${stripOfIllegalChars(data.brandData.brand)}/${data.brandData.logo}`}
-      alt={data.brandData.brand ?? 'Brand logo'}
+      src={`/data/${stripOfIllegalChars(brandData.brand)}/${brandData.logo}`}
+      alt={brandData.brand ?? 'Brand logo'}
       class="w-32 h-32 rounded-xl object-contain bg-white shadow-md dark:bg-gray-900" />
     
     <div class="text-center md:text-left">
       <h1 class="text-3xl font-bold text-gray-900 dark:text-gray-100 mb-2">
-        {data.brandData.brand ?? ''}
+        {brandData.brand ?? ''}
       </h1>
       <a
         href={websiteUrl}
@@ -74,21 +83,21 @@
     >
       <MaterialForm
         defaultForm={data.materialForm}
-        brandName={data.brandData.brand}
+        brandName={brandData.brand}
         formType={'create'}
       />
     </EditModal>
 
     <ul class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-      {#key [filteredMaterialKeys, data.brandData.materials]}
+      {#key [filteredMaterialKeys, brandData.materials]}
         {#each filteredMaterialKeys as materialKey}
-          {#if data.brandData.materials[materialKey]}
-            <a href={`/Brand/${stripOfIllegalChars(data.brandData.brand)}/${materialKey}`}>
+          {#if brandData.materials[materialKey]}
+            <a href={`/Brand/${stripOfIllegalChars(brandData.brand)}/${materialKey}`}>
               <li
                 class="border rounded p-4 bg-white border-gray-200 text-gray-900 dark:bg-gray-900 dark:border-gray-700 dark:text-gray-100 shadow-md transition-colors flex flex-col justify-between">
                 <div>
                   <div class="font-medium text-lg mb-1">
-                    {data.brandData.materials[materialKey].material ?? materialKey}
+                    {brandData.materials[materialKey].material ?? materialKey}
                   </div>
                 </div>
               </li>
