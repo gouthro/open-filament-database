@@ -57,7 +57,13 @@ def validate_json_file(json_path: PathLike, schema: dict):
 
 
 def cleanse_folder_name(name: str) -> str:
-    return name.replace("/", " ").strip()
+    value = name;
+
+    value = value.replace("/", " ").strip()    
+    for char in illegal_characters:
+        value = value.replace(char, " ").strip()
+
+    return value;
 
 
 STORE_SCHEMA = get_json_from_file("schemas/store_schema.json")
@@ -161,16 +167,9 @@ def validate_folder_names():
             brand_data = get_json_from_file(brand_file)
             brand_name = cleanse_folder_name(brand_data.get("brand", ""))
             if _brand_dir.name != brand_name:
-                is_error_illegal_char = False
-
-                for char in brand_name:
-                    if char in illegal_characters:
-                        is_error_illegal_char = True
-
-                if not is_error_illegal_char:
-                    print("The name of the folder", _brand_dir,
-                        f"does not match the value of 'brand' ({brand_name}) of", brand_file.name)
-                    failed_validation = True
+                print("The name of the folder", _brand_dir,
+                    f"does not match the value of 'brand' ({brand_name}) of", brand_file.name)
+                failed_validation = True
 
         for _material_dir in _brand_dir.iterdir():
             if not _material_dir.is_dir():
