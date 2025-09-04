@@ -47,12 +47,12 @@
   {#if color.variant?.traits}
     <div class="mb-1 text-xs text-gray-700 dark:text-gray-300">
       <strong>Traits:</strong>
-      {#each Object.entries(color.variant.traits) as [trait, value], i}
-        <span>
-          <Fa class="text-green-600 inline" icon={faCheck} />
-          {trait}{i < Object.entries(color.variant.traits).length - 1 ? ', ' : ''}
-        </span>
-      {/each}
+        {#each Object.entries(color.variant.traits) as [trait, value], i}
+          <span>
+            <Fa class="text-green-600 inline" icon={faCheck} />
+            {trait}{i < Object.entries(color.variant.traits).length - 1 ? ', ' : ''}
+          </span>
+        {/each}
     </div>
   {/if}
   <div>

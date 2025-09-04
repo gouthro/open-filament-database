@@ -244,6 +244,10 @@ export function flattenMaterialData(materialData: any) {
     material: materialData.material,
   };
 
+  if (materialData.default_max_dry_temperature) {
+    flattened.default_max_dry_temperature = materialData.default_max_dry_temperature;
+  }
+
   // Build nested structure that matches your form schema
   flattened.generic = {
     first_layer_bed_temp: materialData.generic?.first_layer_bed_temp,

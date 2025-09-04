@@ -14,6 +14,8 @@
 
   type formType = 'edit' | 'create';
   let { defaultForm, formType, brandName } = $props();
+
+  console.log(defaultForm);
   
   const {
     form,

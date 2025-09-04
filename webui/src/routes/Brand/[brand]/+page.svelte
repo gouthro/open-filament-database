@@ -5,36 +5,27 @@
   import { isItemDeleted } from '$lib/pseudoDeleter';
   import { browser } from '$app/environment';
   import { stripOfIllegalChars } from '$lib/globalHelpers.js';
-  import { getEditedItem } from '$lib/pseudoEditor';
   let { data } = $props();
 
-  console.log("hi!");
-  /*console.log(data);
-  console.log(getEditItems("brand"));
-  console.log(getEditedItem("brand", "modified", data.normalizedBrand));*/
+  let brandData = data.brandData;
+  let materialKeys = Object.keys(brandData.materials ?? {});
 
-  let brandData = $state();
-  let materialKeys = $state();
-  let websiteUrl = $state();
-  let filteredMaterialKeys = $state();
+  const websiteUrl = $derived(
+    brandData.website?.startsWith('http')
+      ? brandData.website
+      : `https://${brandData.website || ''}`,
+  );
+
+  const filteredMaterialKeys = $derived(
+    !browser
+      ? materialKeys
+      : materialKeys.filter(
+          (materialKey) => !isItemDeleted('material', materialKey, brandData.brand),
+        ),
+  );
 
   $effect(() => {
     materialKeys = Object.keys(brandData.materials ?? {});
-
-    if (browser) {
-      brandData = data?.brandData ? data.brandData : getEditedItem("brand", "modified", data.normalizedBrand)
-
-      if (brandData) {
-        materialKeys = Object.keys(brandData.materials ?? {});
-        websiteUrl = 
-          brandData.website?.startsWith('http')
-            ? brandData.website
-            : `https://${brandData.website || ''}`;
-        filteredMaterialKeys = materialKeys.filter(
-          (materialKey) => !isItemDeleted('material', materialKey, brandData.brand),
-        );
-      }
-    }
   });
 </script>
 

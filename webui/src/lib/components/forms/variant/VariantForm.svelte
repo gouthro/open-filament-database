@@ -107,6 +107,10 @@
   tempTraits.subscribe((value) => {
     $form.traits = value;
   });
+
+  if (colorData) {
+    $form.old_name = colorData.name;
+  }
 </script>
 
 <Form
