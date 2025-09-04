@@ -32,7 +32,7 @@
     "fan_always_on": "1",
     "fan_below_layer_time": "25",
     "filament_colour": "#FF8000",
-    "filament_max_volumetric_speed": "37",
+    "filament_max_volumetric_speed": "36",
     "filament_type": "PCTG",
     "first_layer_bed_temperature": "85",
     "first_layer_temperature": "260",

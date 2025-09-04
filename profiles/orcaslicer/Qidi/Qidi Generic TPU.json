@@ -186,7 +186,7 @@
         "250"
     ],
     "enable_overhang_bridge_fan": [
-        "0"
+        "1"
     ],
     "filament_id": "GFU99",
     "setting_id": "GFSR99",

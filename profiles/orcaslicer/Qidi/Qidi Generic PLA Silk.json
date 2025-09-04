@@ -28,7 +28,7 @@
         "60"
     ],
     "overhang_fan_threshold": [
-        "95%"
+        "50%"
     ],
     "overhang_fan_speed": [
         "100"
@@ -185,7 +185,7 @@
         "0"
     ],
     "enable_overhang_bridge_fan": [
-        "0"
+        "1"
     ],
     "filament_id": "GFA05",
     "setting_id": "GFSL99_01",

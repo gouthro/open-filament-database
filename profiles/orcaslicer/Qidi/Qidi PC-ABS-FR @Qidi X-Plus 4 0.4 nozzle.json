@@ -97,7 +97,7 @@
         "0"
     ],
     "filament_type": [
-        "ABS"
+        "PC-ABS-FR"
     ],
     "filament_vendor": [
         "QIDI"
@@ -162,7 +162,7 @@
     "nozzle_temperature_range_high": [
         "270"
     ],
-    "filament_id": "GFB99",
+    "filament_id": "QD_0_1_34",
     "setting_id": "GFSA04",
     "pressure_advance": [
         "0.042"

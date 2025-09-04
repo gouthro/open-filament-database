@@ -41,7 +41,7 @@
     "temperature": "225",
     "filament_vendor": "3D-Fuel",
     "filament_retract_lift": "0",
-    "idle_temperature": "150",
+    "idle_temperature": "170",
     "filament_travel_ramping_lift": "1",
     "filament_travel_max_lift": "0.6",
     "filament_travel_slope": "1",

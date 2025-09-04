@@ -10,7 +10,7 @@
         "50"
     ],
     "hot_plate_temp": [
-        "50"
+        "35"
     ],
     "textured_plate_temp": [
         "50"
@@ -22,7 +22,7 @@
         "50"
     ],
     "hot_plate_temp_initial_layer": [
-        "60"
+        "35"
     ],
     "textured_plate_temp_initial_layer": [
         "50"
@@ -184,7 +184,7 @@
         "250"
     ],
     "enable_overhang_bridge_fan": [
-        "0"
+        "1"
     ],
     "filament_id": "GFU99",
     "setting_id": "GFSR99",

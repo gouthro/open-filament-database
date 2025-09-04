@@ -28,7 +28,7 @@
         "60"
     ],
     "overhang_fan_threshold": [
-        "95%"
+        "50%"
     ],
     "overhang_fan_speed": [
         "100"
@@ -166,9 +166,9 @@
         "0"
     ],
     "enable_overhang_bridge_fan": [
-        "0"
+        "1"
     ],
-    "filament_id": "GFB99",
+    "filament_id": "QD_0_1_4",
     "setting_id": "GFSA04",
     "pressure_advance": [
         "0.034"

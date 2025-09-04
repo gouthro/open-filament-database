@@ -10,7 +10,7 @@
         "100"
     ],
     "hot_plate_temp": [
-        "100"
+        "90"
     ],
     "textured_plate_temp": [
         "100"
@@ -22,7 +22,7 @@
         "100"
     ],
     "hot_plate_temp_initial_layer": [
-        "100"
+        "90"
     ],
     "textured_plate_temp_initial_layer": [
         "100"
@@ -31,7 +31,7 @@
         "95%"
     ],
     "overhang_fan_speed": [
-        "60"
+        "80%"
     ],
     "slow_down_for_layer_cooling": [
         "1"
@@ -55,7 +55,7 @@
         "20"
     ],
     "filament_density": [
-        "1.04"
+        "1.25"
     ],
     "filament_deretraction_speed": [
         "nil"
@@ -115,7 +115,7 @@
         "Cool Plate"
     ],
     "nozzle_temperature_initial_layer": [
-        "275"
+        "255"
     ],
     "full_fan_speed_layer": [
         "0"
@@ -136,19 +136,34 @@
         "; Filament gcode\n"
     ],
     "nozzle_temperature": [
-        "270"
+        "250"
     ],
     "temperature_vitrification": [
         "108"
     ],
     "nozzle_temperature_range_low": [
-        "260"
+        "240"
     ],
     "nozzle_temperature_range_high": [
-        "300"
+        "290"
     ],
     "filament_id": "BSFI007",
     "setting_id": "BSSI007",
+    "enable_overhang_bridge_fan": [
+        "1"
+    ],
+    "additional_cooling_fan_speed": [
+        "0"
+    ],
+    "activate_air_filtration": [
+        "1"
+    ],
+    "complete_print_exhaust_fan_speed": [
+        "100"
+    ],
+    "during_print_exhaust_fan_speed": [
+        "80"
+    ],
     "compatible_printers": [
         "BLOCKS RD50 V2 0.4 nozzle",
         "BLOCKS RD50 V2 0.6 nozzle",

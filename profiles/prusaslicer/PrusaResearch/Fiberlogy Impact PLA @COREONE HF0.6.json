@@ -42,7 +42,7 @@
     "renamed_from": "Fiberlogy PLA",
     "filament_vendor": "Fiberlogy",
     "filament_spool_weight": "330",
-    "idle_temperature": "150",
+    "idle_temperature": "170",
     "filament_travel_ramping_lift": "1",
     "filament_travel_max_lift": "0.6",
     "filament_travel_slope": "1",

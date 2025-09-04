@@ -47,6 +47,7 @@
     "filament_retract_restart_extra": "0",
     "filament_retract_speed": "60",
     "filament_retract_before_travel": "2",
+    "filament_retract_layer_change": "0",
     "idle_temperature": "150",
     "filament_travel_max_lift": "0.6",
     "chamber_temperature": "30",

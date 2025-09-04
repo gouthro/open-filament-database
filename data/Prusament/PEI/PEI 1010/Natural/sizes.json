@@ -1,0 +1,24 @@
+[
+  {
+    "filament_weight": 500,
+    "diameter": 1.75,
+    "purchase_links": [
+      {
+        "store_id": "prusa3d",
+        "url": "https://www.prusa3d.com/product/prusament-pei-1010-natural-500-g/",
+        "affiliate": false
+      }
+    ]
+  },
+  {
+    "filament_weight": 25,
+    "diameter": 1.75,
+    "purchase_links": [
+      {
+        "store_id": "prusa3d",
+        "url": "https://www.prusa3d.com/product/prusament-pei-1010-natural-25g-sample/",
+        "affiliate": false
+      }
+    ]
+  }
+]

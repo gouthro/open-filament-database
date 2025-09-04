@@ -24,7 +24,7 @@
     "filament_soluble": "0",
     "min_print_speed": "15",
     "slowdown_below_layer_time": "10",
-    "start_filament_gcode": "\"M572 S{if nozzle_diameter[filament_extruder_id]==0.4}0.023{elsif nozzle_diameter[filament_extruder_id]==0.5}0.018{elsif nozzle_diameter[filament_extruder_id]==0.6}0.015{elsif nozzle_diameter[filament_extruder_id]==0.8}0.01{elsif nozzle_diameter[filament_extruder_id]==0.25}0.08{elsif nozzle_diameter[filament_extruder_id]==0.3}0.05{else}0{endif} ; Filament gcode\\nM142 S36 ; set heatbreak target temp\"",
+    "start_filament_gcode": "\"M572 S{if nozzle_diameter[filament_extruder_id]==0.4}0.02{elsif nozzle_diameter[filament_extruder_id]==0.5}0.016{elsif nozzle_diameter[filament_extruder_id]==0.6}0.014{elsif nozzle_diameter[filament_extruder_id]==0.8}0.01{elsif nozzle_diameter[filament_extruder_id]==0.25}0.072{elsif nozzle_diameter[filament_extruder_id]==0.3}0.045{else}0{endif} ; Filament gcode\\nM142 S36 ; set heatbreak target temp\"",
     "bed_temperature": "60",
     "bridge_fan_speed": "100",
     "disable_fan_first_layers": "1",

@@ -41,7 +41,7 @@
     "temperature": "210",
     "filament_vendor": "Made for Prusa",
     "filament_spool_weight": "230",
-    "idle_temperature": "150",
+    "idle_temperature": "170",
     "filament_travel_ramping_lift": "1",
     "filament_travel_max_lift": "0.6",
     "filament_travel_slope": "1",

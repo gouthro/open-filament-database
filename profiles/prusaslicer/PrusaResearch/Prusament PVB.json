@@ -1,7 +1,7 @@
 {
     "cooling": "1",
     "compatible_printers": "",
-    "compatible_printers_condition": "nozzle_diameter[0]!=0.8 and printer_notes!~/.*PG.*/ and ! (printer_notes=~/.*PRINTER_VENDOR_PRUSA3D.*/ and printer_notes=~/.*PRINTER_MODEL_MK(2.5|3).*/ and single_extruder_multi_material) and printer_notes!~/.*MINIIS.*/",
+    "compatible_printers_condition": "nozzle_diameter[0]!=0.8 and printer_notes!~/.*PG.*/ and ! (printer_notes=~/.*PRINTER_VENDOR_PRUSA3D.*/ and printer_notes=~/.*PRINTER_MODEL_MK(2.5|3).*/ and single_extruder_multi_material)",
     "end_filament_gcode": "\"; Filament-specific end gcode\"",
     "extrusion_multiplier": "1",
     "filament_loading_speed": "28",

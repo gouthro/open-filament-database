@@ -43,7 +43,7 @@
         "; filament end gcode \n"
     ],
     "filament_flow_ratio": [
-        "0.97"
+        "0.95"
     ],
     "reduce_fan_stop_start_freq": [
         "1"
@@ -64,7 +64,7 @@
         "1.75"
     ],
     "filament_max_volumetric_speed": [
-        "20"
+        "18"
     ],
     "filament_minimal_purge_on_wipe_tower": [
         "15"
@@ -115,7 +115,7 @@
         "Cool Plate"
     ],
     "nozzle_temperature_initial_layer": [
-        "220"
+        "210"
     ],
     "full_fan_speed_layer": [
         "0"
@@ -127,7 +127,7 @@
         "100"
     ],
     "slow_down_min_speed": [
-        "5"
+        "30"
     ],
     "slow_down_layer_time": [
         "5"
@@ -136,7 +136,7 @@
         "; filament start gcode\n"
     ],
     "nozzle_temperature": [
-        "220"
+        "210"
     ],
     "temperature_vitrification": [
         "60"
@@ -148,10 +148,19 @@
         "230"
     ],
     "additional_cooling_fan_speed": [
-        "80"
+        "100"
     ],
     "filament_id": "BSFI001",
     "setting_id": "BSSI001",
+    "complete_print_exhaust_fan_speed": [
+        "80"
+    ],
+    "activate_air_filtration": [
+        "1"
+    ],
+    "during_print_exhaust_fan_speed": [
+        "100"
+    ],
     "compatible_printers": [
         "BLOCKS Pro S100 0.4 nozzle",
         "BLOCKS Pro S100 0.6 nozzle",

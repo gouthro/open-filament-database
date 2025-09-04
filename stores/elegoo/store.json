@@ -1,0 +1,14 @@
+{
+  "id": "elegoo",
+  "name": "ELEGOO",
+  "storefront_url": "https://eu.elegoo.com/",
+  "affiliate": false,
+  "logo": "elegoo.png",
+  "ships_from": [
+    "EU",
+    "CN"
+  ],
+  "ships_to": [
+    "EU"
+  ]
+}

@@ -133,7 +133,7 @@
         "250"
     ],
     "temperature_vitrification": [
-        "80"
+        "70"
     ],
     "during_print_exhaust_fan_speed": [
         "100"
@@ -157,12 +157,12 @@
         "Qidi X-Plus 4 0.4 nozzle"
     ],
     "nozzle_temperature_range_low": [
-        "220"
+        "240"
     ],
     "nozzle_temperature_range_high": [
-        "260"
+        "280"
     ],
-    "filament_id": "GFB99",
+    "filament_id": "QD_0_1_40",
     "setting_id": "GFSA04",
     "pressure_advance": [
         "0.056"

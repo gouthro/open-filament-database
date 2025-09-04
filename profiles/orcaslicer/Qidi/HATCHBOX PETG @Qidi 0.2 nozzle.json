@@ -133,7 +133,7 @@
         "250"
     ],
     "temperature_vitrification": [
-        "80"
+        "70"
     ],
     "during_print_exhaust_fan_speed": [
         "100"
@@ -163,10 +163,10 @@
         "Qidi Q1 Pro 0.2 nozzle"
     ],
     "nozzle_temperature_range_low": [
-        "220"
+        "240"
     ],
     "nozzle_temperature_range_high": [
-        "260"
+        "280"
     ],
     "filament_id": "GFG99",
     "setting_id": "GFSG99",
