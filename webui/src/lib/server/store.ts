@@ -46,16 +46,16 @@ export const createStore = async (storeData: z.infer<typeof storeSchema>) => {
 };
 
 export async function updateStore(storeData: z.infer<typeof storeSchema>) {
-  const oldDir = path.join(STORE_DIR, stripOfIllegalChars(storeData.oldStoreName || storeData.name));
-  const newDir = path.join(STORE_DIR, stripOfIllegalChars(storeData.name));
+  const oldDir = path.join(STORE_DIR, stripOfIllegalChars(storeData.oldStoreName || storeData.id));
+  const newDir = path.join(STORE_DIR, stripOfIllegalChars(storeData.id));
 
   if (
     storeData.oldStoreName &&
-    storeData.oldStoreName !== storeData.name &&
+    storeData.oldStoreName !== storeData.id &&
     fs.existsSync(oldDir)
   ) {
     if (fs.existsSync(newDir)) {
-      console.warn(`New store folder "${storeData.name}" already exists.`);
+      console.warn(`New store folder "${storeData.id}" already exists.`);
     }
     fs.renameSync(oldDir, newDir);
   } else if (!fs.existsSync(newDir)) {

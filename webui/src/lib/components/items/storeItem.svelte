@@ -11,7 +11,7 @@
   class="p-4 bg-white flex rounded-xl shadow-lg hover:shadow-xl relative transition-shadow duration-300 border border-gray-200 dark:bg-gray-900 dark:border-gray-700 dark:text-gray-100 text-gray-900">
   <div class="flex w-1/2 md:w-2/6">
     <img
-      src={`/stores/${stripOfIllegalChars(storeData.name)}/${storeData.logo}`}
+      src={`/stores/${stripOfIllegalChars(storeData.id)}/${storeData.logo}`}
       alt={storeName + ' logo'}
       class="w-30 h-30 rounded-lg object-contain bg-white dark:bg-gray-800 border border-gray-100 dark:border-gray-700"
       loading="lazy"
@@ -79,7 +79,7 @@
   </div>
   <div class="w-fit h-fit absolute top-4 right-4">
     <a
-      href={`/Store/${storeData.name}`}
+      href={`/Store/${stripOfIllegalChars(storeData.id)}`}
       class="flex items-center gap-2 p-2 rounded-lg bg-gray-100 dark:bg-gray-800 border border-gray-300 dark:border-gray-700 text-gray-600 dark:text-gray-300 hover:bg-green-100 hover:text-green-700 dark:hover:bg-green-900 dark:hover:text-green-300 shadow transition-colors"
       title="Edit {storeData.name}">
       <Fa icon={faPen} />

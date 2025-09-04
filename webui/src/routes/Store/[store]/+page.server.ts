@@ -4,7 +4,6 @@ import { superValidate } from 'sveltekit-superforms';
 import { zod } from 'sveltekit-superforms/adapters';
 import { storeSchema } from '$lib/validation/store-schema.js';
 import { setFlash } from 'sveltekit-flash-message/server';
-import { filamentVariantSchema } from '$lib/validation/filament-variant-schema';
 import { refreshDatabase } from '$lib/dataCacher';
 import { stripOfIllegalChars } from '$lib/globalHelpers';
 import { updateStore } from '$lib/server/store';
@@ -69,11 +68,11 @@ export const actions = {
       await updateStore(form.data);
       await refreshDatabase();
     } catch (error) {
-      console.error('Failed to create brand:', error);
-      setFlash({ type: 'error', message: 'Failed to create brand. Please try again.' }, cookies);
+      console.error('Failed to update store:', error);
+      setFlash({ type: 'error', message: 'Failed to update store. Please try again.' }, cookies);
       return fail(500, { form });
     }
 
-    throw redirect(303, `/Store/${stripOfIllegalChars((form.data.name))}`);
+    throw redirect(303, `/Store/${stripOfIllegalChars(form.data.id)}`);
   },
 };

@@ -24,7 +24,7 @@
         <div class="flex text-left gap-3">
           {#if data.storeData?.logo}
             <img
-              src={`/stores/${stripOfIllegalChars(data.storeData.name)}/${data.storeData.logo}`}
+              src={`/stores/${stripOfIllegalChars(data.storeData.id)}/${data.storeData.logo}`}
               alt={data.storeData.name + ' logo'}
               class="w-35 h-35 rounded-lg object-contain bg-white dark:bg-gray-800 border border-gray-100 dark:border-gray-700"
               loading="lazy"
