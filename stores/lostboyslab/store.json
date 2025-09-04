@@ -4,6 +4,6 @@
   "storefront_url": "https://www.lostboyslab.shop/",
   "affiliate": false,
   "logo": "lostboyslab.png",
-  "ships_from": ["SE", "US"],
-  "ships_to": []
+  "ships_from": ["EU", "SE", "US"],
+  "ships_to": ["EU"]
 }
