@@ -15,7 +15,7 @@ test('page loads without JS errors', async ({ page }) => {
 
   await page.goto('/');
   
-  await expect(page).toHaveTitle(/Brands|Open Filament Database|web-ui/);
+  await expect(page).toHaveTitle(/WebUI Landing/);
   
   await page.waitForTimeout(2000);
   
