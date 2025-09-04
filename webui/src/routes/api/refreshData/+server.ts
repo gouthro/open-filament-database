@@ -4,9 +4,10 @@ import { setFlash } from 'sveltekit-flash-message/server';
 
 export async function POST({ cookies }) {
     try {
-        await refreshDatabase();
-        setFlash({ type: 'success', message: 'Successfully reloaded DB!' }, cookies);
-        return json({ error: 'Refreshed!' }, { status: 200 });
+      await refreshDatabase();
+      console.log("Refreshed DB!");
+      setFlash({ type: 'success', message: 'Successfully reloaded DB!' }, cookies);
+      return json({ error: 'Refreshed!' }, { status: 200 });
     } catch (error) {
     console.error('Refresh error:', error);
     setFlash({ type: 'error', message: 'Refresh DB error :/' }, cookies);

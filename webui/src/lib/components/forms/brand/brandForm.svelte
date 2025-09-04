@@ -1,17 +1,18 @@
 <script lang="ts">
   import { env } from '$env/dynamic/public';
-  import { pseudoDelete, pseudoUndoDelete } from '$lib/pseudoDeleter';
+  import { pseudoDelete } from '$lib/pseudoDeleter';
   import { realDelete } from '$lib/realDeleter';
   import { fileProxy } from 'sveltekit-superforms';
   import { stripOfIllegalChars } from '$lib/globalHelpers';
   import TextField from '../components/textField.svelte';
-  import LogoUpload from './components/logoUpload.svelte';
+  import LogoUpload from '../components/logoUpload.svelte';
   import DeleteButton from '../components/deleteButton.svelte';
   import Form from '../components/form.svelte';
   import SubmitButton from '../components/submitButton.svelte';
   import { superForm } from 'sveltekit-superforms';
   import { zodClient } from 'sveltekit-superforms/adapters';
   import { brandSchema } from '$lib/validation/filament-brand-schema';
+  import { pseudoEdit } from '$lib/pseudoEditor';
 
   type formType = 'edit' | 'create';
   let { defaultForm, formType } = $props();
@@ -28,8 +29,13 @@
     clearOnSubmit: "none",
     validationMethod: 'onblur',
     validators: zodClient(brandSchema),
-    onResult: ({ result}) => {
-      console.log(result);
+    onResult: ({ result }) => {
+      if (result?.type === "success") {
+        if (result?.data?.data) {
+          let data = JSON.parse(result.data.data);
+          pseudoEdit("brand", "modified", data.brand, data)
+        }
+      }
     }
   });
   

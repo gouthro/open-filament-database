@@ -1,5 +1,4 @@
 import { z } from 'zod';
-import { getImageDimensions } from '$lib/globalHelpers';
 
 const MAX_FILE_SIZE = 5 * 1024 * 1024; // 5MB
 const MIN_DIMENSIONS = { width: 100, height: 100 };

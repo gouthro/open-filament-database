@@ -13,7 +13,7 @@ export const specificSlicerSchema = z.object({
 
 export const slicerSettingsSchema = z.object({
   generic: genericSlicerSchema,
-  prusa: specificSlicerSchema,
+  prusaslicer: specificSlicerSchema,
   bambus: specificSlicerSchema,
   orca: specificSlicerSchema,
   cura: specificSlicerSchema,

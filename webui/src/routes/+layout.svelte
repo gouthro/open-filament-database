@@ -1,12 +1,12 @@
 <script lang="ts">
   import BackBtn from '$lib/components/backBtn.svelte';
   import Breadcrumb from '$lib/components/breadcrumb.svelte';
+  import { getFlash, updateFlash } from 'sveltekit-flash-message';
   import '../app.css';
   import type { LayoutProps } from './$types';
-  import { getFlash, updateFlash } from 'sveltekit-flash-message';
   import { page } from '$app/state';
   import { env } from '$env/dynamic/public';
-  const isLocal = env.PUBLIC_IS_LOCAL === 'true';
+  const isDev = env.PUBLIC_IS_DEV === 'true';
 
   let flash = getFlash(page);
   let { children }: LayoutProps = $props();
@@ -90,7 +90,7 @@
   >
     © {currentYear} Open Filament Database – All rights reserved
 
-    {#if isLocal}
+    {#if isDev}
       <button
         style="float: right;"
         class="bg-red-900"
@@ -100,6 +100,8 @@
         });
 
         await updateFlash(page);
+
+        location.reload();
       }}>
         Refresh DB Data
       </button>

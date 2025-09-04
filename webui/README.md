@@ -19,3 +19,5 @@ A modern CRUD (Create, Read, Update, Delete) interface built with SvelteKit for 
 [ ] Add slicer settings for filaments
 [ ] Add hex_variants, color_standards for instances
 [ ] Add image dimension validation to brand schema, got stuck in issues with what's available in browser vs server as all code needs to be available in both :/
+[ ] Add python validation
+[ ] Add export from zip option

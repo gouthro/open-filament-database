@@ -6,7 +6,7 @@
   import { traitsSchema } from '$lib/validation/filament-variant-schema';
   import { capitalizeFirstLetter } from '$lib/globalHelpers';
   import { writable } from 'svelte/store';
-  import DiscontinuedCheck from '../components/discontinuedCheck.svelte';
+  import BigCheck from '../components/bigCheck.svelte';
   import Form from '../components/form.svelte';
   import DeleteButton from '../components/deleteButton.svelte';
   import SubmitButton from '../components/submitButton.svelte';
@@ -19,7 +19,7 @@
   import { stripOfIllegalChars } from '$lib/globalHelpers';
 
   type formType = 'edit' | 'create';
-  let { defaultForm, formType, brandName, materialName, filamentName, colorData = null } = $props();
+  let { defaultForm, formType, brandName, materialName, filamentName, stores, colorData = null } = $props();
 
   const {
     form,
@@ -32,10 +32,7 @@
     invalidateAll: false,
     clearOnSubmit: "none",
     validationMethod: 'onblur',
-    validators: zodClient(filamentVariantSchema),
-    onResult: ({ result}) => {
-      console.log(result);
-    }
+    validators: zodClient(filamentVariantSchema)
   });
 
   async function handleDelete() {
@@ -110,6 +107,10 @@
   tempTraits.subscribe((value) => {
     $form.traits = value;
   });
+
+  if (colorData) {
+    $form.old_name = colorData.name;
+  }
 </script>
 
 <Form
@@ -140,7 +141,7 @@
         required={true}
       />
 
-      <DiscontinuedCheck
+      <BigCheck
         bind:formVar={$form.discontinued}
         errorVar={$errors.discontinued}
         description="Select if this colour/variant is discontinued"
@@ -188,6 +189,7 @@
               sizeIndex={index}
               removeSize={removeSize}
               errors={errors}
+              stores={stores}
             />
           {/each}
         </div>

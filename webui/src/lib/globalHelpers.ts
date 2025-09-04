@@ -68,6 +68,23 @@ export const capitalizeFirstLetter = (val: string) => {
   return String(val).charAt(0).toUpperCase() + String(val).slice(1);
 };
 
+export const removeUndefined = (obj: any): any => {
+  if (Array.isArray(obj)) {
+    return obj.map(removeUndefined);
+  } else if (obj && typeof obj === 'object') {
+    return Object.fromEntries(
+      Object.entries(obj)
+        .filter(([_, v]) => v !== undefined)
+        .filter(([_, v]) => v !== "null")
+        .filter(([_, v]) => v !== null)
+        .filter(([_, v]) => v?.length !== 0)
+        .filter(([_, v]) => v)
+        .map(([k, v]) => [k, removeUndefined(v)]),
+    );
+  }
+  return obj;
+};
+
 /*
 D:/SP/open-filament-database/webui/src/lib/globalHelpers.ts:85
       throw new Error("Unsupported file type in Node.js (must be Buffer or Uint8Array)");
@@ -77,7 +94,7 @@ Error: Unsupported file type in Node.js (must be Buffer or Uint8Array)
     at getImageDimensions (D:/SP/open-filament-database/webui/src/lib/globalHelpers.ts:85:13)
 
 Node.js v24.5.0
-*/
+
 export const getImageDimensions = async (file) => {
   if (!browser) {
     // Use 'sharp' in Node.js
@@ -114,3 +131,4 @@ export const getImageDimensions = async (file) => {
     });
   }
 }
+*/

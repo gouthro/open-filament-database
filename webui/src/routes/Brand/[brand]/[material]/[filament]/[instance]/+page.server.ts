@@ -2,11 +2,12 @@ import { error, fail, redirect } from '@sveltejs/kit';
 import type { PageServerLoad } from './$types';
 import { superValidate } from 'sveltekit-superforms';
 import { zod } from 'sveltekit-superforms/adapters';
-import { removeUndefined, updateColorSize, updateColorVariant } from '$lib/server/helpers';
+import { removeUndefined } from '$lib/globalHelpers';
 import { setFlash } from 'sveltekit-flash-message/server';
 import { filamentVariantSchema } from '$lib/validation/filament-variant-schema';
 import { refreshDatabase } from '$lib/dataCacher';
 import { stripOfIllegalChars } from '$lib/globalHelpers';
+import { updateVariant } from '$lib/server/variant';
 
 export const load: PageServerLoad = async ({ params, parent }) => {
   const { brand, material, filament, instance } = params;
@@ -80,6 +81,12 @@ export const load: PageServerLoad = async ({ params, parent }) => {
     sizes: (structuredClone(sizeData) || [])
   };
 
+  let stores: string[] = [];
+
+  Object.values(filamentData.stores).forEach((value) => {
+    stores.push(value.id);
+  });
+
   const variantForm = await superValidate(variantData, zod(filamentVariantSchema));
 
   return {
@@ -87,6 +94,7 @@ export const load: PageServerLoad = async ({ params, parent }) => {
     materialData,
     filamentData: filamentDataObj,
     colorData,
+    stores,
     variantForm,
   };
 };
@@ -94,20 +102,18 @@ export const load: PageServerLoad = async ({ params, parent }) => {
 export const actions = {
   variant: async ({ request, params, cookies }) => {
     let data = await request.formData();
-    data.color_name = data.name;
 
     const form = await superValidate(data, zod(filamentVariantSchema));
-    const { brand, material, filament } = params;
+    const { brand, material, filament, instance } = params;
 
     if (!form.valid) {
       return fail(400, { form });
     }
     
     try {
-      const filteredFilament = removeUndefined(form.data);
+      let filteredData = removeUndefined(form.data);
 
-      await updateColorVariant(brand, material, filament, form.data.color_name, filteredFilament);
-      await updateColorSize(brand, material, filament, form.data.color_name, filteredFilament.sizes);
+      await updateVariant(brand, material, filament, instance, filteredData);
       await refreshDatabase();
     } catch (error) {
       console.error('Failed to update variant:', error);
@@ -116,6 +122,6 @@ export const actions = {
     }
 
     setFlash({ type: 'success', message: 'Variant updated successfully!' }, cookies);
-    throw redirect(303, `/${stripOfIllegalChars(brand)}/${material}/${filament}/${form.data.color_name}`);
+    throw redirect(303, `/Brand/${stripOfIllegalChars(brand)}/${material}/${filament}/${form.data.color_name}`);
   }
 };

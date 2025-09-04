@@ -3,7 +3,7 @@
   import { pseudoDelete } from '$lib/pseudoDeleter';
   import { realDelete } from '$lib/realDeleter';
   import DeleteButton from '../components/deleteButton.svelte';
-  import DiscontinuedCheck from '../components/discontinuedCheck.svelte';
+  import BigCheck from '../components/bigCheck.svelte';
   import Form from '../components/form.svelte';
   import NumberField from '../components/numberField.svelte';
   import SubmitButton from '../components/submitButton.svelte';
@@ -26,10 +26,7 @@
     invalidateAll: false,
     clearOnSubmit: "none",
     validationMethod: 'onblur',
-    validators: zodClient(filamentSchema),
-    onResult: ({ result}) => {
-      console.log(result);
-    }
+    validators: zodClient(filamentSchema)
   });
 
   async function handleDelete() {
@@ -93,7 +90,7 @@
     errorVar={$errors.max_dry_temperature}
   />
 
-  <DiscontinuedCheck
+  <BigCheck
     bind:formVar={$form.discontinued}
     errorVar={$errors.discontinued}
     description="Select if this filament is discontinued"

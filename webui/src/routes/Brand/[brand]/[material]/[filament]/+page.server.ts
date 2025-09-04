@@ -4,10 +4,11 @@ import { fail, superValidate } from 'sveltekit-superforms';
 import { zod } from 'sveltekit-superforms/adapters';
 import { filamentSchema } from '$lib/validation/filament-schema';
 import { filamentVariantSchema } from '$lib/validation/filament-variant-schema';
-import { createColorFiles, removeUndefined, updateFilament } from '$lib/server/helpers';
+import { createVariant } from '$lib/server/variant';
+import { updateFilament } from '$lib/server/filament';
+import { removeUndefined } from '$lib/globalHelpers';
 import { setFlash } from 'sveltekit-flash-message/server';
 import { refreshDatabase } from '$lib/dataCacher';
-import { isValidJSON } from '$lib/globalHelpers';
 import { stripOfIllegalChars } from '$lib/globalHelpers';
 
 export const load: PageServerLoad = async ({ params, parent }) => {
@@ -36,12 +37,19 @@ export const load: PageServerLoad = async ({ params, parent }) => {
   if (!filamentKey) throw error(404, 'Filament not found');
   const filamentDataObj = materialData.filaments[filamentKey];
 
+  let stores: string[] = [];
+
+  Object.values(filamentData.stores).forEach((value) => {
+    stores.push(value.id);
+  });
+
   const filamentForm = await superValidate(filamentDataObj, zod(filamentSchema));
   const filamentVariantForm = await superValidate(zod(filamentVariantSchema));
 
   return {
     brandData,
     materialData,
+    stores,
     filamentForm,
     filamentVariantForm,
     filamentData: filamentDataObj,
@@ -68,7 +76,7 @@ export const actions = {
     }
 
     setFlash({ type: 'success', message: 'Filament updated successfully!' }, cookies);
-    throw redirect(303, `/${stripOfIllegalChars(brand)}/${material}/${form.data.name}`);
+    throw redirect(303, `/Brand/${stripOfIllegalChars(brand)}/${material}/${form.data.name}`);
   },
   variant: async ({ request, params, cookies }) => {
     let data = await request.formData();
@@ -82,12 +90,7 @@ export const actions = {
     try {
       let filteredData = removeUndefined(form.data);
 
-      filteredData['brandName'] = brand;
-      filteredData['materialName'] = material;
-      filteredData['filamentName'] = filament;
-      filteredData['color_name'] = filteredData.color_name;
-
-      await createColorFiles(filteredData);
+      await createVariant(brand, material, filament, filteredData);
       await refreshDatabase();
     } catch (error) {
       console.error('Failed to update color:', error);
@@ -96,6 +99,6 @@ export const actions = {
     }
 
     setFlash({ type: 'success', message: 'Color updated successfully!' }, cookies);
-    throw redirect(303, `/${stripOfIllegalChars(brand)}/${material}/${filament}/${form.data.color_name}`);
+    throw redirect(303, `/Brand/${stripOfIllegalChars(brand)}/${material}/${filament}/${form.data.color_name}`);
   },
 };
