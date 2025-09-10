@@ -1,6 +1,6 @@
 {
     "type": "filament",
-    "name": "Overture TPU @System",
+    "name": "Overture Silk PLA @BBL P1P 0.2 nozzle",
     "from": "system",
     "instantiation": "true",
     "activate_air_filtration": [
@@ -16,19 +16,19 @@
         "70"
     ],
     "cool_plate_temp": [
-        "30"
+        "35"
     ],
     "cool_plate_temp_initial_layer": [
-        "30"
+        "35"
     ],
     "during_print_exhaust_fan_speed": [
         "70"
     ],
     "eng_plate_temp": [
-        "30"
+        "0"
     ],
     "eng_plate_temp_initial_layer": [
-        "30"
+        "0"
     ],
     "fan_cooling_layer_time": [
         "100"
@@ -40,10 +40,10 @@
         "100"
     ],
     "filament_cost": [
-        "29.99"
+        "25.99"
     ],
     "filament_density": [
-        "1.18"
+        "1.19"
     ],
     "filament_deretraction_speed": [
         "nil"
@@ -61,7 +61,7 @@
         "nil"
     ],
     "filament_max_volumetric_speed": [
-        "8"
+        "1.6"
     ],
     "filament_minimal_purge_on_wipe_tower": [
         "15"
@@ -79,7 +79,7 @@
         "nil"
     ],
     "filament_retraction_length": [
-        "0.4"
+        "nil"
     ],
     "filament_retraction_minimum_travel": [
         "nil"
@@ -94,7 +94,7 @@
         "0"
     ],
     "filament_type": [
-        "TPU"
+        "PLA"
     ],
     "filament_vendor": [
         "Overture"
@@ -121,7 +121,7 @@
         "10%"
     ],
     "filament_scarf_gap": [
-        "0%"
+        "15%"
     ],
     "filament_scarf_length": [
         "10"
@@ -130,10 +130,10 @@
         "100%"
     ],
     "hot_plate_temp": [
-        "35"
+        "55"
     ],
     "hot_plate_temp_initial_layer": [
-        "35"
+        "55"
     ],
     "nozzle_temperature": [
         "220"
@@ -145,7 +145,7 @@
         "100"
     ],
     "overhang_fan_threshold": [
-        "95%"
+        "50%"
     ],
     "reduce_fan_stop_start_freq": [
         "1"
@@ -154,45 +154,47 @@
         "3"
     ],
     "supertack_plate_temp": [
-        "0"
+        "45"
     ],
     "supertack_plate_temp_initial_layer": [
-        "0"
+        "45"
     ],
     "slow_down_for_layer_cooling": [
         "1"
     ],
     "slow_down_layer_time": [
-        "15"
+        "4"
     ],
     "slow_down_min_speed": [
-        "10"
+        "20"
     ],
     "temperature_vitrification": [
-        "30"
+        "58"
     ],
     "textured_plate_temp": [
-        "35"
+        "55"
     ],
     "textured_plate_temp_initial_layer": [
-        "35"
+        "55"
+    ],
+    "compatible_printers": [
+        "Bambu Lab P1P 0.2 nozzle"
     ],
     "filament_start_gcode": [
-        "; Filament gcode\n"
+        "; filament start gcode\n{if  (bed_temperature[current_extruder] >45)||(bed_temperature_initial_layer[current_extruder] >45)}M106 P3 S255\n{elsif(bed_temperature[current_extruder] >35)||(bed_temperature_initial_layer[current_extruder] >35)}M106 P3 S180\n{endif}\n\n{if activate_air_filtration[current_extruder] && support_air_filtration}\nM106 P3 S{during_print_exhaust_fan_speed_num[current_extruder]} \n{endif}"
     ],
     "filament_end_gcode": [
-        "; filament end gcode\n"
+        "; filament end gcode \nM106 P3 S0\n"
     ],
-    "compatible_printers": [],
     "additional_cooling_fan_speed": [
         "70"
     ],
-    "nozzle_temperature_range_high": [
-        "230"
-    ],
     "nozzle_temperature_range_low": [
-        "210"
+        "200"
     ],
-    "filament_id": "GFOT008",
-    "setting_id": "OGFOT008"
+    "nozzle_temperature_range_high": [
+        "220"
+    ],
+    "filament_id": "GFOT002",
+    "setting_id": "GFOT002_05"
 }

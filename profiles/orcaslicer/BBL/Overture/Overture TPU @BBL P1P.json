@@ -1,6 +1,6 @@
 {
     "type": "filament",
-    "name": "Overture TPU @System",
+    "name": "Overture TPU @BBL P1P",
     "from": "system",
     "instantiation": "true",
     "activate_air_filtration": [
@@ -52,7 +52,7 @@
         "1.75"
     ],
     "filament_flow_ratio": [
-        "0.95"
+        "1"
     ],
     "filament_is_support": [
         "0"
@@ -61,7 +61,7 @@
         "nil"
     ],
     "filament_max_volumetric_speed": [
-        "8"
+        "10"
     ],
     "filament_minimal_purge_on_wipe_tower": [
         "15"
@@ -177,13 +177,17 @@
     "textured_plate_temp_initial_layer": [
         "35"
     ],
+    "compatible_printers": [
+        "Bambu Lab P1P 0.4 nozzle",
+        "Bambu Lab P1P 0.6 nozzle",
+        "Bambu Lab P1P 0.8 nozzle"
+    ],
     "filament_start_gcode": [
-        "; Filament gcode\n"
+        "; filament start gcode\n{if  (bed_temperature[current_extruder] >35)||(bed_temperature_initial_layer[current_extruder] >35)}M106 P3 S255\n{elsif(bed_temperature[current_extruder] >30)||(bed_temperature_initial_layer[current_extruder] >30)}M106 P3 S180\n{endif}\n\n{if activate_air_filtration[current_extruder] && support_air_filtration}\nM106 P3 S{during_print_exhaust_fan_speed_num[current_extruder]} \n{endif}"
     ],
     "filament_end_gcode": [
-        "; filament end gcode\n"
+        "; filament end gcode \nM106 P3 S0\n"
     ],
-    "compatible_printers": [],
     "additional_cooling_fan_speed": [
         "70"
     ],
@@ -194,5 +198,5 @@
         "210"
     ],
     "filament_id": "GFOT008",
-    "setting_id": "OGFOT008"
+    "setting_id": "GFOT008_04"
 }
