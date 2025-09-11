@@ -23,5 +23,5 @@ export const filamentMaterialSchema = z
   .object({
     material: z.string(),
     default_max_dry_temperature: z.number().optional(),
-    default_slicer_settings: slicerSettingsSchema
+    default_slicer_settings: slicerSettingsSchema.optional()
   });
