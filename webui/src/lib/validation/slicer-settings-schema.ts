@@ -17,7 +17,7 @@ const specificSlicerSettingsSchema = z.object({
 export const slicerSettingsSchema = z.object({
   generic: genericSlicerSchema.optional(),
   prusaslicer: specificSlicerSettingsSchema.optional(),
-  bambustudio: specificSlicerSettingsSchema.optional(),
   orcaslicer: specificSlicerSettingsSchema.optional(),
+  bambustudio: specificSlicerSettingsSchema.optional(),
   cura: specificSlicerSettingsSchema.optional(),
 });

@@ -3,7 +3,7 @@ import * as fs from 'node:fs';
 import * as path from 'node:path';
 import { env } from "$env/dynamic/public";
 import { filamentMaterialSchema } from "$lib/validation/filament-material-schema";
-import { isEmptyObject } from '$lib/globalHelpers';
+import { isEmptyObject, removeEmptyObjects, removeUndefined } from '$lib/globalHelpers';
 
 const DATA_DIR = env.PUBLIC_DATA_PATH;
 
@@ -78,157 +78,92 @@ export function updateMaterial(brandName: string, currentMaterialName: string, m
   }
 }
 
-function transformMaterialData(materialData: any) {
-  const transformedData: any = {
+function transformGeneric(slicer_settings: any) {
+  let genericSettings: any = {};
+
+  genericSettings.first_layer_bed_temp = slicer_settings.first_layer_bed_temp || null;
+
+  genericSettings.first_layer_nozzle_temp = slicer_settings.first_layer_nozzle_temp || null;
+
+  genericSettings.bed_temp = slicer_settings.bed_temp || null;
+
+  genericSettings.nozzle_temp = slicer_settings.nozzle_temp || null;
+
+  // Only return object if it has properties
+  if (!isEmptyObject(genericSettings)) {
+    return genericSettings;
+  } else {
+    return null;
+  }
+}
+
+function transformSpecific(slicer_settings: any) {
+  let genericSettings: any = {};
+
+  genericSettings = transformGeneric(slicer_settings);
+
+  genericSettings.profile_name = slicer_settings.profile_name || null;
+
+  // Only return object if it has properties
+  if (!isEmptyObject(genericSettings)) {
+    return genericSettings;
+  } else {
+    return null;
+  }
+}
+
+export function transformMaterialData(materialData: any) {
+  let transformedData: any = {
     material: materialData.material,
   };
 
-  if (materialData.default_max_dry_temperature) {
+  if (materialData?.default_max_dry_temperature) {
     transformedData.default_max_dry_temperature = materialData.default_max_dry_temperature;
   }
 
   let default_slicer_settings: any = {}
 
-  // Handle generic settings - already in correct structure
-  if (!isEmptyObject(materialData.generic)) {
-    const genericSettings: any = {};
-    if (
-      materialData.generic.first_layer_bed_temp !== undefined &&
-      materialData.generic.first_layer_bed_temp !== null
-    ) {
-      genericSettings.first_layer_bed_temp = materialData.generic.first_layer_bed_temp;
-    }
-    if (
-      materialData.generic.first_layer_nozzle_temp !== undefined &&
-      materialData.generic.first_layer_nozzle_temp !== null
-    ) {
-      genericSettings.first_layer_nozzle_temp = materialData.generic.first_layer_nozzle_temp;
-    }
-    if (materialData.generic.bed_temp !== undefined && materialData.generic.bed_temp !== null) {
-      genericSettings.bed_temp = materialData.generic.bed_temp;
-    }
-    if (
-      materialData.generic.nozzle_temp !== undefined &&
-      materialData.generic.nozzle_temp !== null
-    ) {
-      genericSettings.nozzle_temp = materialData.generic.nozzle_temp;
-    }
-    // Only add generic object if it has properties
-    if (!isEmptyObject(genericSettings)) {
-      default_slicer_settings.generic = genericSettings;
-    }
-  }
+  if (!isEmptyObject(materialData?.default_slicer_settings)) {
+    let slicer_settings = materialData.default_slicer_settings;
 
-  // Handle PrusaSlicer settings
-  if (!isEmptyObject(materialData.prusaslicer)) {
-    const prusaSettings: any = {};
-    if (materialData?.prusaslicer?.profile_name) {
-      prusaSettings.profile_name = materialData?.prusaslicer.profile_name;
+    // Handle generic settings
+    if (slicer_settings?.generic) {
+      let genericSettings = transformGeneric(slicer_settings.generic);
+      if (genericSettings) {
+        default_slicer_settings.generic = genericSettings;
+      }
     }
 
-    // Handle prusaslicer overrides
-    const overrides = materialData.prusaslicer;
-    if (overrides.first_layer_bed_temp !== undefined) {
-      prusaSettings.first_layer_bed_temp = overrides.first_layer_bed_temp;
-    }
-    if (overrides.first_layer_nozzle_temp !== undefined) {
-      prusaSettings.first_layer_nozzle_temp = overrides.first_layer_nozzle_temp;
-    }
-    if (overrides.bed_temp !== undefined) {
-      prusaSettings.bed_temp = overrides.bed_temp;
-    }
-    if (overrides.nozzle_temp !== undefined) {
-      prusaSettings.nozzle_temp = overrides.nozzle_temp;
+    // Handle PrusaSlicer settings
+    if (slicer_settings?.prusaslicer) {
+      let prusaslicerSettings = transformSpecific(slicer_settings.prusaslicer);
+      if (prusaslicerSettings) {
+        default_slicer_settings.prusaslicer = prusaslicerSettings;
+      }
     }
 
-
-    // Only add prusa object if it has properties
-    if (!isEmptyObject(prusaSettings)) {
-      default_slicer_settings.prusaslicer = prusaSettings;
-    }
-  }
-
-  // Handle Bambu Studio settings
-  if (!isEmptyObject(materialData.bambus)) {
-    const bambusSettings: any = {};
-    if (materialData?.bambu?.profile_name !== undefined) {
-      bambusSettings.profile_name = materialData?.bambu.profile_name;
+    // Handle Bambu settings
+    if (slicer_settings?.bambustudio) {
+      let bambuSettings = transformSpecific(slicer_settings.bambustudio);
+      if (bambuSettings) {
+        default_slicer_settings.bambustudio = bambuSettings;
+      }
     }
 
-    // Handle bambus overrides
-    const overrides = materialData?.bambus;
-    if (overrides.first_layer_bed_temp !== undefined) {
-      bambusSettings.first_layer_bed_temp = overrides.first_layer_bed_temp;
-    }
-    if (overrides.first_layer_nozzle_temp !== undefined) {
-      bambusSettings.first_layer_nozzle_temp = overrides.first_layer_nozzle_temp;
-    }
-    if (overrides.bed_temp !== undefined) {
-      bambusSettings.bed_temp = overrides.bed_temp;
-    }
-    if (overrides.nozzle_temp !== undefined) {
-      bambusSettings.nozzle_temp = overrides.nozzle_temp;
+    // Handle Orca Slicer settings
+    if (slicer_settings?.orcaslicer) {
+      let orcaslicerSettings = transformSpecific(slicer_settings.orcaslicer);
+      if (orcaslicerSettings) {
+        default_slicer_settings.orcaslicer = orcaslicerSettings;
+      }
     }
 
-    // Only add bambus object if it has properties
-    if (!isEmptyObject(bambusSettings)) {
-      default_slicer_settings.bambus = bambusSettings;
-    }
-  }
-
-  // Handle OrcaSlicer settings
-  if (!isEmptyObject(materialData.orca)) {
-    const orcaSettings: any = {};
-    if (materialData?.orca.profile_name) {
-      orcaSettings.profile_name = materialData?.orca.profile_name;
-    }
-
-    // Handle orca overrides
-    const overrides = materialData?.orca;
-    if (overrides.first_layer_bed_temp !== undefined) {
-      orcaSettings.first_layer_bed_temp = overrides.first_layer_bed_temp;
-    }
-    if (overrides.first_layer_nozzle_temp !== undefined) {
-      orcaSettings.first_layer_nozzle_temp = overrides.first_layer_nozzle_temp;
-    }
-    if (overrides.bed_temp !== undefined) {
-      orcaSettings.bed_temp = overrides.bed_temp;
-    }
-    if (overrides.nozzle_temp !== undefined) {
-      orcaSettings.nozzle_temp = overrides.nozzle_temp;
-    }
-
-    // Only add orca object if it has properties
-    if (!isEmptyObject(orcaSettings)) {
-      default_slicer_settings.orca = orcaSettings;
-    }
-  }
-
-  // Handle Cura settings
-  if (!isEmptyObject(materialData.cura)) {
-    const curaSettings: any = {};
-    if (materialData?.cura.cura_profile_path) {
-      curaSettings.profile_path = materialData.cura.cura_profile_path;
-    }
-
-    // Handle cura overrides
-    const overrides = materialData?.cura;
-    if (overrides.first_layer_bed_temp !== undefined) {
-      curaSettings.first_layer_bed_temp = overrides.first_layer_bed_temp;
-    }
-    if (overrides.first_layer_nozzle_temp !== undefined) {
-      curaSettings.first_layer_nozzle_temp = overrides.first_layer_nozzle_temp;
-    }
-    if (overrides.bed_temp !== undefined) {
-      curaSettings.bed_temp = overrides.bed_temp;
-    }
-    if (overrides.nozzle_temp !== undefined) {
-      curaSettings.nozzle_temp = overrides.nozzle_temp;
-    }
-
-    // Only add cura object if it has properties
-    if (!isEmptyObject(curaSettings)) {
-      default_slicer_settings.cura = curaSettings;
+    // Handle Cura settings
+    if (slicer_settings?.cura) {
+      let curaSettings = transformSpecific(slicer_settings.cura);
+      if (curaSettings) {
+        default_slicer_settings.cura = curaSettings;
+      }
     }
   }
 
@@ -236,66 +171,15 @@ function transformMaterialData(materialData: any) {
     transformedData.default_slicer_settings = default_slicer_settings;
   }
 
-  return transformedData;
-}
+  transformedData = removeUndefined(transformedData);
 
-export function flattenMaterialData(materialData: any) {
-  const flattened: any = {
-    material: materialData.material,
-  };
-
-  if (materialData.default_max_dry_temperature) {
-    flattened.default_max_dry_temperature = materialData.default_max_dry_temperature;
+  if (transformedData.default_slicer_settings) {
+    Object.keys(transformedData.default_slicer_settings).forEach(key => {
+      if (isEmptyObject(transformedData.default_slicer_settings[key])) {
+        delete transformedData.default_slicer_settings[key];
+      }
+    });
   }
 
-  // Build nested structure that matches your form schema
-  flattened.generic = {
-    first_layer_bed_temp: materialData.generic?.first_layer_bed_temp,
-    first_layer_nozzle_temp: materialData.generic?.first_layer_nozzle_temp,
-    bed_temp: materialData.generic?.bed_temp,
-    nozzle_temp: materialData.generic?.nozzle_temp,
-  };
-
-  flattened.prusaslicer = {
-    prusa_profile_path: materialData.prusaslicer?.profile_path, // This should match your JSON structure
-    prusa_overrides: {
-      // Map the direct properties from prusaslicer object to overrides
-      first_layer_bed_temp: materialData.prusaslicer?.first_layer_bed_temp,
-      first_layer_nozzle_temp: materialData.prusaslicer?.first_layer_nozzle_temp,
-      bed_temp: materialData.prusaslicer?.bed_temp,
-      nozzle_temp: materialData.prusaslicer?.nozzle_temp,
-    },
-  };
-
-  flattened.bambus = {
-    bambus_profile_path: materialData.bambus?.profile_path,
-    bambus_overrides: {
-      first_layer_bed_temp: materialData.bambus?.first_layer_bed_temp,
-      first_layer_nozzle_temp: materialData.bambus?.first_layer_nozzle_temp,
-      bed_temp: materialData.bambus?.bed_temp,
-      nozzle_temp: materialData.bambus?.nozzle_temp,
-    },
-  };
-
-  flattened.orca = {
-    orca_profile_path: materialData.orca?.profile_path,
-    orca_overrides: {
-      first_layer_bed_temp: materialData.orca?.first_layer_bed_temp,
-      first_layer_nozzle_temp: materialData.orca?.first_layer_nozzle_temp,
-      bed_temp: materialData.orca?.bed_temp,
-      nozzle_temp: materialData.orca?.nozzle_temp,
-    },
-  };
-
-  flattened.cura = {
-    cura_profile_path: materialData.cura?.profile_path,
-    cura_overrides: {
-      first_layer_bed_temp: materialData.cura?.first_layer_bed_temp,
-      first_layer_nozzle_temp: materialData.cura?.first_layer_nozzle_temp,
-      bed_temp: materialData.cura?.bed_temp,
-      nozzle_temp: materialData.cura?.nozzle_temp,
-    },
-  };
-
-  return flattened;
+  return transformedData;
 }
