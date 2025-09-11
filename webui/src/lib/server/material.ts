@@ -173,11 +173,13 @@ export function transformMaterialData(materialData: any) {
 
   transformedData = removeUndefined(transformedData);
 
-  Object.keys(transformedData.default_slicer_settings).forEach(key => {
-    if (isEmptyObject(transformedData.default_slicer_settings[key])) {
-      delete transformedData.default_slicer_settings[key];
-    }
-  });
+  if (transformedData.default_slicer_settings) {
+    Object.keys(transformedData.default_slicer_settings).forEach(key => {
+      if (isEmptyObject(transformedData.default_slicer_settings[key])) {
+        delete transformedData.default_slicer_settings[key];
+      }
+    });
+  }
 
   return transformedData;
 }
