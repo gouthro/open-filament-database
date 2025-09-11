@@ -9,6 +9,7 @@ And then running the following depending on platform, if any text appears that b
 ### Windows
 ```bash
 python.exe data_validator.py --folder-names # Validates folder names.
+python.exe data_validator.py --logo-files # Validates logo files.
 python.exe data_validator.py --json-files # Validates json files.
 python.exe data_validator.py --store-ids # Validates store ids.
 ```
@@ -16,6 +17,7 @@ python.exe data_validator.py --store-ids # Validates store ids.
 ### Linux/macos
 ```bash
 python data_validator.py --folder-names # Validates folder names.
+python data_validator.py --logo-files # Validates logo files.
 python data_validator.py --json-files # Validates json files.
 python data_validator.py --store-ids # Validates store ids.
 ```

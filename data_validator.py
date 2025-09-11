@@ -337,16 +337,22 @@ if __name__ == '__main__':
 
     args = parser.parse_args()
     if args.json_files:
+        print("Validating json files, please wait...")
         validate_json_files()
 
     if args.logo_files:
+        print("Validating logo files, please wait...")
         validate_logo_files()
 
     if args.folder_names:
+        print("Validating folder names, please wait...")
         validate_folder_names()
 
     if args.store_ids:
+        print("Validating store ids, please wait...")
         validate_store_ids()
 
     if failed_validation:
         exit(-1)
+    else:
+        print("Validation succeeded!")

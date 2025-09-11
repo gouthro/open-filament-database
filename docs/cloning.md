@@ -11,6 +11,10 @@ You now have to write or copy in the following command while replacing `YOUR_USE
 git clone https://github.com/YOUR_USERNAME/open-filament-database.git
 ```
 press enter and let it run, when it allows you to write again you then enter the following two lines, first one will be speedy.
+
+**Remember to replace YOUR_BRANCHNAME with what your request provides**
+E.g. adding a new red variant to the plain pla of Elegoo would be "RedPlaElegoo
+
 ```bash
 cd open-filament-database
 git checkout -b YOUR_BRANCHNAME
