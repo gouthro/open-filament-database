@@ -93,10 +93,6 @@
   const cura_bt = intProxy(form, 'default_slicer_settings.cura.bed_temp');
   const cura_nt = intProxy(form, 'default_slicer_settings.cura.nozzle_temp');
 
-  $effect(() => {
-    console.log($form);
-    console.log($errors);
-  });
 </script>
 
 <Form
