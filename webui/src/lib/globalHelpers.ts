@@ -1,5 +1,3 @@
-import { browser } from '$app/environment';
-
 const illegal_characters = [
   "#","%","&","{","}","\\","<",
   ">","*","?","/","$","!","'",

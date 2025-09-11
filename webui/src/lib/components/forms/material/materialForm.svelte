@@ -14,8 +14,6 @@
 
   type formType = 'edit' | 'create';
   let { defaultForm, formType, brandName } = $props();
-
-  console.log(defaultForm);
   
   const {
     form,
@@ -57,31 +55,48 @@
 
   let selectedSlicer: string[] = $state([]);
 
+  Array.from(slicerOptions).forEach((val) => {
+    let key = val.key;
+
+    if ($form?.default_slicer_settings?.[key]) {
+      Object.values($form?.default_slicer_settings?.[key]).forEach(element => {
+        if (element && !selectedSlicer.includes(key)) {
+          selectedSlicer.push(key);
+        }
+      });
+    }
+  });
+
   // Proxies are needed for nested properties to work correctly with sveltekit-superforms
-  const generic_flbt = intProxy(form, 'generic.first_layer_bed_temp');
-  const generic_flnt = intProxy(form, 'generic.first_layer_nozzle_temp');
-  const generic_bt = intProxy(form, 'generic.bed_temp');
-  const generic_nt = intProxy(form, 'generic.nozzle_temp');
+  const generic_flbt = intProxy(form, 'default_slicer_settings.generic.first_layer_bed_temp');
+  const generic_flnt = intProxy(form, 'default_slicer_settings.generic.first_layer_nozzle_temp');
+  const generic_bt = intProxy(form, 'default_slicer_settings.generic.bed_temp');
+  const generic_nt = intProxy(form, 'default_slicer_settings.generic.nozzle_temp');
 
-  const prusa_flbt = intProxy(form, 'prusaslicer.first_layer_bed_temp');
-  const prusa_flnt = intProxy(form, 'prusaslicer.first_layer_nozzle_temp');
-  const prusa_bt = intProxy(form, 'prusaslicer.bed_temp');
-  const prusa_nt = intProxy(form, 'prusaslicer.nozzle_temp');
+  const prusa_flbt = intProxy(form, 'default_slicer_settings.prusaslicer.first_layer_bed_temp');
+  const prusa_flnt = intProxy(form, 'default_slicer_settings.prusaslicer.first_layer_nozzle_temp');
+  const prusa_bt = intProxy(form, 'default_slicer_settings.prusaslicer.bed_temp');
+  const prusa_nt = intProxy(form, 'default_slicer_settings.prusaslicer.nozzle_temp');
 
-  const bambus_flbt = intProxy(form, 'bambus.first_layer_bed_temp');
-  const bambus_flnt = intProxy(form, 'bambus.first_layer_nozzle_temp');
-  const bambus_bt = intProxy(form, 'bambus.bed_temp');
-  const bambus_nt = intProxy(form, 'bambus.nozzle_temp');
+  const bambu_flbt = intProxy(form, 'default_slicer_settings.bambustudio.first_layer_bed_temp');
+  const bambu_flnt = intProxy(form, 'default_slicer_settings.bambustudio.first_layer_nozzle_temp');
+  const bambu_bt = intProxy(form, 'default_slicer_settings.bambustudio.bed_temp');
+  const bambu_nt = intProxy(form, 'default_slicer_settings.bambustudio.nozzle_temp');
 
-  const orca_flbt = intProxy(form, 'orca.first_layer_bed_temp');
-  const orca_flnt = intProxy(form, 'orca.first_layer_nozzle_temp');
-  const orca_bt = intProxy(form, 'orca.bed_temp');
-  const orca_nt = intProxy(form, 'orca.nozzle_temp');
+  const orca_flbt = intProxy(form, 'default_slicer_settings.orcaslicer.first_layer_bed_temp');
+  const orca_flnt = intProxy(form, 'default_slicer_settings.orcaslicer.first_layer_nozzle_temp');
+  const orca_bt = intProxy(form, 'default_slicer_settings.orcaslicer.bed_temp');
+  const orca_nt = intProxy(form, 'default_slicer_settings.orcaslicer.nozzle_temp');
 
-  const cura_flbt = intProxy(form, 'cura.first_layer_bed_temp');
-  const cura_flnt = intProxy(form, 'cura.first_layer_nozzle_temp');
-  const cura_bt = intProxy(form, 'cura.bed_temp');
-  const cura_nt = intProxy(form, 'cura.nozzle_temp');
+  const cura_flbt = intProxy(form, 'default_slicer_settings.cura.first_layer_bed_temp');
+  const cura_flnt = intProxy(form, 'default_slicer_settings.cura.first_layer_nozzle_temp');
+  const cura_bt = intProxy(form, 'default_slicer_settings.cura.bed_temp');
+  const cura_nt = intProxy(form, 'default_slicer_settings.cura.nozzle_temp');
+
+  $effect(() => {
+    console.log($form);
+    console.log($errors);
+  });
 </script>
 
 <Form
@@ -126,265 +141,267 @@
       {/each}
     </div>
 
-    <!-- Generic Settings -->
-    {#if selectedSlicer.includes('generic')}
-      <fieldset class="border border-gray-200 dark:border-gray-700 rounded p-4 mb-4">
-        <legend class="font-semibold text-base mb-2">
-          Generic
-        </legend>
-        <div class="space-y-4">
-          <div class="grid grid-cols-2 gap-4">
-            <NumberField
-              id="generic_first_layer_bed_temp"
-              title="First Layer Bed Temp (°C)"
-              description=""
-              placeholder="60"
-              bind:formVar={$generic_flbt}
-            />
+    {#key selectedSlicer}
+      <!-- Generic Settings -->
+      {#if selectedSlicer.includes('generic')}
+        <fieldset class="border border-gray-200 dark:border-gray-700 rounded p-4 mb-4">
+          <legend class="font-semibold text-base mb-2">
+            Generic
+          </legend>
+          <div class="space-y-4">
+            <div class="grid grid-cols-2 gap-4">
+              <NumberField
+                id="generic_first_layer_bed_temp"
+                title="First Layer Bed Temp (°C)"
+                description=""
+                placeholder="60"
+                bind:formVar={$generic_flbt}
+              />
 
-            <NumberField
-              id="generic_first_layer_nozzle_temp"
-              title="First Layer Nozzle Temp (°C)"
-              description=""
-              placeholder="215"
-              bind:formVar={$generic_flnt}
-            />
+              <NumberField
+                id="generic_first_layer_nozzle_temp"
+                title="First Layer Nozzle Temp (°C)"
+                description=""
+                placeholder="215"
+                bind:formVar={$generic_flnt}
+              />
 
-            <NumberField
-              id="generic_bed_temp"
-              title="Bed Temp (°C)"
-              description=""
-              placeholder="60"
-              bind:formVar={$generic_bt}
-            />
+              <NumberField
+                id="generic_bed_temp"
+                title="Bed Temp (°C)"
+                description=""
+                placeholder="60"
+                bind:formVar={$generic_bt}
+              />
 
-            <NumberField
-              id="generic_nozzle_temp"
-              title="Nozzle Temp (°C)"
-              description=""
-              placeholder="210"
-              bind:formVar={$generic_nt}
-            />
+              <NumberField
+                id="generic_nozzle_temp"
+                title="Nozzle Temp (°C)"
+                description=""
+                placeholder="210"
+                bind:formVar={$generic_nt}
+              />
+            </div>
           </div>
-        </div>
-      </fieldset>
-    {/if}
+        </fieldset>
+      {/if}
 
-    <!-- PrusaSlicer Settings -->
-    {#if selectedSlicer.includes('prusaslicer')}
-      <fieldset class="border border-gray-200 dark:border-gray-700 rounded p-4 mb-4">
-        <legend class="font-semibold text-base mb-2">
-          Generic
-        </legend>
-        <div class="space-y-4">
-          <TextField
-            id="prusa_profile_name"
-            title="Profile Name"
-            description={null}
-            placeholder="profiles/filament/PLA_Basic.ini"
-            bind:formVar={$form.prusaslicer.profile_name}
-            errorVar={null}
-          />
-
-          <p class="text-lg font-bold mb-2">Temperature Overrides</p>
-          <div class="grid grid-cols-2 gap-4">
-            <NumberField
-              id="prusa_first_layer_bed_temp"
-              title="First Layer Bed Temp (°C)"
-              description=""
-              placeholder="60"
-              bind:formVar={$prusa_flbt}
+      <!-- PrusaSlicer Settings -->
+      {#if selectedSlicer.includes('prusaslicer')}
+        <fieldset class="border border-gray-200 dark:border-gray-700 rounded p-4 mb-4">
+          <legend class="font-semibold text-base mb-2">
+            PrusaSlicer
+          </legend>
+          <div class="space-y-4">
+            <TextField
+              id="prusa_profile_name"
+              title="Profile Name"
+              description={null}
+              placeholder="profiles/filament/PLA_Basic.ini"
+              bind:formVar={$form.default_slicer_settings.prusaslicer.profile_name}
+              errorVar={null}
             />
 
-            <NumberField
-              id="prusa_first_layer_nozzle_temp"
-              title="First Layer Nozzle Temp (°C)"
-              description=""
-              placeholder="215"
-              bind:formVar={$prusa_flnt}
-            />
+            <p class="text-lg font-bold mb-2">Temperature Overrides</p>
+            <div class="grid grid-cols-2 gap-4">
+              <NumberField
+                id="prusa_first_layer_bed_temp"
+                title="First Layer Bed Temp (°C)"
+                description=""
+                placeholder="60"
+                bind:formVar={$prusa_flbt}
+              />
 
-            <NumberField
-              id="prusa_bed_temp"
-              title="Bed Temp (°C)"
-              description=""
-              placeholder="60"
-              bind:formVar={$prusa_bt}
-            />
+              <NumberField
+                id="prusa_first_layer_nozzle_temp"
+                title="First Layer Nozzle Temp (°C)"
+                description=""
+                placeholder="215"
+                bind:formVar={$prusa_flnt}
+              />
 
-            <NumberField
-              id="prusa_nozzle_temp"
-              title="Nozzle Temp (°C)"
-              description=""
-              placeholder="210"
-              bind:formVar={$prusa_nt}
-            />
+              <NumberField
+                id="prusa_bed_temp"
+                title="Bed Temp (°C)"
+                description=""
+                placeholder="60"
+                bind:formVar={$prusa_bt}
+              />
+
+              <NumberField
+                id="prusa_nozzle_temp"
+                title="Nozzle Temp (°C)"
+                description=""
+                placeholder="210"
+                bind:formVar={$prusa_nt}
+              />
+            </div>
           </div>
-        </div>
-      </fieldset>
-    {/if}
+        </fieldset>
+      {/if}
 
-    <!-- Bambu Studio Settings -->
-    {#if selectedSlicer.includes('bambustudio')}
-      <fieldset class="border border-gray-200 dark:border-gray-700 rounded p-4 mb-4">
-        <legend class="font-semibold text-base mb-2">
-          Generic
-        </legend>
-        <div class="space-y-4">
-          <TextField
-            id="bambus_profile_name"
-            title="Profile Name"
-            description={null}
-            placeholder="profiles/filament/PLA_Basic.ini"
-            bind:formVar={$form.bambus.profile_name}
-            errorVar={null}
-          />
-
-          <p class="text-lg font-bold mb-2">Temperature Overrides</p>
-          <div class="grid grid-cols-2 gap-4">
-            <NumberField
-              id="bambus_first_layer_bed_temp"
-              title="First Layer Bed Temp (°C)"
-              description=""
-              placeholder="60"
-              bind:formVar={$bambus_flbt}
+      <!-- Bambu Studio Settings -->
+      {#if selectedSlicer.includes('bambustudio')}
+        <fieldset class="border border-gray-200 dark:border-gray-700 rounded p-4 mb-4">
+          <legend class="font-semibold text-base mb-2">
+            Bambu Studio
+          </legend>
+          <div class="space-y-4">
+            <TextField
+              id="bambu_profile_name"
+              title="Profile Name"
+              description={null}
+              placeholder="profiles/filament/PLA_Basic.ini"
+              bind:formVar={$form.default_slicer_settings.bambustudio.profile_name}
+              errorVar={null}
             />
 
-            <NumberField
-              id="bambus_first_layer_nozzle_temp"
-              title="First Layer Nozzle Temp (°C)"
-              description=""
-              placeholder="215"
-              bind:formVar={$bambus_flnt}
-            />
+            <p class="text-lg font-bold mb-2">Temperature Overrides</p>
+            <div class="grid grid-cols-2 gap-4">
+              <NumberField
+                id="bambu_first_layer_bed_temp"
+                title="First Layer Bed Temp (°C)"
+                description=""
+                placeholder="60"
+                bind:formVar={$bambu_flbt}
+              />
 
-            <NumberField
-              id="bambus_bed_temp"
-              title="Bed Temp (°C)"
-              description=""
-              placeholder="60"
-              bind:formVar={$bambus_bt}
-            />
+              <NumberField
+                id="bambu_first_layer_nozzle_temp"
+                title="First Layer Nozzle Temp (°C)"
+                description=""
+                placeholder="215"
+                bind:formVar={$bambu_flnt}
+              />
 
-            <NumberField
-              id="bambus_nozzle_temp"
-              title="Nozzle Temp (°C)"
-              description=""
-              placeholder="210"
-              bind:formVar={$bambus_nt}
-            />
+              <NumberField
+                id="bambu_bed_temp"
+                title="Bed Temp (°C)"
+                description=""
+                placeholder="60"
+                bind:formVar={$bambu_bt}
+              />
+
+              <NumberField
+                id="bambu_nozzle_temp"
+                title="Nozzle Temp (°C)"
+                description=""
+                placeholder="210"
+                bind:formVar={$bambu_nt}
+              />
+            </div>
           </div>
-        </div>
-      </fieldset>
-    {/if}
+        </fieldset>
+      {/if}
 
-    <!-- OrcaSlicer Settings -->
-    {#if selectedSlicer.includes('orcaslicer')}
-      <fieldset class="border border-gray-200 dark:border-gray-700 rounded p-4 mb-4">
-        <legend class="font-semibold text-base mb-2">
-          Generic
-        </legend>
-        <div class="space-y-4">
-          <TextField
-            id="orca_profile_name"
-            title="Profile Name"
-            description={null}
-            placeholder="profiles/filament/PLA_Basic.ini"
-            bind:formVar={$form.orca.profile_name}
-            errorVar={null}
-          />
-
-          <p class="text-lg font-bold mb-2">Temperature Overrides</p>
-          <div class="grid grid-cols-2 gap-4">
-            <NumberField
-              id="orca_first_layer_bed_temp"
-              title="First Layer Bed Temp (°C)"
-              description=""
-              placeholder="60"
-              bind:formVar={$orca_flbt}
+      <!-- OrcaSlicer Settings -->
+      {#if selectedSlicer.includes('orcaslicer')}
+        <fieldset class="border border-gray-200 dark:border-gray-700 rounded p-4 mb-4">
+          <legend class="font-semibold text-base mb-2">
+            OrcaSlicer
+          </legend>
+          <div class="space-y-4">
+            <TextField
+              id="orca_profile_name"
+              title="Profile Name"
+              description={null}
+              placeholder="profiles/filament/PLA_Basic.ini"
+              bind:formVar={$form.default_slicer_settings.orcaslicer.profile_name}
+              errorVar={null}
             />
 
-            <NumberField
-              id="orca_first_layer_nozzle_temp"
-              title="First Layer Nozzle Temp (°C)"
-              description=""
-              placeholder="215"
-              bind:formVar={$orca_flnt}
-            />
+            <p class="text-lg font-bold mb-2">Temperature Overrides</p>
+            <div class="grid grid-cols-2 gap-4">
+              <NumberField
+                id="orca_first_layer_bed_temp"
+                title="First Layer Bed Temp (°C)"
+                description=""
+                placeholder="60"
+                bind:formVar={$orca_flbt}
+              />
 
-            <NumberField
-              id="orca_bed_temp"
-              title="Bed Temp (°C)"
-              description=""
-              placeholder="60"
-              bind:formVar={$orca_bt}
-            />
+              <NumberField
+                id="orca_first_layer_nozzle_temp"
+                title="First Layer Nozzle Temp (°C)"
+                description=""
+                placeholder="215"
+                bind:formVar={$orca_flnt}
+              />
 
-            <NumberField
-              id="orca_nozzle_temp"
-              title="Nozzle Temp (°C)"
-              description=""
-              placeholder="210"
-              bind:formVar={$orca_nt}
-            />
+              <NumberField
+                id="orca_bed_temp"
+                title="Bed Temp (°C)"
+                description=""
+                placeholder="60"
+                bind:formVar={$orca_bt}
+              />
+
+              <NumberField
+                id="orca_nozzle_temp"
+                title="Nozzle Temp (°C)"
+                description=""
+                placeholder="210"
+                bind:formVar={$orca_nt}
+              />
+            </div>
           </div>
-        </div>
-      </fieldset>
-    {/if}
+        </fieldset>
+      {/if}
 
-    <!-- Cura Settings -->
-    {#if selectedSlicer.includes('cura')}
-      <fieldset class="border border-gray-200 dark:border-gray-700 rounded p-4 mb-4">
-        <legend class="font-semibold text-base mb-2">
-          Generic
-        </legend>
-        <div class="space-y-4">
-          <TextField
-            id="cura_profile_name"
-            title="Profile Name"
-            description={null}
-            placeholder="profiles/filament/PLA_Basic.ini"
-            bind:formVar={$form.cura.profile_name}
-            errorVar={null}
-          />
-
-          <p class="text-lg font-bold mb-2">Temperature Overrides</p>
-          <div class="grid grid-cols-2 gap-4">
-            <NumberField
-              id="cura_first_layer_bed_temp"
-              title="First Layer Bed Temp (°C)"
-              description=""
-              placeholder="60"
-              bind:formVar={$cura_flbt}
+      <!-- Cura Settings -->
+      {#if selectedSlicer.includes('cura')}
+        <fieldset class="border border-gray-200 dark:border-gray-700 rounded p-4 mb-4">
+          <legend class="font-semibold text-base mb-2">
+            Cura
+          </legend>
+          <div class="space-y-4">
+            <TextField
+              id="cura_profile_name"
+              title="Profile Name"
+              description={null}
+              placeholder="profiles/filament/PLA_Basic.ini"
+              bind:formVar={$form.default_slicer_settings.cura.profile_name}
+              errorVar={null}
             />
 
-            <NumberField
-              id="cura_first_layer_nozzle_temp"
-              title="First Layer Nozzle Temp (°C)"
-              description=""
-              placeholder="215"
-              bind:formVar={$cura_flnt}
-            />
+            <p class="text-lg font-bold mb-2">Temperature Overrides</p>
+            <div class="grid grid-cols-2 gap-4">
+              <NumberField
+                id="cura_first_layer_bed_temp"
+                title="First Layer Bed Temp (°C)"
+                description=""
+                placeholder="60"
+                bind:formVar={$cura_flbt}
+              />
 
-            <NumberField
-              id="cura_bed_temp"
-              title="Bed Temp (°C)"
-              description=""
-              placeholder="60"
-              bind:formVar={$cura_bt}
-            />
+              <NumberField
+                id="cura_first_layer_nozzle_temp"
+                title="First Layer Nozzle Temp (°C)"
+                description=""
+                placeholder="215"
+                bind:formVar={$cura_flnt}
+              />
 
-            <NumberField
-              id="cura_nozzle_temp"
-              title="Nozzle Temp (°C)"
-              description=""
-              placeholder="210"
-              bind:formVar={$cura_nt}
-            />
+              <NumberField
+                id="cura_bed_temp"
+                title="Bed Temp (°C)"
+                description=""
+                placeholder="60"
+                bind:formVar={$cura_bt}
+              />
+
+              <NumberField
+                id="cura_nozzle_temp"
+                title="Nozzle Temp (°C)"
+                description=""
+                placeholder="210"
+                bind:formVar={$cura_nt}
+              />
+            </div>
           </div>
-        </div>
-      </fieldset>
-    {/if}
+        </fieldset>
+      {/if}
+    {/key}
   </div>
 
   <SubmitButton>

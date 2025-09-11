@@ -1,10 +1,10 @@
 import { z } from 'zod';
 
 export const genericSlicerSchema = z.object({
-  first_layer_bed_temp: z.number().optional(),
-  first_layer_nozzle_temp: z.number().optional(),
-  bed_temp: z.number().optional(),
-  nozzle_temp: z.number().optional(),
+  first_layer_bed_temp: z.preprocess((value) => {if (value === "") return undefined;return Number(value);}, z.union([z.number(), z.nan()]).optional()),
+  first_layer_nozzle_temp: z.preprocess((value) => {if (value === "") return undefined;return Number(value);}, z.union([z.number(), z.nan()]).optional()),
+  bed_temp: z.preprocess((value) => {if (value === "") return undefined;return Number(value);}, z.union([z.number(), z.nan()]).optional()),
+  nozzle_temp: z.preprocess((value) => {if (value === "") return undefined;return Number(value);}, z.union([z.number(), z.nan()]).optional()),
 });
 
 export const specificSlicerSchema = z.object({
@@ -14,8 +14,8 @@ export const specificSlicerSchema = z.object({
 export const slicerSettingsSchema = z.object({
   generic: genericSlicerSchema,
   prusaslicer: specificSlicerSchema,
-  bambus: specificSlicerSchema,
-  orca: specificSlicerSchema,
+  orcaslicer: specificSlicerSchema,
+  bambustudio: specificSlicerSchema,
   cura: specificSlicerSchema,
 });
 
@@ -23,5 +23,5 @@ export const filamentMaterialSchema = z
   .object({
     material: z.string(),
     default_max_dry_temperature: z.number().optional(),
-  })
-  .merge(slicerSettingsSchema);
+    default_slicer_settings: slicerSettingsSchema
+  });

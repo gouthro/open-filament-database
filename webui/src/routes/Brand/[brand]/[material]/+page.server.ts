@@ -4,7 +4,7 @@ import { superValidate } from 'sveltekit-superforms';
 import { filamentMaterialSchema } from '$lib/validation/filament-material-schema';
 import { zod } from 'sveltekit-superforms/adapters';
 import { createFilament } from '$lib/server/filament';
-import { flattenMaterialData } from '$lib/server/material';
+import { transformMaterialData } from '$lib/server/material';
 import { removeUndefined } from '$lib/globalHelpers';
 import { updateMaterial } from '$lib/server/material';
 import { stripOfIllegalChars } from '$lib/globalHelpers';
@@ -41,7 +41,7 @@ export const load: PageServerLoad = async ({ params, parent }) => {
 
   const materialData = brandData.materials[materialKey];
 
-  const flattenedMaterialData = flattenMaterialData(materialData);
+  const flattenedMaterialData = transformMaterialData(materialData);
 
   const materialForm = await superValidate(flattenedMaterialData, zod(filamentMaterialSchema));
 
@@ -57,6 +57,8 @@ export const actions = {
   material: async ({ request, params, cookies }) => {
     const form = await superValidate(request, zod(filamentMaterialSchema));
     const { brand, material } = params;
+
+    console.log(form);
 
     if (!form.valid) {
       return fail(400, { form });
