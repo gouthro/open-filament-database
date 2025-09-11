@@ -58,7 +58,6 @@ export const actions = {
     const form = await superValidate(request, zod(filamentMaterialSchema));
     const { brand, material } = params;
 
-    console.log(form);
 
     if (!form.valid) {
       return fail(400, { form });
