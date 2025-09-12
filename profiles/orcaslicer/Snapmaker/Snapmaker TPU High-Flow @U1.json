@@ -1,8 +1,8 @@
 {
     "type": "filament",
+    "name": "Snapmaker TPU High-Flow @U1",
     "from": "system",
     "instantiation": "true",
-    "name": "Snapmaker TPU High-Flow @U1",
     "filament_vendor": [
         "Snapmaker"
     ],

@@ -1,8 +1,8 @@
 {
     "type": "filament",
+    "name": "Snapmaker J1 Breakaway",
     "from": "system",
     "instantiation": "true",
-    "name": "Snapmaker J1 Breakaway",
     "filament_vendor": [
         "Snapmaker"
     ],

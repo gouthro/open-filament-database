@@ -162,8 +162,8 @@
     "pressure_advance": [
         "0.02"
     ],
-    "filament_id": "GFN98",
     "setting_id": "GFSA04",
+    "filament_id": "GFN98",
     "compatible_printers": [
         "InfiMech TX HSN 0.4 nozzle"
     ]

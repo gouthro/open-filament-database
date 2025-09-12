@@ -142,6 +142,7 @@
     "nozzle_temperature_range_high": [
         "280"
     ],
+    "setting_id": "GFSA04",
     "chamber_temperature": [
         "40"
     ],
@@ -151,6 +152,5 @@
     ],
     "filament_notes": [
         ""
-    ],
-    "setting_id": "GFSA04"
+    ]
 }

@@ -150,11 +150,9 @@
     "additional_cooling_fan_speed": [
         "80"
     ],
-    "version": "1.0.0.0",
+    "filament_id": "P510cfa2",
     "compatible_printers": [
         "Cubicon xCeler-I 0.4 nozzle"
     ],
-    "default_filament_colour": "",
-    "filament_id": "P510cfa2",
-    "is_custom_defined": "0"
+    "default_filament_colour": ""
 }

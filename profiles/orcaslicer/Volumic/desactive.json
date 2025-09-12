@@ -87,8 +87,8 @@
     "reduce_fan_stop_start_freq": [
         "1"
     ],
-    "filament_id": "DFL99",
     "setting_id": "DFSL99",
+    "filament_id": "DFL99",
     "filament_flow_ratio": [
         "0.1"
     ],

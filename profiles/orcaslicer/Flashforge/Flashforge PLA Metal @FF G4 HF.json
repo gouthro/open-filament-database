@@ -147,8 +147,8 @@
     "nozzle_temperature_range_high": [
         "240"
     ],
-    "filament_id": "GFB99",
     "setting_id": "GFSA04",
+    "filament_id": "GFB99",
     "support_material_interface_fan_speed": [
         "100"
     ],
@@ -250,7 +250,5 @@
     ],
     "required_nozzle_HRC": [
         "0"
-    ],
-    "version": "2.1.1.0",
-    "is_custom_defined": "0"
+    ]
 }

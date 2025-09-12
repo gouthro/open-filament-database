@@ -1,8 +1,8 @@
 {
     "type": "filament",
+    "name": "Snapmaker Dual TPU",
     "from": "system",
     "instantiation": "true",
-    "name": "Snapmaker Dual TPU",
     "filament_vendor": [
         "Snapmaker"
     ],

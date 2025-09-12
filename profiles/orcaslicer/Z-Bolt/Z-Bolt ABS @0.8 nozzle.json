@@ -200,6 +200,6 @@
     "nozzle_temperature_range_low": [
         "240"
     ],
-    "filament_id": "GFL208",
-    "setting_id": "GFSL208"
+    "setting_id": "GFSL208",
+    "filament_id": "GFL208"
 }

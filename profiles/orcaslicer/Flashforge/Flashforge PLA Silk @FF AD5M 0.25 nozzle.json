@@ -147,8 +147,8 @@
     "nozzle_temperature_range_high": [
         "230"
     ],
-    "filament_id": "GFL99",
     "setting_id": "GFSA04_25",
+    "filament_id": "GFL99",
     "support_material_interface_fan_speed": [
         "100"
     ],
@@ -180,7 +180,5 @@
     ],
     "during_print_exhaust_fan_speed": [
         "100"
-    ],
-    "version": "2.1.1.0",
-    "is_custom_defined": "0"
+    ]
 }

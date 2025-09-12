@@ -205,10 +205,8 @@
         "0"
     ],
     "filament_notes": "",
-    "is_custom_defined": "0",
     "pressure_advance": [
         "0.02"
     ],
-    "version": "1.9.0.14",
     "setting_id": "OVABS08"
 }

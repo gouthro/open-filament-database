@@ -196,8 +196,8 @@
     "nozzle_temperature_range_low": [
         "220"
     ],
-    "setting_id": "GFG99_MTC_0",
     "renamed_from": "My Generic PETG @MyToolChanger",
+    "setting_id": "GFG99_MTC_0",
     "filament_cooling_final_speed": [
         "3.5"
     ],

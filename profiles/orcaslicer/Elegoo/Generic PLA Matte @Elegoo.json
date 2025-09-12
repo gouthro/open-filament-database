@@ -150,8 +150,8 @@
     "additional_cooling_fan_speed": [
         "70"
     ],
-    "filament_id": "GFL99",
     "setting_id": "GFSL99",
+    "filament_id": "GFL99",
     "compatible_printers": [
         "Elegoo Neptune 0.4 nozzle",
         "Elegoo Neptune X 0.4 nozzle",

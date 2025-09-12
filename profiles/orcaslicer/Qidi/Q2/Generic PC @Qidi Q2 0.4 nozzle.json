@@ -192,8 +192,8 @@
     "hot_plate_temp": [
         "110"
     ],
-    "filament_id": "GFB99",
     "setting_id": "GFSA04",
+    "filament_id": "GFB99",
     "filament_adhesiveness_category": [
         "500"
     ],

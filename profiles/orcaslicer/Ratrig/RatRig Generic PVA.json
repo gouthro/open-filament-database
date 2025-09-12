@@ -150,8 +150,8 @@
     "additional_cooling_fan_speed": [
         "70"
     ],
-    "filament_id": "GFS99",
     "setting_id": "GFSA04",
+    "filament_id": "GFS99",
     "enable_pressure_advance": [
         "1"
     ],

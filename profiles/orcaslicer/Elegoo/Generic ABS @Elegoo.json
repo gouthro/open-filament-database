@@ -147,8 +147,8 @@
     "nozzle_temperature_range_high": [
         "245"
     ],
-    "filament_id": "GFB99",
     "setting_id": "GFSA04",
+    "filament_id": "GFB99",
     "compatible_printers": [
         "Elegoo Neptune 0.4 nozzle",
         "Elegoo Neptune X 0.4 nozzle",

@@ -276,6 +276,5 @@
     ],
     "filament_unloading_speed_start": [
         "40"
-    ],
-    "version": "1.9.0.2"
+    ]
 }

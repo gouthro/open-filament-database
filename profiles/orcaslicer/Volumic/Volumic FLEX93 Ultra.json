@@ -90,8 +90,8 @@
     "additional_cooling_fan_speed": [
         "70"
     ],
-    "filament_id": "GFU99",
     "setting_id": "GFSR99",
+    "filament_id": "GFU99",
     "filament_flow_ratio": [
         "1.20"
     ],

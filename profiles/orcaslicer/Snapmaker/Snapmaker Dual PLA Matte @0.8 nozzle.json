@@ -1,8 +1,8 @@
 {
     "type": "filament",
+    "name": "Snapmaker Dual PLA Matte @0.8 nozzle",
     "from": "system",
     "instantiation": "true",
-    "name": "Snapmaker Dual PLA Matte @0.8 nozzle",
     "filament_vendor": [
         "Snapmaker"
     ],

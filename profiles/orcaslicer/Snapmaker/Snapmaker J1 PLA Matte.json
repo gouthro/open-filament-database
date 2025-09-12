@@ -1,8 +1,8 @@
 {
     "type": "filament",
+    "name": "Snapmaker J1 PLA Matte",
     "from": "system",
     "instantiation": "true",
-    "name": "Snapmaker J1 PLA Matte",
     "filament_vendor": [
         "Snapmaker"
     ],

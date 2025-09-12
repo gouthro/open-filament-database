@@ -187,7 +187,6 @@
     "hot_plate_temp_initial_layer": [
         "105"
     ],
-    "is_custom_defined": "0",
     "nozzle_temperature": [
         "240"
     ],
@@ -236,9 +235,8 @@
     "textured_plate_temp_initial_layer": [
         "105"
     ],
-    "version": "0.0.0.0",
-    "filament_id": "IQM2",
     "setting_id": "IQS2",
+    "filament_id": "IQM2",
     "adaptive_pressure_advance": [
         "0"
     ],

@@ -187,9 +187,8 @@
     "nozzle_temperature_range_low": [
         "230"
     ],
-    "setting_id": "GFSA04",
     "renamed_from": "My Generic PETG",
+    "setting_id": "GFSA04",
     "enable_pressure_advance": "1",
-    "pressure_advance": "0.048",
-    "is_custom_defined": "0"
+    "pressure_advance": "0.048"
 }

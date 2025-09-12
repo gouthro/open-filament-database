@@ -153,8 +153,8 @@
     "additional_cooling_fan_speed": [
         "70"
     ],
-    "filament_id": "GFS99",
     "setting_id": "GFSA04",
+    "filament_id": "GFS99",
     "compatible_printers": [
         "Vzbot 235 AWD 0.4 nozzle",
         "Vzbot 330 AWD 0.4 nozzle",

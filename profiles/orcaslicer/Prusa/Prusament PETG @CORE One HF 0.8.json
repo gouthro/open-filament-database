@@ -142,6 +142,7 @@
     "nozzle_temperature_range_high": [
         "260"
     ],
+    "setting_id": "GFSA04",
     "chamber_temperature": [
         "35"
     ],
@@ -153,6 +154,5 @@
     ],
     "filament_z_hop_types": [
         "Slope Lift"
-    ],
-    "setting_id": "GFSA04"
+    ]
 }

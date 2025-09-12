@@ -147,8 +147,8 @@
     "nozzle_temperature_range_high": [
         "250"
     ],
-    "filament_id": "FFG01",
     "setting_id": "FFGP02_01",
+    "filament_id": "FFG01",
     "support_material_interface_fan_speed": [
         "100"
     ],
@@ -170,8 +170,6 @@
     "filament_unloading_speed_start": [
         "40"
     ],
-    "is_custom_defined": "0",
-    "version": "2.1.1.0",
     "complete_print_exhaust_fan_speed": [
         "40"
     ],

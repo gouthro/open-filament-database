@@ -1,8 +1,8 @@
 {
     "type": "filament",
+    "name": "Snapmaker ASA",
     "from": "system",
     "instantiation": "true",
-    "name": "Snapmaker ASA",
     "filament_vendor": [
         "Snapmaker"
     ],

@@ -1,9 +1,9 @@
 {
     "type": "filament",
-    "from": "system",
-    "instantiation": "true",
     "name": "Snapmaker PLA Lite @U1",
+    "from": "system",
     "filament_id": "1417031127011",
+    "instantiation": "true",
     "filament_end_gcode": [
         "; filament end gcode \n"
     ],
@@ -269,7 +269,6 @@
     "idle_temperature": [
         "0"
     ],
-    "is_custom_defined": "0",
     "pellet_flow_coefficient": [
         "0.4157"
     ],

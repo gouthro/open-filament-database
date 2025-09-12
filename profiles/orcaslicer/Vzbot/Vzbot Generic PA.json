@@ -147,8 +147,8 @@
     "nozzle_temperature_range_high": [
         "300"
     ],
-    "filament_id": "GFN99",
     "setting_id": "GFSA04",
+    "filament_id": "GFN99",
     "compatible_printers": [
         "Vzbot 235 AWD 0.4 nozzle",
         "Vzbot 330 AWD 0.4 nozzle",

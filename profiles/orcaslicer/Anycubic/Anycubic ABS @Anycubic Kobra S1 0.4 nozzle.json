@@ -141,8 +141,8 @@
     "nozzle_temperature_range_high": [
         "280"
     ],
-    "filament_id": "GFB99",
     "setting_id": "GFSA04",
+    "filament_id": "GFB99",
     "compatible_printers": [
         "Anycubic Kobra S1 0.4 nozzle"
     ],

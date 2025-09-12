@@ -153,8 +153,8 @@
     "complete_print_exhaust_fan_speed": [
         "60"
     ],
-    "filament_id": "GFC99",
     "setting_id": "GFSA04",
+    "filament_id": "GFC99",
     "enable_pressure_advance": [
         "1"
     ],

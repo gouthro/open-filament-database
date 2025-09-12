@@ -196,8 +196,8 @@
     "nozzle_temperature_range_low": [
         "260"
     ],
-    "setting_id": "GFN99_MTC_0",
     "renamed_from": "My Generic PA @MyToolChanger",
+    "setting_id": "GFN99_MTC_0",
     "filament_cooling_final_speed": [
         "3.5"
     ],

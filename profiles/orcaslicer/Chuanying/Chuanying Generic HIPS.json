@@ -194,8 +194,8 @@
     "nozzle_temperature_range_low": [
         "220"
     ],
-    "filament_id": "GFB99",
     "setting_id": "GFSA04",
+    "filament_id": "GFB99",
     "support_material_interface_fan_speed": [
         "40"
     ],
@@ -276,6 +276,5 @@
     ],
     "filament_unloading_speed_start": [
         "40"
-    ],
-    "version": "1.9.0.2"
+    ]
 }

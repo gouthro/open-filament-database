@@ -147,8 +147,8 @@
     "nozzle_temperature_range_high": [
         "230"
     ],
-    "filament_id": "GFL99",
     "setting_id": "GFSA04",
+    "filament_id": "GFL99",
     "support_material_interface_fan_speed": [
         "100"
     ],
@@ -164,12 +164,10 @@
     "compatible_printers": [
         "Flashforge AD5X 0.6 nozzle"
     ],
-    "is_custom_defined": "0",
     "textured_cool_plate_temp": [
         "45"
     ],
     "textured_cool_plate_temp_initial_layer": [
         "45"
-    ],
-    "version": "2.1.1.0"
+    ]
 }

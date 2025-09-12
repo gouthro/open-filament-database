@@ -150,8 +150,8 @@
     "additional_cooling_fan_speed": [
         "60"
     ],
-    "filament_id": "BSFI003",
     "setting_id": "BSSI003",
+    "filament_id": "BSFI003",
     "filament_shrink": [
         "99.5%"
     ],

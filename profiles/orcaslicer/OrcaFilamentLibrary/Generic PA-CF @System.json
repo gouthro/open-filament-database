@@ -191,6 +191,6 @@
     "nozzle_temperature_range_low": [
         "260"
     ],
-    "setting_id": "OGFSA04",
-    "renamed_from": "My Generic PA-CF"
+    "renamed_from": "My Generic PA-CF",
+    "setting_id": "OGFSA04"
 }

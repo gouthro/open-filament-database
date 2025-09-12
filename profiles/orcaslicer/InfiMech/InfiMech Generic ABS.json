@@ -156,8 +156,8 @@
     "during_print_exhaust_fan_speed": [
         "100"
     ],
-    "filament_id": "GFB99",
     "setting_id": "GFSA04",
+    "filament_id": "GFB99",
     "enable_pressure_advance": [
         "1"
     ],

@@ -153,8 +153,8 @@
     "required_nozzle_HRC": [
         "40"
     ],
-    "filament_id": "GFN98",
     "setting_id": "GFSN99",
+    "filament_id": "GFN98",
     "enable_pressure_advance": [
         "1"
     ],

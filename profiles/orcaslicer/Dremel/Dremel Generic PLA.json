@@ -126,8 +126,8 @@
     "additional_cooling_fan_speed": [
         "70"
     ],
-    "filament_id": "GFL99",
     "setting_id": "GFSA04",
+    "filament_id": "GFL99",
     "compatible_printers": [
         "Dremel 3D45 0.4 nozzle",
         "Dremel 3D40 0.4 nozzle",

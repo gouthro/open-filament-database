@@ -142,8 +142,8 @@
     "additional_cooling_fan_speed": [
         "70"
     ],
-    "filament_id": "GFL99",
     "setting_id": "GFSA04",
+    "filament_id": "GFL99",
     "compatible_printers": [
         "FLSun S1 0.4 nozzle"
     ],

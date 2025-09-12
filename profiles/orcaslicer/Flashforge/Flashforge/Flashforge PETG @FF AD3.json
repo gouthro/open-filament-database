@@ -147,8 +147,8 @@
     "nozzle_temperature_range_high": [
         "260"
     ],
-    "filament_id": "FFF03",
     "setting_id": "FFFP02",
+    "filament_id": "FFF03",
     "support_material_interface_fan_speed": [
         "90"
     ],

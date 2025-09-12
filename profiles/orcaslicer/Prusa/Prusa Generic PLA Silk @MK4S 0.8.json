@@ -125,6 +125,7 @@
     "additional_cooling_fan_speed": [
         "70"
     ],
+    "setting_id": "GFSA04",
     "compatible_printers": [
         "Prusa MK4S 0.8 nozzle",
         "Prusa MK4S HF0.8 nozzle"
@@ -135,6 +136,5 @@
     ],
     "filament_ramming_parameters": [
         "250 100 40 40 40 40 40 | 0.05 40 0.45 40 0.95 40 1.45 40 1.95 40 2.45 40 2.95 40 3.45 40 3.95 40 4.45 40 4.95 40"
-    ],
-    "setting_id": "GFSA04"
+    ]
 }

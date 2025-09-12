@@ -147,8 +147,8 @@
     "nozzle_temperature_range_high": [
         "255"
     ],
-    "filament_id": "GFG99",
     "setting_id": "GFSG99",
+    "filament_id": "GFG99",
     "compatible_printers": [
         "DeltaMaker 2 0.35 nozzle",
         "DeltaMaker 2T 0.5 nozzle",

@@ -246,6 +246,6 @@
     "textured_plate_temp_initial_layer": [
         "105"
     ],
-    "filament_id": "EFL91",
-    "setting_id": "EFSA01"
+    "setting_id": "EFSA01",
+    "filament_id": "EFL91"
 }

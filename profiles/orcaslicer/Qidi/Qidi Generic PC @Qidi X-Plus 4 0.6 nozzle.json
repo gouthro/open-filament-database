@@ -162,8 +162,8 @@
     "nozzle_temperature_range_high": [
         "290"
     ],
-    "filament_id": "GFC99",
     "setting_id": "GFSC99",
+    "filament_id": "GFC99",
     "pressure_advance": [
         "0.03"
     ]

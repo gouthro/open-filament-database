@@ -246,6 +246,6 @@
     "textured_plate_temp_initial_layer": [
         "60"
     ],
-    "filament_id": "EFL40",
-    "setting_id": "EFSA40"
+    "setting_id": "EFSA40",
+    "filament_id": "EFL40"
 }

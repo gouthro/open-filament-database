@@ -147,8 +147,8 @@
     "nozzle_temperature_range_high": [
         "260"
     ],
-    "filament_id": "GFG99",
     "setting_id": "GFSA04_12",
+    "filament_id": "GFG99",
     "support_material_interface_fan_speed": [
         "90"
     ],
@@ -164,7 +164,6 @@
     "compatible_printers": [
         "Flashforge Guider4 Pro 0.25 nozzle"
     ],
-    "version": "2.1.1.0",
     "activate_air_filtration": [
         "1"
     ],
@@ -174,7 +173,6 @@
     "during_print_exhaust_fan_speed": [
         "40"
     ],
-    "is_custom_defined": "0",
     "textured_cool_plate_temp": [
         "0"
     ],

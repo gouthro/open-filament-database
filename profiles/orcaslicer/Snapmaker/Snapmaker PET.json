@@ -1,8 +1,8 @@
 {
     "type": "filament",
+    "name": "Snapmaker PET",
     "from": "system",
     "instantiation": "true",
-    "name": "Snapmaker PET",
     "filament_vendor": [
         "Snapmaker"
     ],

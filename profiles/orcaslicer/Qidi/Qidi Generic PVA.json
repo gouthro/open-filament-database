@@ -203,6 +203,6 @@
     "additional_cooling_fan_speed": [
         "70"
     ],
-    "filament_id": "GFS99",
-    "setting_id": "GFSS99"
+    "setting_id": "GFSS99",
+    "filament_id": "GFS99"
 }

@@ -87,8 +87,8 @@
     "reduce_fan_stop_start_freq": [
         "1"
     ],
-    "filament_id": "GFL99",
     "setting_id": "GFSL99",
+    "filament_id": "GFL99",
     "filament_flow_ratio": [
         "1.00"
     ],

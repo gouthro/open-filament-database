@@ -150,8 +150,8 @@
     "nozzle_temperature_range_low": [
         "230"
     ],
-    "filament_id": "GFG99",
     "setting_id": "GFSG99_05",
+    "filament_id": "GFG99",
     "compatible_printers": [
         "CoLiDo X16 0.4 nozzle",
         "CoLiDo 160 V2 0.4 nozzle"

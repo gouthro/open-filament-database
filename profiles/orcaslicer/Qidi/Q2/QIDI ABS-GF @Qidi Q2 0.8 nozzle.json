@@ -192,8 +192,8 @@
     "hot_plate_temp": [
         "90"
     ],
-    "filament_id": "QD_1_1_12",
     "setting_id": "GFSA04",
+    "filament_id": "QD_1_1_12",
     "chamber_temperatures": [
         "0"
     ],

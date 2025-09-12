@@ -1,8 +1,8 @@
 {
     "type": "filament",
+    "name": "PolyLite PLA @U1",
     "from": "system",
     "instantiation": "true",
-    "name": "PolyLite PLA @U1",
     "filament_vendor": [
         "Snapmaker"
     ],

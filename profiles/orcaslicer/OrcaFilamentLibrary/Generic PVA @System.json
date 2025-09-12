@@ -193,7 +193,7 @@
     "nozzle_temperature_range_low": [
         "190"
     ],
-    "filament_id": "OGFS99",
+    "renamed_from": "My Generic PVA",
     "setting_id": "OGFSA04",
-    "renamed_from": "My Generic PVA"
+    "filament_id": "OGFS99"
 }

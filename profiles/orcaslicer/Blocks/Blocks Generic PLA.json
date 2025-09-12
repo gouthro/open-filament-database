@@ -150,8 +150,8 @@
     "additional_cooling_fan_speed": [
         "100"
     ],
-    "filament_id": "BSFI001",
     "setting_id": "BSSI001",
+    "filament_id": "BSFI001",
     "complete_print_exhaust_fan_speed": [
         "80"
     ],

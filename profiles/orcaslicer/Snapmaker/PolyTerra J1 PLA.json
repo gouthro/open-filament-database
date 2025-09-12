@@ -1,8 +1,8 @@
 {
     "type": "filament",
+    "name": "PolyTerra J1 PLA",
     "from": "system",
     "instantiation": "true",
-    "name": "PolyTerra J1 PLA",
     "filament_vendor": [
         "Polymaker"
     ],

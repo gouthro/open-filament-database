@@ -147,8 +147,8 @@
     "nozzle_temperature_range_high": [
         "280"
     ],
-    "filament_id": "BSFI008",
     "setting_id": "BSSI008",
+    "filament_id": "BSFI008",
     "compatible_printers": [
         "BLOCKS RD50 V2 0.4 nozzle",
         "BLOCKS RD50 V2 0.6 nozzle",

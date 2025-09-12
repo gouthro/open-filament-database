@@ -199,8 +199,8 @@
     "enable_overhang_bridge_fan": [
         "1"
     ],
-    "filament_id": "GFL98",
     "setting_id": "GFSL98",
+    "filament_id": "GFL98",
     "required_nozzle_HRC": [
         "40"
     ]

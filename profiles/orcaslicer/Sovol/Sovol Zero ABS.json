@@ -192,11 +192,10 @@
     "nozzle_temperature_range_low": [
         "230"
     ],
-    "filament_id": "GFL99",
-    "setting_id": "GFSA04",
     "renamed_from": "My Generic ABS",
+    "setting_id": "GFSA04",
+    "filament_id": "GFL99",
     "additional_cooling_fan_speed": [
         "0"
-    ],
-    "is_custom_defined": "0"
+    ]
 }

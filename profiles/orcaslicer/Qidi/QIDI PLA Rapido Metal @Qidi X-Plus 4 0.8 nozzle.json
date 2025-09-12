@@ -168,10 +168,9 @@
     "enable_overhang_bridge_fan": [
         "1"
     ],
-    "filament_id": "QD_0_1_3",
     "setting_id": "GFSA04",
+    "filament_id": "QD_0_1_3",
     "pressure_advance": [
         "0.01"
-    ],
-    "is_custom_defined": "0"
+    ]
 }

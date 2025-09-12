@@ -194,7 +194,7 @@
     "nozzle_temperature_range_low": [
         "240"
     ],
-    "filament_id": "GFB99",
+    "renamed_from": "My Generic ABS",
     "setting_id": "GFSA04",
-    "renamed_from": "My Generic ABS"
+    "filament_id": "GFB99"
 }

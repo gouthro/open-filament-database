@@ -144,8 +144,8 @@
     "nozzle_temperature_range_high": [
         "270"
     ],
-    "filament_id": "GFC99",
     "setting_id": "GFCA04",
+    "filament_id": "GFC99",
     "enable_pressure_advance": [
         "1"
     ],

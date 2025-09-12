@@ -191,6 +191,6 @@
     "nozzle_temperature_range_low": [
         "220"
     ],
-    "setting_id": "OGFSA04",
-    "renamed_from": "My Generic PETG"
+    "renamed_from": "My Generic PETG",
+    "setting_id": "OGFSA04"
 }

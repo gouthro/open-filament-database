@@ -243,14 +243,12 @@
     "support_material_interface_fan_speed": [
         "-1"
     ],
-    "filament_id": "GFA99",
     "setting_id": "GFSA99_07",
+    "filament_id": "GFA99",
     "compatible_printers": [
         "CoLiDo DIY 4.0 V2 0.4 nozzle"
     ],
-    "is_custom_defined": "0",
     "pressure_advance": [
         "0.024"
-    ],
-    "version": "2.1.1.0"
+    ]
 }

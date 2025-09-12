@@ -1,8 +1,8 @@
 {
     "type": "filament",
+    "name": "Snapmaker J1 PLA Eco",
     "from": "system",
     "instantiation": "true",
-    "name": "Snapmaker J1 PLA Eco",
     "filament_vendor": [
         "Snapmaker"
     ],

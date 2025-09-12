@@ -150,8 +150,8 @@
     "nozzle_temperature_range_high": [
         "250"
     ],
-    "filament_id": "GFG99",
     "setting_id": "GFSA04",
+    "filament_id": "GFG99",
     "bed_temperature_difference": [
         "10"
     ],
@@ -190,6 +190,5 @@
     ],
     "support_material_interface_fan_speed": [
         "100"
-    ],
-    "version": "1.5.1.2"
+    ]
 }

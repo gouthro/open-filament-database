@@ -166,8 +166,8 @@
     "enable_overhang_bridge_fan": [
         "1"
     ],
-    "filament_id": "GFA05",
     "setting_id": "GFSL99_01",
+    "filament_id": "GFA05",
     "pressure_advance": [
         "0.032"
     ]

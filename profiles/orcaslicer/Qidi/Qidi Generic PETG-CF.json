@@ -193,8 +193,8 @@
     "nozzle_temperature_range_high": [
         "290"
     ],
-    "filament_id": "GFG98",
     "setting_id": "GFSG50",
+    "filament_id": "GFG98",
     "required_nozzle_HRC": [
         "40"
     ],

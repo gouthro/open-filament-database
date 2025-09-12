@@ -103,6 +103,7 @@
     "nozzle_temperature_range_high": [
         "250"
     ],
+    "setting_id": "GFSA04",
     "compatible_printers": [
         "Prusa MK4S 0.3 nozzle",
         "Prusa MK4S 0.4 nozzle",
@@ -113,6 +114,5 @@
     "default_filament_colour": "#008000",
     "filament_notes": [
         ""
-    ],
-    "setting_id": "GFSA04"
+    ]
 }

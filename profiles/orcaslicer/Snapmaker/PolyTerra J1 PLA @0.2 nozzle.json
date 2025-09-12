@@ -1,8 +1,8 @@
 {
     "type": "filament",
+    "name": "PolyTerra J1 PLA @0.2 nozzle",
     "from": "system",
     "instantiation": "true",
-    "name": "PolyTerra J1 PLA @0.2 nozzle",
     "filament_vendor": [
         "Polymaker"
     ],

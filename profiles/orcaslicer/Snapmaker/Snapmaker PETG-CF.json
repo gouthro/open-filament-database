@@ -1,8 +1,8 @@
 {
     "type": "filament",
+    "name": "Snapmaker PETG-CF",
     "from": "system",
     "instantiation": "true",
-    "name": "Snapmaker PETG-CF",
     "filament_vendor": [
         "Snapmaker"
     ],

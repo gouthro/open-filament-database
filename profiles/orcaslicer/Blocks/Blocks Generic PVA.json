@@ -153,8 +153,8 @@
     "additional_cooling_fan_speed": [
         "70"
     ],
-    "filament_id": "BSFI009",
     "setting_id": "BSSI009",
+    "filament_id": "BSFI009",
     "compatible_printers": [
         "BLOCKS RD50 V2 0.4 nozzle",
         "BLOCKS RD50 V2 0.6 nozzle",

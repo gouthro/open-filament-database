@@ -165,13 +165,12 @@
     "nozzle_temperature_range_high": [
         "280"
     ],
-    "filament_id": "QD_0_1_32",
     "setting_id": "GFSA04",
+    "filament_id": "QD_0_1_32",
     "filament_is_support": [
         "1"
     ],
     "pressure_advance": [
         "0.02"
-    ],
-    "is_custom_defined": "0"
+    ]
 }

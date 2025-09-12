@@ -200,7 +200,7 @@
     "nozzle_temperature_range_low": [
         "240"
     ],
-    "filament_id": "GFL508",
     "setting_id": "GFSL508",
+    "filament_id": "GFL508",
     "description": "Use this filament profile to print big ABS models with chamber heating"
 }

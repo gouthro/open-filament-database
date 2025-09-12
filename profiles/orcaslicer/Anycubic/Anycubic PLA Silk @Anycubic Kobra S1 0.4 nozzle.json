@@ -144,9 +144,8 @@
     "additional_cooling_fan_speed": [
         "60"
     ],
-    "filament_id": "GFL99",
     "setting_id": "GFSA04",
-    "is_custom_defined": "0",
+    "filament_id": "GFL99",
     "compatible_printers": [
         "Anycubic Kobra S1 0.4 nozzle"
     ],

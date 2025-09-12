@@ -1,8 +1,8 @@
 {
     "type": "filament",
+    "name": "Snapmaker Dual PLA Metal",
     "from": "system",
     "instantiation": "true",
-    "name": "Snapmaker Dual PLA Metal",
     "filament_vendor": [
         "Snapmaker"
     ],

@@ -1,8 +1,8 @@
 {
     "type": "filament",
+    "name": "Snapmaker Dual PLA-CF",
     "from": "system",
     "instantiation": "true",
-    "name": "Snapmaker Dual PLA-CF",
     "filament_vendor": [
         "Snapmaker"
     ],

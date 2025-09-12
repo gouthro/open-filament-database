@@ -147,8 +147,8 @@
     "nozzle_temperature_range_high": [
         "290"
     ],
-    "filament_id": "BSFI007",
     "setting_id": "BSSI007",
+    "filament_id": "BSFI007",
     "enable_overhang_bridge_fan": [
         "1"
     ],

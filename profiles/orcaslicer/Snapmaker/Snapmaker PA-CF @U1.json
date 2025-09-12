@@ -1,8 +1,8 @@
 {
     "type": "filament",
+    "name": "Snapmaker PA-CF @U1",
     "from": "system",
     "instantiation": "true",
-    "name": "Snapmaker PA-CF @U1",
     "filament_vendor": [
         "Snapmaker"
     ],

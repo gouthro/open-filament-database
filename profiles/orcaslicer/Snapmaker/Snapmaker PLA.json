@@ -1,8 +1,8 @@
 {
     "type": "filament",
+    "name": "Snapmaker PLA",
     "from": "system",
     "instantiation": "true",
-    "name": "Snapmaker PLA",
     "filament_vendor": [
         "Snapmaker"
     ],

@@ -1,8 +1,8 @@
 {
     "type": "filament",
+    "name": "Snapmaker Dual ASA",
     "from": "system",
     "instantiation": "true",
-    "name": "Snapmaker Dual ASA",
     "filament_vendor": [
         "Snapmaker"
     ],

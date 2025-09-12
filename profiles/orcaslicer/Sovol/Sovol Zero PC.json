@@ -187,8 +187,8 @@
     "nozzle_temperature_range_low": [
         "190"
     ],
-    "setting_id": "GFSA04",
     "renamed_from": "My Generic PC",
+    "setting_id": "GFSA04",
     "dont_slow_down_outer_wall": "0",
     "additional_cooling_fan_speed": "0"
 }

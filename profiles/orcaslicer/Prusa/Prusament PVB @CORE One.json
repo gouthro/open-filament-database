@@ -148,6 +148,7 @@
     "additional_cooling_fan_speed": [
         "70"
     ],
+    "setting_id": "GFSA04",
     "chamber_temperature": [
         "20"
     ],
@@ -164,6 +165,5 @@
     ],
     "filament_z_hop_types": [
         "Slope Lift"
-    ],
-    "setting_id": "GFSA04"
+    ]
 }

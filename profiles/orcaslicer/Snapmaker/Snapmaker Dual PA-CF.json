@@ -1,8 +1,8 @@
 {
     "type": "filament",
+    "name": "Snapmaker Dual PA-CF",
     "from": "system",
     "instantiation": "true",
-    "name": "Snapmaker Dual PA-CF",
     "filament_vendor": [
         "Snapmaker"
     ],

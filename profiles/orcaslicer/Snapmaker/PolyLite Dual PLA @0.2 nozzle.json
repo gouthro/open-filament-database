@@ -1,8 +1,8 @@
 {
     "type": "filament",
+    "name": "PolyLite Dual PLA @0.2 nozzle",
     "from": "system",
     "instantiation": "true",
-    "name": "PolyLite Dual PLA @0.2 nozzle",
     "filament_vendor": [
         "Snapmaker"
     ],

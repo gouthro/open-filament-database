@@ -147,8 +147,8 @@
     "nozzle_temperature_range_high": [
         "270"
     ],
-    "filament_id": "GFL99",
     "setting_id": "GFSA04_05",
+    "filament_id": "GFL99",
     "additional_cooling_fan_speed": [
         "0"
     ],
@@ -193,7 +193,5 @@
     ],
     "support_material_interface_fan_speed": [
         "80"
-    ],
-    "version": "2.1.1.0",
-    "is_custom_defined": "0"
+    ]
 }

@@ -160,12 +160,10 @@
     "required_nozzle_HRC": [
         "40"
     ],
-    "version": "1.0.0.0",
     "compatible_printers": [
         "Cubicon xCeler-I 0.4 nozzle"
     ],
     "default_filament_colour": "",
-    "is_custom_defined": "0",
     "additional_cooling_fan_speed": [
         "0"
     ]

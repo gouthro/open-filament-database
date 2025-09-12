@@ -196,8 +196,8 @@
     "nozzle_temperature_range_low": [
         "260"
     ],
-    "setting_id": "GFC99_MTC_0",
     "renamed_from": "My Generic PC @MyToolChanger",
+    "setting_id": "GFC99_MTC_0",
     "filament_cooling_final_speed": [
         "3.5"
     ],

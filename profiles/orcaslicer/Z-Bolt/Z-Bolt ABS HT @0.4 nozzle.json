@@ -200,8 +200,8 @@
     "nozzle_temperature_range_low": [
         "240"
     ],
-    "filament_id": "GFL504",
     "setting_id": "GFSL504",
+    "filament_id": "GFL504",
     "description": "Use this filament profile to print big ABS models with chamber heating",
     "renamed_from": "Z-Bolt ABS HT@0.4 nozzle"
 }

@@ -243,11 +243,9 @@
     "support_material_interface_fan_speed": [
         "-1"
     ],
-    "filament_id": "GFA99",
     "setting_id": "GFSA99_06",
+    "filament_id": "GFA99",
     "compatible_printers": [
         "CoLiDo SR1 0.4 nozzle"
-    ],
-    "is_custom_defined": "0",
-    "version": "2.1.1.0"
+    ]
 }

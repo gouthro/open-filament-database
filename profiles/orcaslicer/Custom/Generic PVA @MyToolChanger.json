@@ -198,9 +198,9 @@
     "nozzle_temperature_range_low": [
         "190"
     ],
-    "filament_id": "GFS99",
-    "setting_id": "GFS99_MTC_0",
     "renamed_from": "My Generic PVA @MyToolChanger",
+    "setting_id": "GFS99_MTC_0",
+    "filament_id": "GFS99",
     "filament_cooling_final_speed": [
         "3.5"
     ],

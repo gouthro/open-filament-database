@@ -147,8 +147,8 @@
     "nozzle_temperature_range_high": [
         "270"
     ],
-    "filament_id": "GFG99",
     "setting_id": "GFSG99_00",
+    "filament_id": "GFG99",
     "compatible_printers": [
         "Creality K1C 0.4 nozzle",
         "Creality K1C 0.6 nozzle",

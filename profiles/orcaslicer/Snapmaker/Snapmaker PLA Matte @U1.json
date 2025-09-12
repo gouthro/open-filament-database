@@ -1,8 +1,8 @@
 {
     "type": "filament",
+    "name": "Snapmaker PLA Matte @U1",
     "from": "system",
     "instantiation": "true",
-    "name": "Snapmaker PLA Matte @U1",
     "filament_vendor": [
         "Snapmaker"
     ],
@@ -281,7 +281,6 @@
     "idle_temperature": [
         "0"
     ],
-    "is_custom_defined": "0",
     "pellet_flow_coefficient": [
         "0.4157"
     ],

@@ -192,8 +192,8 @@
     "nozzle_temperature_range_low": [
         "240"
     ],
-    "filament_id": "GFB99",
     "setting_id": "GFSA04_02",
+    "filament_id": "GFB99",
     "support_material_interface_fan_speed": [
         "80"
     ],
@@ -202,6 +202,5 @@
     ],
     "pressure_advance": [
         "0.1"
-    ],
-    "version": "1.8.0.0"
+    ]
 }
