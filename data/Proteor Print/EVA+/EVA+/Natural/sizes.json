@@ -1,0 +1,15 @@
+[
+  {
+    "filament_weight": 4310,
+    "diameter": 2.85,
+    "empty_spool_weight": 810,
+    "spool_core_diameter": 50,
+    "purchase_links": [
+      {
+        "store_id": "ProteorPrint",
+        "url": "https://www.proteordigital.com/product-page/eva-test",
+        "affiliate": false
+      }
+    ]
+  }
+]
