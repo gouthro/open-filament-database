@@ -2,7 +2,7 @@
   import { env } from '$env/dynamic/public';
   import { pseudoDelete, } from '$lib/pseudoDeleter';
   import { realDelete } from '$lib/realDeleter';
-  import { intProxy } from 'sveltekit-superforms';
+  import { intProxy, stringProxy } from 'sveltekit-superforms';
   import Form from '../components/form.svelte';
   import TextField from '../components/textField.svelte';
   import NumberField from '../components/numberField.svelte';
@@ -73,21 +73,49 @@
   const generic_bt = intProxy(form, 'default_slicer_settings.generic.bed_temp');
   const generic_nt = intProxy(form, 'default_slicer_settings.generic.nozzle_temp');
 
+  const prusa_prof = stringProxy(
+    form,
+    "default_slicer_settings.prusaslicer.profile_name",
+    {
+      empty: "undefined"
+    }
+  );
   const prusa_flbt = intProxy(form, 'default_slicer_settings.prusaslicer.first_layer_bed_temp');
   const prusa_flnt = intProxy(form, 'default_slicer_settings.prusaslicer.first_layer_nozzle_temp');
   const prusa_bt = intProxy(form, 'default_slicer_settings.prusaslicer.bed_temp');
   const prusa_nt = intProxy(form, 'default_slicer_settings.prusaslicer.nozzle_temp');
 
+  const bambu_prof = stringProxy(
+    form,
+    "default_slicer_settings.prusaslicer.profile_name",
+    {
+      empty: "undefined"
+    }
+  );
   const bambu_flbt = intProxy(form, 'default_slicer_settings.bambustudio.first_layer_bed_temp');
   const bambu_flnt = intProxy(form, 'default_slicer_settings.bambustudio.first_layer_nozzle_temp');
   const bambu_bt = intProxy(form, 'default_slicer_settings.bambustudio.bed_temp');
   const bambu_nt = intProxy(form, 'default_slicer_settings.bambustudio.nozzle_temp');
 
+  const orca_prof = stringProxy(
+    form,
+    "default_slicer_settings.prusaslicer.profile_name",
+    {
+      empty: "undefined"
+    }
+  );
   const orca_flbt = intProxy(form, 'default_slicer_settings.orcaslicer.first_layer_bed_temp');
   const orca_flnt = intProxy(form, 'default_slicer_settings.orcaslicer.first_layer_nozzle_temp');
   const orca_bt = intProxy(form, 'default_slicer_settings.orcaslicer.bed_temp');
   const orca_nt = intProxy(form, 'default_slicer_settings.orcaslicer.nozzle_temp');
 
+  const cura_prof = stringProxy(
+    form,
+    "default_slicer_settings.prusaslicer.profile_name",
+    {
+      empty: "undefined"
+    }
+  );
   const cura_flbt = intProxy(form, 'default_slicer_settings.cura.first_layer_bed_temp');
   const cura_flnt = intProxy(form, 'default_slicer_settings.cura.first_layer_nozzle_temp');
   const cura_bt = intProxy(form, 'default_slicer_settings.cura.bed_temp');
@@ -197,7 +225,7 @@
               title="Profile Name"
               description={null}
               placeholder="profiles/filament/PLA_Basic.ini"
-              bind:formVar={$form.default_slicer_settings.prusaslicer.profile_name}
+              bind:formVar={$prusa_prof}
               errorVar={$errors?.default_slicer_settings?.prusaslicer?.profile_name}
             />
 
@@ -254,7 +282,7 @@
               title="Profile Name"
               description={null}
               placeholder="profiles/filament/PLA_Basic.ini"
-              bind:formVar={$form.default_slicer_settings.bambustudio.profile_name}
+              bind:formVar={$bambu_prof}
               errorVar={$errors?.default_slicer_settings?.bambustudio?.profile_name}
             />
 
@@ -312,7 +340,7 @@
               title="Profile Name"
               description={null}
               placeholder="profiles/filament/PLA_Basic.ini"
-              bind:formVar={$form.default_slicer_settings.orcaslicer.profile_name}
+              bind:formVar={$orca_prof}
               errorVar={$errors?.default_slicer_settings?.orcaslicer?.profile_name}
             />
 
@@ -370,7 +398,7 @@
               title="Profile Name"
               description={null}
               placeholder="profiles/filament/PLA_Basic.ini"
-              bind:formVar={$form.default_slicer_settings.cura.profile_name}
+              bind:formVar={$cura_prof}
               errorVar={$errors?.default_slicer_settings?.cura?.profile_name}
             />
 
