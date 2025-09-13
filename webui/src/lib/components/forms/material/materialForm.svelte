@@ -87,7 +87,7 @@
 
   const bambu_prof = stringProxy(
     form,
-    "default_slicer_settings.prusaslicer.profile_name",
+    "default_slicer_settings.bambustudio.profile_name",
     {
       empty: "undefined"
     }
@@ -99,7 +99,7 @@
 
   const orca_prof = stringProxy(
     form,
-    "default_slicer_settings.prusaslicer.profile_name",
+    "default_slicer_settings.orcaslicer.profile_name",
     {
       empty: "undefined"
     }
@@ -111,7 +111,7 @@
 
   const cura_prof = stringProxy(
     form,
-    "default_slicer_settings.prusaslicer.profile_name",
+    "default_slicer_settings.cura.profile_name",
     {
       empty: "undefined"
     }
@@ -237,7 +237,7 @@
                 description=""
                 placeholder="60"
                 bind:formVar={$prusa_flbt}
-                errorVar={$errors?.default_slicer_settings?.prusaslicer?.first_layer_nozzle_temp}
+                errorVar={$errors?.default_slicer_settings?.prusaslicer?.first_layer_bed_temp}
               />
 
               <NumberField
@@ -246,7 +246,7 @@
                 description=""
                 placeholder="215"
                 bind:formVar={$prusa_flnt}
-                errorVar={$errors?.default_slicer_settings?.prusaslicer?.bed_temp}
+                errorVar={$errors?.default_slicer_settings?.prusaslicer?.first_layer_nozzle_temp}
               />
 
               <NumberField
@@ -255,7 +255,7 @@
                 description=""
                 placeholder="60"
                 bind:formVar={$prusa_bt}
-                errorVar={$errors?.default_slicer_settings?.prusaslicer?.nozzle_temp}
+                errorVar={$errors?.default_slicer_settings?.prusaslicer?.bed_temp}
               />
 
               <NumberField
@@ -264,6 +264,7 @@
                 description=""
                 placeholder="210"
                 bind:formVar={$prusa_nt}
+                errorVar={$errors?.default_slicer_settings?.prusaslicer?.nozzle_temp}
               />
             </div>
           </div>
