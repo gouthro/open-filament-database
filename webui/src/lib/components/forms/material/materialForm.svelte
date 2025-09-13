@@ -92,7 +92,6 @@
   const cura_flnt = intProxy(form, 'default_slicer_settings.cura.first_layer_nozzle_temp');
   const cura_bt = intProxy(form, 'default_slicer_settings.cura.bed_temp');
   const cura_nt = intProxy(form, 'default_slicer_settings.cura.nozzle_temp');
-
 </script>
 
 <Form
@@ -152,6 +151,7 @@
                 description=""
                 placeholder="60"
                 bind:formVar={$generic_flbt}
+                errorVar={$errors?.default_slicer_settings?.generic?.first_layer_bed_temp}
               />
 
               <NumberField
@@ -160,6 +160,7 @@
                 description=""
                 placeholder="215"
                 bind:formVar={$generic_flnt}
+                errorVar={$errors?.default_slicer_settings?.generic?.first_layer_nozzle_temp}
               />
 
               <NumberField
@@ -168,6 +169,7 @@
                 description=""
                 placeholder="60"
                 bind:formVar={$generic_bt}
+                errorVar={$errors?.default_slicer_settings?.generic?.bed_temp}
               />
 
               <NumberField
@@ -176,6 +178,7 @@
                 description=""
                 placeholder="210"
                 bind:formVar={$generic_nt}
+                errorVar={$errors?.default_slicer_settings?.generic?.nozzle_temp}
               />
             </div>
           </div>
@@ -195,7 +198,7 @@
               description={null}
               placeholder="profiles/filament/PLA_Basic.ini"
               bind:formVar={$form.default_slicer_settings.prusaslicer.profile_name}
-              errorVar={null}
+              errorVar={$errors?.default_slicer_settings?.prusaslicer?.profile_name}
             />
 
             <p class="text-lg font-bold mb-2">Temperature Overrides</p>
@@ -206,6 +209,7 @@
                 description=""
                 placeholder="60"
                 bind:formVar={$prusa_flbt}
+                errorVar={$errors?.default_slicer_settings?.prusaslicer?.first_layer_nozzle_temp}
               />
 
               <NumberField
@@ -214,6 +218,7 @@
                 description=""
                 placeholder="215"
                 bind:formVar={$prusa_flnt}
+                errorVar={$errors?.default_slicer_settings?.prusaslicer?.bed_temp}
               />
 
               <NumberField
@@ -222,6 +227,7 @@
                 description=""
                 placeholder="60"
                 bind:formVar={$prusa_bt}
+                errorVar={$errors?.default_slicer_settings?.prusaslicer?.nozzle_temp}
               />
 
               <NumberField
@@ -249,7 +255,7 @@
               description={null}
               placeholder="profiles/filament/PLA_Basic.ini"
               bind:formVar={$form.default_slicer_settings.bambustudio.profile_name}
-              errorVar={null}
+              errorVar={$errors?.default_slicer_settings?.bambustudio?.profile_name}
             />
 
             <p class="text-lg font-bold mb-2">Temperature Overrides</p>
@@ -260,6 +266,7 @@
                 description=""
                 placeholder="60"
                 bind:formVar={$bambu_flbt}
+                errorVar={$errors?.default_slicer_settings?.bambustudio?.first_layer_bed_temp}
               />
 
               <NumberField
@@ -268,6 +275,7 @@
                 description=""
                 placeholder="215"
                 bind:formVar={$bambu_flnt}
+                errorVar={$errors?.default_slicer_settings?.bambustudio?.first_layer_nozzle_temp}
               />
 
               <NumberField
@@ -276,6 +284,7 @@
                 description=""
                 placeholder="60"
                 bind:formVar={$bambu_bt}
+                errorVar={$errors?.default_slicer_settings?.bambustudio?.bed_temp}
               />
 
               <NumberField
@@ -284,6 +293,7 @@
                 description=""
                 placeholder="210"
                 bind:formVar={$bambu_nt}
+                errorVar={$errors?.default_slicer_settings?.bambustudio?.nozzle_temp}
               />
             </div>
           </div>
@@ -303,7 +313,7 @@
               description={null}
               placeholder="profiles/filament/PLA_Basic.ini"
               bind:formVar={$form.default_slicer_settings.orcaslicer.profile_name}
-              errorVar={null}
+              errorVar={$errors?.default_slicer_settings?.orcaslicer?.profile_name}
             />
 
             <p class="text-lg font-bold mb-2">Temperature Overrides</p>
@@ -314,6 +324,7 @@
                 description=""
                 placeholder="60"
                 bind:formVar={$orca_flbt}
+                errorVar={$errors?.default_slicer_settings?.orcaslicer?.first_layer_bed_temp}
               />
 
               <NumberField
@@ -322,6 +333,7 @@
                 description=""
                 placeholder="215"
                 bind:formVar={$orca_flnt}
+                errorVar={$errors?.default_slicer_settings?.orcaslicer?.first_layer_nozzle_temp}
               />
 
               <NumberField
@@ -330,6 +342,7 @@
                 description=""
                 placeholder="60"
                 bind:formVar={$orca_bt}
+                errorVar={$errors?.default_slicer_settings?.orcaslicer?.bed_temp}
               />
 
               <NumberField
@@ -338,6 +351,7 @@
                 description=""
                 placeholder="210"
                 bind:formVar={$orca_nt}
+                errorVar={$errors?.default_slicer_settings?.orcaslicer?.nozzle_temp}
               />
             </div>
           </div>
@@ -357,7 +371,7 @@
               description={null}
               placeholder="profiles/filament/PLA_Basic.ini"
               bind:formVar={$form.default_slicer_settings.cura.profile_name}
-              errorVar={null}
+              errorVar={$errors?.default_slicer_settings?.cura?.profile_name}
             />
 
             <p class="text-lg font-bold mb-2">Temperature Overrides</p>
@@ -368,6 +382,7 @@
                 description=""
                 placeholder="60"
                 bind:formVar={$cura_flbt}
+                errorVar={$errors?.default_slicer_settings?.cura?.first_layer_bed_temp}
               />
 
               <NumberField
@@ -376,6 +391,7 @@
                 description=""
                 placeholder="215"
                 bind:formVar={$cura_flnt}
+                errorVar={$errors?.default_slicer_settings?.cura?.first_layer_nozzle_temp}
               />
 
               <NumberField
@@ -384,6 +400,7 @@
                 description=""
                 placeholder="60"
                 bind:formVar={$cura_bt}
+                errorVar={$errors?.default_slicer_settings?.cura?.bed_temp}
               />
 
               <NumberField
@@ -392,6 +409,7 @@
                 description=""
                 placeholder="210"
                 bind:formVar={$cura_nt}
+                errorVar={$errors?.default_slicer_settings?.cura?.nozzle_temp}
               />
             </div>
           </div>
