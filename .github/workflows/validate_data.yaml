@@ -24,7 +24,7 @@ jobs:
     runs-on: ubuntu-24.04
     strategy:
       matrix:
-        name: [ json-files, folder-names, store-ids ]
+        name: [ json-files, folder-names, store-ids, logo-files ]
     name: Validate data - ${{ matrix.name }}
     steps:
       - name: Checkout
