@@ -201,8 +201,12 @@ def validate_logo_files():
             
             if icon_name != "":
                 logo_file = _brand_dir.joinpath(icon_name)
-                if logo_file.exists() and not ".svg" in icon_name:
-                    validate_icon(logo_file)
+                if logo_file.exists():
+                    if not ".svg" in icon_name:
+                        validate_icon(logo_file)
+                else:
+                    print(f"{logo_file} missing")
+                    failed_validation = True
 
     # Validate store folder logos
     for _store_dir in Path("./stores").iterdir():
