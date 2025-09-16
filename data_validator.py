@@ -169,6 +169,7 @@ minSize = 100
 maxSize = 400
 
 def validate_icon(logo_file):
+    global failed_validation
     img = Image.open(logo_file)
                     
     width, height = img.size
