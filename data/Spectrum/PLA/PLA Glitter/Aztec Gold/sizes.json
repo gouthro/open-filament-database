@@ -3,10 +3,10 @@
     "filament_weight": 1000,
     "diameter": 1.75,
     "ean": "5903175651570",
-    "article_number": "80898",
+    "article_number": "80185",
     "purchase_links": [
       {
-        "store_id": "80185",
+        "store_id": "spectrum",
         "url": "https://shop.spectrumfilaments.com/product-eng-1150-Filament-Spectrum-PLA-Glitter-1-75mm-AZTEC-GOLD-1kg.html",
         "affiliate": false
       }
