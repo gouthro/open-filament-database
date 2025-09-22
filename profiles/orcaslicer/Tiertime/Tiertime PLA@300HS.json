@@ -177,6 +177,6 @@
     "additional_cooling_fan_speed": [
         "70"
     ],
-    "setting_id": "GFSA00",
-    "filament_id": "GFA00_01"
+    "filament_id": "GFA00_01",
+    "setting_id": "GFSA00"
 }

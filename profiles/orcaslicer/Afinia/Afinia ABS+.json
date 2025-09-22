@@ -1,13 +1,13 @@
 {
     "type": "filament",
-    "name": "Tiertime Generic PA",
+    "name": "Afinia ABS+",
     "from": "system",
     "instantiation": "true",
     "activate_air_filtration": [
-        "1"
+        "0"
     ],
     "chamber_temperatures": [
-        "60"
+        "0"
     ],
     "close_fan_the_first_x_layers": [
         "3"
@@ -25,22 +25,22 @@
         "70"
     ],
     "eng_plate_temp": [
-        "100"
+        "90"
     ],
     "eng_plate_temp_initial_layer": [
-        "100"
+        "90"
     ],
     "fan_cooling_layer_time": [
-        "65"
+        "30"
     ],
     "fan_max_speed": [
-        "85"
+        "60"
     ],
     "fan_min_speed": [
-        "40"
+        "10"
     ],
     "filament_cost": [
-        "20"
+        "24.99"
     ],
     "filament_density": [
         "1.04"
@@ -52,7 +52,7 @@
         "1.75"
     ],
     "filament_flow_ratio": [
-        "1"
+        "0.95"
     ],
     "filament_is_support": [
         "0"
@@ -61,7 +61,7 @@
         "nil"
     ],
     "filament_max_volumetric_speed": [
-        "12"
+        "16"
     ],
     "filament_minimal_purge_on_wipe_tower": [
         "15"
@@ -94,10 +94,10 @@
         "0"
     ],
     "filament_type": [
-        "PA"
+        "ABS"
     ],
     "filament_vendor": [
-        "Generic"
+        "Afinia"
     ],
     "filament_wipe": [
         "nil"
@@ -115,25 +115,25 @@
         "0"
     ],
     "hot_plate_temp": [
-        "100"
+        "90"
     ],
     "hot_plate_temp_initial_layer": [
-        "100"
+        "90"
     ],
     "nozzle_temperature": [
-        "260"
+        "275"
     ],
     "nozzle_temperature_initial_layer": [
-        "260"
+        "275"
     ],
     "overhang_fan_speed": [
-        "95"
+        "80"
     ],
     "overhang_fan_threshold": [
-        "10%"
+        "25%"
     ],
     "reduce_fan_stop_start_freq": [
-        "0"
+        "1"
     ],
     "required_nozzle_HRC": [
         "3"
@@ -142,25 +142,23 @@
         "1"
     ],
     "slow_down_layer_time": [
-        "8"
+        "12"
     ],
     "slow_down_min_speed": [
-        "10"
+        "20"
     ],
     "temperature_vitrification": [
-        "108"
+        "100"
     ],
     "textured_plate_temp": [
-        "100"
+        "90"
     ],
     "textured_plate_temp_initial_layer": [
-        "100"
+        "90"
     ],
     "compatible_printers": [
-        "Tiertime UP400 Pro 0.4 nozzle",
-        "Tiertime UP400 Pro 0.6 nozzle",
-        "Tiertime UP400 Pro 0.8 nozzle",
-        "Tiertime UP310 Pro 0.4 nozzle"
+        "Afinia H400 Pro 0.4 nozzle",
+        "Afinia H400 Pro 0.6 nozzle"
     ],
     "filament_start_gcode": [
         "; Filament gcode\n;{if activate_air_filtration[current_extruder] && support_air_filtration}\n;M106 P3 S{during_print_exhaust_fan_speed_num[current_extruder]} \n;{endif}"
@@ -174,6 +172,6 @@
     "nozzle_temperature_range_low": [
         "240"
     ],
-    "filament_id": "GFN99",
-    "setting_id": "GFSN98"
+    "filament_id": "GFB00",
+    "setting_id": "GFSB00"
 }
