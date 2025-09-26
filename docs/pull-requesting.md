@@ -10,15 +10,17 @@ You should be brought to a page that looks like this, simply change the title to
 When you're ready press the `Create pull request` button and wait for someone to come merge it, or be ready for some feedback \:D
 
 ### Alternative method
-If the last method didn't work it is also possible to go to your profile, and go to your repositories \
+If the last method didn't work, because of the yellow banner not appearing, it is also possible to go to your profile, and go to your repositories \
 ![](img/pullRequesting03.png) \
 After getting to your repository list you can search up your version of the database \
 ![](img/pullRequesting04.png) \
 Click on the database and then the pull requests tab \
 ![](img/pullRequesting05.png) \
 You can then click the "New Pull request" button \
-![](img/pullRequesting06.png) \ 
-And find your branch on the right side \
+![](img/pullRequesting06.png)
+Find your branch on the right side \
 ![](img/pullRequesting07.png)
+Click the "Create pull request" button
+![](img/pullRequesting08.png)
 And then you just fill it out with whatever info you think we need and wait for someone to come merge it, or be ready for some feedback \:D
 ![](img/pullRequesting02.png)
