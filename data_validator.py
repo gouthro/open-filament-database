@@ -8,6 +8,7 @@ from jsonschema.exceptions import ValidationError
 from jsonschema.validators import validate
 
 from PIL import Image
+import re
 
 PathLike = Union[str, os.PathLike[str]]
 
@@ -167,8 +168,23 @@ def validate_json_files():
 
 minSize = 100
 maxSize = 400
+def validate_file_casing(name):
+    global failed_validation
+
+    pattern = r'^[a-z0-9]+(?:_[a-z0-9]+)*$'
+
+    for char in name:
+        if char == " ":
+            print(f'Logo name {name} contains a space (" "), please replace this with _ or consider shortening (e.g. "sunlu logo.png" becomes sunlu.png)')
+            failed_validation = True
+
+    if not bool(re.fullmatch(pattern, name.split(".")[0])):
+        print(f'Logo name {name} does not follow lowercase snakecase, please make it do so. e.g. sunlu.png or proteor_print.png')
+        failed_validation = True
 
 def validate_icon(logo_file):
+    global failed_validation
+
     img = Image.open(logo_file)
                     
     width, height = img.size
@@ -202,6 +218,7 @@ def validate_logo_files():
                 logo_file = _brand_dir.joinpath(icon_name)
                 if logo_file.exists() and not ".svg" in icon_name:
                     validate_icon(logo_file)
+                    validate_file_casing(icon_name)
 
     # Validate store folder logos
     for _store_dir in Path("./stores").iterdir():
@@ -216,7 +233,8 @@ def validate_logo_files():
             if icon_name != "":
                 logo_file = _store_dir.joinpath(icon_name)
                 if logo_file.exists() and not ".svg" in icon_name:
-                    validate_icon(logo_file)
+                    validate_icon(logo_file)            
+                    validate_file_casing(icon_name)
 
 # -------------------------
 # Validate folder names
@@ -353,6 +371,8 @@ if __name__ == '__main__':
         validate_store_ids()
 
     if failed_validation:
+        print("Validation failed!")
         exit(-1)
     else:
         print("Validation succeeded!")
+        exit(0)
