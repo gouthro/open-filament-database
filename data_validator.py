@@ -173,11 +173,6 @@ def validate_file_casing(name):
 
     pattern = r'^[a-z0-9]+(?:_[a-z0-9]+)*$'
 
-    for char in name:
-        if char == " ":
-            print(f'Logo name {name} contains a space (" "), please replace this with _ or consider shortening (e.g. "sunlu logo.png" becomes sunlu.png)')
-            failed_validation = True
-
     if not bool(re.fullmatch(pattern, name.split(".")[0])):
         print(f'Logo name {name} does not follow lowercase snake_case, please make it do so. e.g. sunlu.png or proteor_print.png')
         failed_validation = True
