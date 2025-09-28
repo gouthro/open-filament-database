@@ -173,7 +173,7 @@ def validate_file_casing(name):
 
     pattern = r'^[a-z0-9]+(?:_[a-z0-9]+)*$'
 
-    if not bool(re.fullmatch(pattern, name.split(".")[0])):
+    if not re.fullmatch(pattern, name.split(".")[0]):
         print(f'Logo name {name} does not follow lowercase snake_case, please make it do so. e.g. sunlu.png or proteor_print.png')
         failed_validation = True
 
