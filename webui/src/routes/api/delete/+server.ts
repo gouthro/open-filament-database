@@ -5,6 +5,7 @@ import { refreshDatabase } from '$lib/dataCacher';
 import { env } from '$env/dynamic/public';
 
 const DATA_DIR = path.resolve(env.PUBLIC_DATA_PATH);
+const STORE_DIR = path.resolve(env.PUBLIC_STORES_PATH);
 
 function deleteFolderRecursive(folderPath) {
   if (fs.existsSync(folderPath)) {
@@ -23,6 +24,10 @@ export async function DELETE({ request }) {
     switch (type) {
       case 'brand':
         targetPath = path.join(DATA_DIR, name);
+        break;
+      
+      case 'store':
+        targetPath = path.join(STORE_DIR, name);
         break;
 
       case 'material':
@@ -63,7 +68,7 @@ export async function DELETE({ request }) {
     }
 
     // Check if the path exists and is within the data directory (security check)
-    if (!targetPath.startsWith(DATA_DIR)) {
+    if (!targetPath.startsWith(DATA_DIR) && !targetPath.startsWith(STORE_DIR)) {
       return json({ error: 'Invalid path' }, { status: 400 });
     }
 
