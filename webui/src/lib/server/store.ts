@@ -26,7 +26,7 @@ export const createStore = async (storeData: z.infer<typeof storeSchema>) => {
     const buffer = Buffer.from(arrayBuffer);
     logoPath = path.join(storeDir, storeData.logo.name);
     fs.writeFileSync(logoPath, buffer);
-    logoUrl = `/stores/${folderName}/${storeData.logo.name}`;
+    logoUrl = `${storeData.logo.name}`;
   }
 
   const storeJson = {
