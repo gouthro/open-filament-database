@@ -2,12 +2,11 @@
   {
     "filament_weight": 1000,
     "diameter": 1.75,
-    "ean": "44483185934498",
-    "article_number": "hpl17-106",
+    "ean": "44831261262013",
     "purchase_links": [
       {
         "store_id": "AnyCubic",
-        "url": "https://store.anycubic.com/products/pla-basic-special-color-filament?variant=44483185934498",
+        "url": "https://ca.anycubic.com/products/pla-special?variant=44831261262013",
         "affiliate": false
       }
     ]

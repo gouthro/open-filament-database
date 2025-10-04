@@ -1,0 +1,17 @@
+[
+  {
+    "filament_weight": 1000,
+    "diameter": 1.75,
+    "empty_spool_weight": 217,
+    "spool_core_diameter": 58,
+    "ean": "B0FJL9MWRK",
+    "article_number": "25-07-20",
+    "purchase_links": [
+      {
+        "store_id": "UniTak3D",
+        "url": "https://www.amazon.ca/dp/B0FJL9MWRK?ref=ppx_yo2ov_dt_b_fed_asin_title&th=1",
+        "affiliate": false
+      }
+    ]
+  }
+]
