@@ -1,4 +1,7 @@
 {
   "color_name": "Ivory White",
-  "color_hex": "#FFFFF0"
+  "color_hex": "#FFFFF0",
+  "traits": {
+    "matte": true
+  }
 }
