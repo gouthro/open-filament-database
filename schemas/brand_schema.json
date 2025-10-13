@@ -4,6 +4,9 @@
     "definitions": {
         "string_limit": {
             "maxLength": 1000
+        },
+        "country_code": {
+            "pattern": "^([A-Z]{2})|Unknown$"
         }
     },
     "properties": {
@@ -25,7 +28,7 @@
         "origin": {
             "type": "string",
             "description": "The country of origin",
-            "$ref": "#/definitions/string_limit"
+            "$ref": "#/definitions/country_code"
         }
     },
     "required": [
