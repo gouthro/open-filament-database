@@ -2,7 +2,6 @@
   "id": "3DPrintingCanada",
   "name": "3D Printing Canada",
   "storefront_url": "https://3dprintingcanada.com/",
-  "affiliate": false,
   "logo": "3dprintingcanada.png",
   "ships_from": [
     "CA"

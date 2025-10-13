@@ -86,11 +86,13 @@
     required={true}
   />
 
-  <BigCheck
-    bind:formVar={$form.affiliate}
-    errorVar={$errors.affiliate}
-    title="Affiliate"
-    description="Select if this is an affiliate storefront"
+  <TextField
+    id="website"
+    title="Website"
+    description='Official website URL of the storefront'
+    placeholder="https://www.example.com"
+    bind:formVar={$form.storefront_affiliate_link}
+    errorVar={$errors.storefront_affiliate_link}
     required={true}
   />
 

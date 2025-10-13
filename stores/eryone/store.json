@@ -2,8 +2,7 @@
     "id": "eryone",
     "name": "Eryone",
     "storefront_url": "https://eryone3d.com/",
-    "affiliate": false,
-    "logo": "eryone.png",
+      "logo": "eryone.png",
     "ships_from": [
         "US",
         "CA",

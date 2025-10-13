@@ -2,7 +2,6 @@
   "id": "LAB3D Store",
   "name": "LAB3D Store",
   "storefront_url": "https://shop.lab3d.dk/",
-  "affiliate": false,
   "logo": "lab3d.png",
   "ships_from": ["DK"],
   "ships_to": []
