@@ -2,8 +2,7 @@
     "id": "gst3d",
     "name": "GST3d",
     "storefront_url": "https://gst3d.eu/",
-    "affiliate": false,
-    "logo": "gst3d.png",
+      "logo": "gst3d.png",
     "ships_from": [
         "ES"
     ],

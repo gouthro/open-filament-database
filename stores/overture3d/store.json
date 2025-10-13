@@ -2,8 +2,7 @@
     "id": "overture3d",
     "name": "overture",
     "storefront_url": "https://overture3d.com/",
-    "affiliate": false,
-    "logo": "overture.png",
+      "logo": "overture.png",
     "ships_from": [
         "US"
     ],

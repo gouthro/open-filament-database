@@ -2,7 +2,7 @@
     "id": "sunlu",
     "name": "SUNLU",
     "storefront_url": "https://sunlu.com/",
-    "affiliate": true,
+    "affiliate": "https://sunlu.com/",
     "logo": "sunlu.png",
     "ships_from": [
         "US"

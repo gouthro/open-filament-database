@@ -230,7 +230,7 @@ export async function loadFilamentDatabase(dataPath: string, storesPath: string)
           id: storeData?.id ?? folderName,
           name: storeData?.name ?? folderName,
           storefront_url: storeData?.storefront_url ?? '',
-          affiliate: storeData?.affiliate ?? '',
+          storefront_affiliate_link: storeData?.storefront_affiliate_link ?? '',
           logo,
           ships_from: storeData?.ships_from ?? [],
           ships_to: storeData?.ships_to ?? [],

@@ -2,8 +2,7 @@
     "id": "crealitystore",
     "name": "Creality Store",
     "storefront_url": "https://store.creality.com",
-    "affiliate": false,
-    "logo": "crealitystore.png",
+      "logo": "crealitystore.png",
     "ships_from": [
         "US"
     ],

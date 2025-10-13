@@ -2,8 +2,7 @@
     "id": "hatchbox",
     "name": "Hatchbox",
     "storefront_url": "https://www.hatchbox3d.com/",
-    "affiliate": false,
-    "logo": "hatchbox.png",
+      "logo": "hatchbox.png",
     "ships_from": [
         "US",
         "CA",
