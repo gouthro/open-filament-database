@@ -1,0 +1,13 @@
+{
+    "id": "sidament",
+    "name": "Sidament",
+    "storefront_url": "https://siddament.com.au/",
+    "logo": "siddament.jpg",
+    "ships_from": [
+        "AU"
+    ],
+    "ships_to": [
+        "EU",
+        "AU"
+    ]
+}
