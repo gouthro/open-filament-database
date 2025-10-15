@@ -49,10 +49,10 @@
         "50"
     ],
     "eng_plate_temp": [
-        "30"
+        "35"
     ],
     "eng_plate_temp_initial_layer": [
-        "30"
+        "35"
     ],
     "fan_cooling_layer_time": [
         "100"
@@ -270,6 +270,9 @@
     ],
     "slow_down_for_layer_cooling": [
         "1"
+    ],
+    "no_slow_down_for_cooling_on_outwalls": [
+        "0"
     ],
     "slow_down_layer_time": [
         "8"
