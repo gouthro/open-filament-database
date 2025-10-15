@@ -1,8 +1,8 @@
 {
-  "id": "atomic_filament_amazon",
+  "id": "atomic_filament_Amazon",
   "name": "Atomic Filament - Amazon",
   "storefront_url": "https://atomicfilament.com/",
-  "logo": "atomic_filament.png",
+  "logo": "atomic_filament.jpg",
   "ships_from": [],
   "ships_to": []
 }
