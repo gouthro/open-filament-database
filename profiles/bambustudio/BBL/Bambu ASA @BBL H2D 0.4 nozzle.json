@@ -100,7 +100,7 @@
     ],
     "filament_max_volumetric_speed": [
         "20",
-        "30"
+        "35"
     ],
     "filament_ramming_volumetric_speed": [
         "-1",
@@ -270,6 +270,9 @@
     ],
     "slow_down_for_layer_cooling": [
         "1"
+    ],
+    "no_slow_down_for_cooling_on_outwalls": [
+        "0"
     ],
     "slow_down_layer_time": [
         "12"
