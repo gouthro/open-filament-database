@@ -15,6 +15,10 @@ def update_purchase_links(data, preface):
     for item in data:
         for link in item.get("purchase_links", []):
             original_url = link["url"]
+
+            if not "esun3dstore.com" in original_url:
+                continue
+                
             encoded_url = urllib.parse.quote(original_url, safe='')
             link["url"] = f"{preface}{encoded_url}"
             link["affiliate"] = True
@@ -25,15 +29,10 @@ def update_purchase_links(data, preface):
 from pathlib import Path
 import json
 
-# Suppose l[0] is a pathlib.Path object pointing to a JSON file
-# data = json.loads(pathlib.Path(l[0]).read_text())
-
-path = Path("data/Anycubic")
+path = Path("data/eSUN 3D")
 l = list(path.glob("**/sizes.json"))
 print(l)
 for item in l:
-    preface = "https://www.awin1.com/cread.php?awinmid=69360?awinffid=2609884&ued="
+    preface = "https://www.awin1.com/cread.php?awinmid=99267&awinaffid=2609884&ued="
     updated = update_purchase_links(json.loads(item.read_text()), preface)
     item.write_text(json.dumps(updated, indent=2))
-
-    print(json.dumps(updated, indent=2))
