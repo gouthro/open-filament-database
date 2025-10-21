@@ -11,5 +11,16 @@
         "affiliate": false
       }
     ]
+  },
+  {
+    "filament_weight": 1000,
+    "diameter": 2.85,
+    "purchase_links": [
+      {
+        "store_id": "ADD-North",
+        "url": "https://addnorth.com/shop/Filaments%20by%20material/PLA/PLA%20CF%202.85",
+        "affiliate": false
+      }
+    ]
   }
 ]
