@@ -2,7 +2,6 @@
   "id": "polymaker",
   "name": "PolyMaker",
   "storefront_url": "https://us.polymaker.com/",
-  "affiliate": "https://us.polymaker.com/",
   "logo": "polymaker.png",
   "ships_from": [
     "US"
