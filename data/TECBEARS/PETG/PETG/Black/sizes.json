@@ -7,8 +7,8 @@
     "purchase_links": [
       {
         "store_id": "TECBEARS",
-        "url": "https://www.amazon.ca/TECBEARS-Printer-Filament-Dimensional-Accuracy/dp/B0CGKY2XJK?th=1",
-        "affiliate": false
+        "url": "https://amzn.to/3L30iGH",
+        "affiliate": true
       }
     ]
   }

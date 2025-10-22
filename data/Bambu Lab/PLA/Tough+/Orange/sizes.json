@@ -1,14 +1,14 @@
 [
-    {
-        "filament_weight": 1000.0,
-        "diameter": 1.75,
-        "purchase_links": [
-            {
-                "store_id": "BBLStore",
-                "url": "https://eu.store.bambulab.com/products/pla-tough-upgrade?id=624496486489088024",
-                "affiliate": false,
-                "spool_refill": false
-            }
-        ]
-    }
+  {
+    "filament_weight": 1000.0,
+    "diameter": 1.75,
+    "purchase_links": [
+      {
+        "store_id": "BBLStore",
+        "url": "https://eu.store.bambulab.com/products/pla-tough-upgrade?id=624496486489088024",
+        "affiliate": false,
+        "spool_refill": false
+      }
+    ]
+  }
 ]

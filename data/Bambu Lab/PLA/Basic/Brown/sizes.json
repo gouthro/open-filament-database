@@ -1,20 +1,20 @@
 [
-    {
-        "filament_weight": 1000.0,
-        "diameter": 1.75,
-        "purchase_links": [
-            {
-                "store_id": "BBLStore",
-                "url": "https://us.store.bambulab.com/collections/pla/products/pla-basic-filament?variant=41201524768904",
-                "affiliate": false,
-                "spool_refill": false
-            },
-            {
-                "store_id": "BBLStore",
-                "url": "https://us.store.bambulab.com/collections/pla/products/pla-basic-filament?variant=40475106967688",
-                "affiliate": false,
-                "spool_refill": true
-            }
-        ]
-    }
+  {
+    "filament_weight": 1000.0,
+    "diameter": 1.75,
+    "purchase_links": [
+      {
+        "store_id": "BBLStore",
+        "url": "https://us.store.bambulab.com/collections/pla/products/pla-basic-filament?variant=41201524768904",
+        "affiliate": false,
+        "spool_refill": false
+      },
+      {
+        "store_id": "BBLStore",
+        "url": "https://us.store.bambulab.com/collections/pla/products/pla-basic-filament?variant=40475106967688",
+        "affiliate": false,
+        "spool_refill": true
+      }
+    ]
+  }
 ]

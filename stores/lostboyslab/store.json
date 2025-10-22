@@ -3,6 +3,12 @@
   "name": "lostboyslab",
   "storefront_url": "https://www.lostboyslab.shop/",
   "logo": "lostboyslab.png",
-  "ships_from": ["EU", "SE", "US"],
-  "ships_to": ["EU"]
+  "ships_from": [
+    "EU",
+    "SE",
+    "US"
+  ],
+  "ships_to": [
+    "EU"
+  ]
 }

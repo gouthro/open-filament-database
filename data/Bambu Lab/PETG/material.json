@@ -1,11 +1,11 @@
 {
-    "material": "PETG",
-    "default_slicer_settings": {
-        "bambustudio": {
-            "profile_name": "Bambu PETG Basic"
-        },
-        "orcaslicer": {
-            "profile_name": "Bambu PETG Basic"
-        }
+  "material": "PETG",
+  "default_slicer_settings": {
+    "bambustudio": {
+      "profile_name": "Bambu PETG Basic"
+    },
+    "orcaslicer": {
+      "profile_name": "Bambu PETG Basic"
     }
+  }
 }

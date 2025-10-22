@@ -1,14 +1,14 @@
 [
-    {
-        "filament_weight": 750.0,
-        "diameter": 1.75,
-        "purchase_links": [
-            {
-                "store_id": "BBLStore",
-                "url": "https://us.store.bambulab.com/collections/pa-pet/products/ppa-cf",
-                "affiliate": false,
-                "spool_refill": false
-            }
-        ]
-    }
+  {
+    "filament_weight": 750.0,
+    "diameter": 1.75,
+    "purchase_links": [
+      {
+        "store_id": "BBLStore",
+        "url": "https://us.store.bambulab.com/collections/pa-pet/products/ppa-cf",
+        "affiliate": false,
+        "spool_refill": false
+      }
+    ]
+  }
 ]

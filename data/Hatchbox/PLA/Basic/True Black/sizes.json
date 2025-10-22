@@ -8,9 +8,9 @@
     "purchase_links": [
       {
         "store_id": "amazon",
-        "url": "https://www.amazon.com/dp/B00J0ECR5I/ref=twister_B09WW4Z413?_encoding=UTF8&th=1",
-        "affiliate": false
+        "url": "https://amzn.to/4o0j3sJ",
+        "affiliate": true
       }
     ]
-  } 
+  }
 ]

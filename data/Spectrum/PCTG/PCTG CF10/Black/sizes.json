@@ -12,16 +12,16 @@
       }
     ]
   },
-	{
-		"filament_weight": 1000,
-		"diameter": 1.75,
-		"article_number": "80717",
-		"purchase_links": [
-			{
-				"store_id": "spectrum",
-				"url": "https://shop.spectrumfilaments.com/product-eng-1502-Filament-Spectrum-PCTG-CF10-1-75mm-1kg.html",
-				"affiliate": false
-			}
-		]
-	}
+  {
+    "filament_weight": 1000,
+    "diameter": 1.75,
+    "article_number": "80717",
+    "purchase_links": [
+      {
+        "store_id": "spectrum",
+        "url": "https://shop.spectrumfilaments.com/product-eng-1502-Filament-Spectrum-PCTG-CF10-1-75mm-1kg.html",
+        "affiliate": false
+      }
+    ]
+  }
 ]

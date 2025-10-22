@@ -12,17 +12,17 @@
       }
     ]
   },
-	{
-		"filament_weight": 500,
-		"diameter": 1.75,
-		"ean": "5903175650375",
-		"article_number": "80416",
-		"purchase_links": [
-			{
-				"store_id": "spectrum",
-				"url": "https://shop.spectrumfilaments.com/product-eng-1258-Filament-Spectrum-PET-G-FX120-1-75mm-NATURAL-0-5kg.html",
-				"affiliate": false
-			}
-		]
-	}
+  {
+    "filament_weight": 500,
+    "diameter": 1.75,
+    "ean": "5903175650375",
+    "article_number": "80416",
+    "purchase_links": [
+      {
+        "store_id": "spectrum",
+        "url": "https://shop.spectrumfilaments.com/product-eng-1258-Filament-Spectrum-PET-G-FX120-1-75mm-NATURAL-0-5kg.html",
+        "affiliate": false
+      }
+    ]
+  }
 ]

@@ -1,5 +1,5 @@
 {
-    "name": "Matte",
-    "density": 1.25,
-    "diameter_tolerance": 0.03
+  "name": "Matte",
+  "density": 1.25,
+  "diameter_tolerance": 0.03
 }

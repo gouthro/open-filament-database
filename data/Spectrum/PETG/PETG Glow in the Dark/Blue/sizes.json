@@ -12,17 +12,17 @@
       }
     ]
   },
-	{
-		"filament_weight": 1000,
-		"diameter": 1.75,
-		"ean": "5903175652997",
-		"article_number": "80537",
-		"purchase_links": [
-			{
-				"store_id": "spectrum",
-				"url": "https://shop.spectrumfilaments.com/product-eng-1333-Filament-Spectrum-PET-G-Glow-in-the-Dark-1-75mm-BLUE-1kg.html",
-				"affiliate": false
-			}
-		]
-	}
+  {
+    "filament_weight": 1000,
+    "diameter": 1.75,
+    "ean": "5903175652997",
+    "article_number": "80537",
+    "purchase_links": [
+      {
+        "store_id": "spectrum",
+        "url": "https://shop.spectrumfilaments.com/product-eng-1333-Filament-Spectrum-PET-G-Glow-in-the-Dark-1-75mm-BLUE-1kg.html",
+        "affiliate": false
+      }
+    ]
+  }
 ]

@@ -12,17 +12,17 @@
       }
     ]
   },
-	{
-		"filament_weight": 1000,
-		"diameter": 1.75,
-		"ean": "5903175653925",
-		"article_number": "80602",
-		"purchase_links": [
-			{
-				"store_id": "spectrum",
-				"url": "https://shop.spectrumfilaments.com/product-eng-1557-Filament-Spectrum-PET-G-Premium-1-75mm-PEARL-GOLD-1kg-RAL-1036.html",
-				"affiliate": false
-			}
-		]
-	}
+  {
+    "filament_weight": 1000,
+    "diameter": 1.75,
+    "ean": "5903175653925",
+    "article_number": "80602",
+    "purchase_links": [
+      {
+        "store_id": "spectrum",
+        "url": "https://shop.spectrumfilaments.com/product-eng-1557-Filament-Spectrum-PET-G-Premium-1-75mm-PEARL-GOLD-1kg-RAL-1036.html",
+        "affiliate": false
+      }
+    ]
+  }
 ]

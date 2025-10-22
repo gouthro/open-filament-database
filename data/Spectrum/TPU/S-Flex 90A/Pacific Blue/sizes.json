@@ -12,17 +12,17 @@
       }
     ]
   },
-	{
-		"filament_weight": 250,
-		"diameter": 1.75,
-		"ean": "5903175651921",
-		"article_number": "80264",
-		"purchase_links": [
-			{
-				"store_id": "spectrum",
-				"url": "https://shop.spectrumfilaments.com/product-eng-1197-Filament-Spectrum-S-Flex-90A-1-75mm-PACIFIC-BLUE-0-25kg-RAL-5015.html",
-				"affiliate": false
-			}
-		]
-	}
+  {
+    "filament_weight": 250,
+    "diameter": 1.75,
+    "ean": "5903175651921",
+    "article_number": "80264",
+    "purchase_links": [
+      {
+        "store_id": "spectrum",
+        "url": "https://shop.spectrumfilaments.com/product-eng-1197-Filament-Spectrum-S-Flex-90A-1-75mm-PACIFIC-BLUE-0-25kg-RAL-5015.html",
+        "affiliate": false
+      }
+    ]
+  }
 ]

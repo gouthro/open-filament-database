@@ -1,11 +1,11 @@
 {
-    "material": "PLA",
-    "default_slicer_settings": {
-        "bambustudio": {
-            "profile_name": "Bambu PLA Basic"
-        },
-        "orcaslicer": {
-            "profile_name": "Bambu PLA Basic"
-        }
+  "material": "PLA",
+  "default_slicer_settings": {
+    "bambustudio": {
+      "profile_name": "Bambu PLA Basic"
+    },
+    "orcaslicer": {
+      "profile_name": "Bambu PLA Basic"
     }
+  }
 }
