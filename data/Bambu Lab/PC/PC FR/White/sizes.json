@@ -1,14 +1,14 @@
 [
-    {
-        "filament_weight": 1000.0,
-        "diameter": 1.75,
-        "purchase_links": [
-            {
-                "store_id": "BBLStore",
-                "url": "https://us.store.bambulab.com/collections/pc-tpu/products/pc-fr?variant=43160587993224",
-                "affiliate": false,
-                "spool_refill": false
-            }
-        ]
-    }
+  {
+    "filament_weight": 1000.0,
+    "diameter": 1.75,
+    "purchase_links": [
+      {
+        "store_id": "BBLStore",
+        "url": "https://us.store.bambulab.com/collections/pc-tpu/products/pc-fr?variant=43160587993224",
+        "affiliate": false,
+        "spool_refill": false
+      }
+    ]
+  }
 ]

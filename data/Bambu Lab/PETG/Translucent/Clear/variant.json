@@ -1,5 +1,7 @@
 {
-    "color_name": "Clear",
-    "color_hex": "#FFFFFF",
-    "hex_variants": ["#000000"]
+  "color_name": "Clear",
+  "color_hex": "#FFFFFF",
+  "hex_variants": [
+    "#000000"
+  ]
 }

@@ -8,9 +8,9 @@
     "purchase_links": [
       {
         "store_id": "amazon",
-        "url": "https://www.amazon.com/HATCHBOX-3D-Filament-Dimensional-Accuracy/dp/B00J0GMMP6?ref_=ast_sto_dp&th=1",
-        "affiliate": false
+        "url": "https://amzn.to/4o95LdC",
+        "affiliate": true
       }
     ]
-  } 
+  }
 ]

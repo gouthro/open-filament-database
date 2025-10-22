@@ -1,11 +1,11 @@
 {
-    "material": "ABS",
-    "default_slicer_settings": {
-        "bambustudio": {
-            "profile_name": "Bambu ABS"
-        },
-        "orcaslicer": {
-            "profile_name": "Bambu ABS"
-        }
+  "material": "ABS",
+  "default_slicer_settings": {
+    "bambustudio": {
+      "profile_name": "Bambu ABS"
+    },
+    "orcaslicer": {
+      "profile_name": "Bambu ABS"
     }
+  }
 }

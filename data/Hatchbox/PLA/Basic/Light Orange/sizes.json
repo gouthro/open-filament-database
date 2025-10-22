@@ -8,9 +8,9 @@
     "purchase_links": [
       {
         "store_id": "amazon",
-        "url": "https://www.amazon.com/HATCHBOX-Filament-Dimensional-Accuracy-Printing/dp/B09WWW4GZH?th=1",
-        "affiliate": false
+        "url": "https://amzn.to/3WR5sbf",
+        "affiliate": true
       }
     ]
-  } 
+  }
 ]

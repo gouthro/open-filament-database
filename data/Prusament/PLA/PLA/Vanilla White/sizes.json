@@ -5,8 +5,8 @@
     "purchase_links": [
       {
         "store_id": "prusa3d",
-        "url": "https://www.prusa3d.com/product/prusament-pla-vanilla-white-1kg/",
-        "affiliate": false
+        "url": "https://www.prusa3d.com/product/prusament-pla-vanilla-white-1kg/#a_aid=SimplyPrint",
+        "affiliate": true
       }
     ]
   },
@@ -16,8 +16,8 @@
     "purchase_links": [
       {
         "store_id": "prusa3d",
-        "url": "https://www.prusa3d.com/product/prusament-pla-vanilla-white-1kg-refill/",
-        "affiliate": false
+        "url": "https://www.prusa3d.com/product/prusament-pla-vanilla-white-1kg-refill/#a_aid=SimplyPrint",
+        "affiliate": true
       }
     ]
   }
