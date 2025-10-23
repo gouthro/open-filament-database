@@ -1,0 +1,10 @@
+{
+    "filament_settings_id": [
+        "KS-PA"
+    ],
+    "from": "User",
+    "inherits": "My Generic ASA",
+    "is_custom_defined": "0",
+    "name": "KS-PA",
+    "version": "1.6.0.0"
+}

@@ -1,0 +1,28 @@
+{
+    "filament_flow_ratio": [
+        "1"
+    ],
+    "filament_max_volumetric_speed": [
+        "200"
+    ],
+    "filament_settings_id": [
+        "KS-PC"
+    ],
+    "filament_type": [
+        "PC"
+    ],
+    "from": "User",
+    "hot_plate_temp": [
+        "100"
+    ],
+    "hot_plate_temp_initial_layer": [
+        "100"
+    ],
+    "inherits": "My Generic ASA",
+    "is_custom_defined": "0",
+    "name": "KS-PC",
+    "slow_down_layer_time": [
+        "0"
+    ],
+    "version": "1.6.0.0"
+}

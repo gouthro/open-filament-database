@@ -1,0 +1,34 @@
+{
+    "filament_max_volumetric_speed": [
+        "12"
+    ],
+    "filament_settings_id": [
+        "KS-PP_CF"
+    ],
+    "filament_type": [
+        "PP-CF"
+    ],
+    "from": "User",
+    "hot_plate_temp": [
+        "95"
+    ],
+    "hot_plate_temp_initial_layer": [
+        "95"
+    ],
+    "inherits": "My Generic PA-CF",
+    "is_custom_defined": "0",
+    "name": "KS-PP_CF",
+    "nozzle_temperature": [
+        "250"
+    ],
+    "nozzle_temperature_initial_layer": [
+        "250"
+    ],
+    "nozzle_temperature_range_high": [
+        "280"
+    ],
+    "nozzle_temperature_range_low": [
+        "245"
+    ],
+    "version": "1.6.0.0"
+}

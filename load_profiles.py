@@ -253,6 +253,58 @@ def squash_slic3r_profiles(slicer_name: str, filament_library_name: Optional[str
                 json.dump(squash_inherits(name), f, indent=4)
 
 
+def load_overlay_profiles(overlay_path: PathLike = "./overlay"):
+    """
+    Load overlay profiles and copy them to the profile output directory.
+    Overlay profiles can override or supplement the downloaded profiles.
+
+    Overlay profiles should be organized as:
+    overlay/profiles/[slicer_name]/[vendor]/[profile_name].json
+
+    :param overlay_path: Path to the overlay directory (default: "./overlay")
+    """
+    overlay_path = Path(overlay_path)
+    profiles_overlay_path = overlay_path.joinpath("profiles")
+
+    # Check if overlay profiles directory exists
+    if not profiles_overlay_path.exists():
+        print("No overlay profiles directory found, skipping overlay load...")
+        return
+
+    print("Loading overlay profiles...")
+    overlay_count = 0
+
+    # Iterate through all slicer directories in the overlay
+    for slicer_dir in profiles_overlay_path.iterdir():
+        if not slicer_dir.is_dir():
+            continue
+
+        slicer_name = slicer_dir.name
+        output_slicer_path = profile_output_path.joinpath(slicer_name)
+
+        # Iterate through all vendor directories
+        for vendor_dir in slicer_dir.iterdir():
+            if not vendor_dir.is_dir():
+                continue
+
+            vendor_name = vendor_dir.name
+            output_vendor_path = output_slicer_path.joinpath(vendor_name)
+
+            # Create vendor directory if it doesn't exist
+            output_vendor_path.mkdir(parents=True, exist_ok=True)
+
+            # Copy all JSON profiles from vendor directory
+            for profile_file in vendor_dir.iterdir():
+                if profile_file.suffix != ".json":
+                    continue
+
+                dest_path = output_vendor_path.joinpath(profile_file.name)
+                shutil.copy2(profile_file, dest_path)
+                overlay_count += 1
+
+    print(f"Loaded {overlay_count} overlay profiles")
+
+
 def run():
     """
     Run the download and extract routine
@@ -277,6 +329,9 @@ def run():
 
     # Download and unzip Cura profiles
     download_and_extract("Cura", CURA_URL, "fdm_materials-master", ".*.fdm_material$")
+
+    # Load overlay profiles (these can override or supplement downloaded profiles)
+    load_overlay_profiles()
 
     # TODO: Convert cura XML files to custom json
 
