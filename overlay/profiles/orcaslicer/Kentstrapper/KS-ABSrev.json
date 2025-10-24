@@ -1,6 +1,12 @@
 {
     "compatible_printers": [
-        "MyKlipper 0.4 nozzle"
+        "Kentstrapper B744",
+        "Kentstrapper B755",
+        "Kentstrapper MAVIS",
+        "Kentstrapper VERVE",
+        "Kentstrapper ZeroHS",
+        "Kentstrapper ZeroHS CC",
+        "Kentstrapper ZeroPro"
     ],
     "enable_pressure_advance": [
         "1"

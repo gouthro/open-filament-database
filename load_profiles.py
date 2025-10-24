@@ -321,17 +321,19 @@ def run():
 
     # Download and unzip BambuStudio profiles
     download_and_extract("BambuStudio", BAMBUSTUDIO_URL, "BambuStudio-master/resources/profiles", ".*/filament/.*")
-    squash_slic3r_profiles("BambuStudio")
 
     # Download and unzip OrcaSlicer profiles
     download_and_extract("OrcaSlicer", ORCASLICER_URL, "OrcaSlicer-main/resources/profiles/", ".*/filament/.*")
-    squash_slic3r_profiles("OrcaSlicer", "OrcaFilamentLibrary")
 
     # Download and unzip Cura profiles
     download_and_extract("Cura", CURA_URL, "fdm_materials-master", ".*.fdm_material$")
 
     # Load overlay profiles (these can override or supplement downloaded profiles)
     load_overlay_profiles()
+
+    # Squash slic3r based profiles
+    squash_slic3r_profiles("BambuStudio")
+    squash_slic3r_profiles("OrcaSlicer", "OrcaFilamentLibrary")
 
     # TODO: Convert cura XML files to custom json
 
