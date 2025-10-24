@@ -1,0 +1,28 @@
+{
+    "fan_max_speed": [
+        "0"
+    ],
+    "filament_cost": [
+        "148"
+    ],
+    "filament_max_volumetric_speed": [
+        "13"
+    ],
+    "filament_settings_id": [
+        "KS-PA_CF"
+    ],
+    "from": "User",
+    "inherits": "My Generic PA-CF",
+    "is_custom_defined": "0",
+    "name": "KS-PA_CF",
+    "nozzle_temperature": [
+        "270"
+    ],
+    "nozzle_temperature_initial_layer": [
+        "275"
+    ],
+    "slow_down_layer_time": [
+        "5"
+    ],
+    "version": "1.6.0.0"
+}
