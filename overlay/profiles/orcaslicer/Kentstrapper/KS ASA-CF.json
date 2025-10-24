@@ -3,11 +3,11 @@
         "MyKlipper 0.4 nozzle"
     ],
     "filament_settings_id": [
-        "KS ASA-CF "
+        "KS ASA-CF"
     ],
     "from": "User",
     "inherits": "Bambu ASA-CF @System",
     "is_custom_defined": "0",
-    "name": "KS ASA-CF ",
+    "name": "KS ASA-CF",
     "version": "2.3.0.3"
 }

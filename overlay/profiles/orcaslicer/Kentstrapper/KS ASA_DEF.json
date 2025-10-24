@@ -3,7 +3,7 @@
         "MyKlipper 0.4 nozzle"
     ],
     "filament_settings_id": [
-        "KS ASA_DEF "
+        "KS ASA_DEF"
     ],
     "filament_vendor": [
         "KENTSTRAPPER"
@@ -17,6 +17,6 @@
     ],
     "inherits": "Bambu ASA @System",
     "is_custom_defined": "0",
-    "name": "KS ASA_DEF ",
+    "name": "KS ASA_DEF",
     "version": "2.3.0.3"
 }
