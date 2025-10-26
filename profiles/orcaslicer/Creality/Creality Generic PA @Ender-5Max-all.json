@@ -21,11 +21,17 @@
     "filament_flow_ratio": "0.9",
     "reduce_fan_stop_start_freq": "1",
     "fan_cooling_layer_time": "100",
-    "filament_cost": "50",
-    "filament_density": "1.24",
+    "filament_cost": [
+        "50"
+    ],
+    "filament_density": [
+        "1.24"
+    ],
     "filament_deretraction_speed": "nil",
     "filament_diameter": "1.75",
-    "filament_max_volumetric_speed": "2",
+    "filament_max_volumetric_speed": [
+        "2"
+    ],
     "filament_minimal_purge_on_wipe_tower": "15",
     "filament_retraction_minimum_travel": "nil",
     "filament_retract_before_wipe": "nil",
@@ -60,7 +66,9 @@
         "; Filament gcode\n"
     ],
     "nozzle_temperature": "250",
-    "temperature_vitrification": "108",
+    "temperature_vitrification": [
+        "108"
+    ],
     "setting_id": "GFSA04_CREALITY_00",
     "filament_id": "11001",
     "activate_air_filtration": "0",
