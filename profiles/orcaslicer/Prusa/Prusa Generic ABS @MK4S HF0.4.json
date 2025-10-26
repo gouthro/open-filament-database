@@ -35,7 +35,9 @@
     "fan_cooling_layer_time": [
         "30"
     ],
-    "filament_cost": "27.82",
+    "filament_cost": [
+        "27.82"
+    ],
     "filament_density": [
         "1.04"
     ],
@@ -45,7 +47,9 @@
     "filament_diameter": [
         "1.75"
     ],
-    "filament_max_volumetric_speed": "26",
+    "filament_max_volumetric_speed": [
+        "26"
+    ],
     "filament_minimal_purge_on_wipe_tower": "35",
     "filament_retraction_minimum_travel": [
         "nil"

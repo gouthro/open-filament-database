@@ -46,7 +46,9 @@
     "filament_cost": [
         "0"
     ],
-    "filament_density": "1.22",
+    "filament_density": [
+        "1.22"
+    ],
     "filament_deretraction_speed": [
         "nil"
     ],
