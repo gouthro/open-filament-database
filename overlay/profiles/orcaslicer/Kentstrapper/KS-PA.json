@@ -12,7 +12,8 @@
         "KS-PA"
     ],
     "from": "User",
-    "inherits": "My Generic ASA",
+    "instantiation": "true",
+    "inherits": "Generic ASA @System",
     "is_custom_defined": "0",
     "name": "KS-PA",
     "version": "1.6.0.0"

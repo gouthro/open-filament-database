@@ -12,6 +12,7 @@
         "KS ASA-CF"
     ],
     "from": "User",
+    "instantiation": "true",
     "inherits": "Bambu ASA-CF @System",
     "is_custom_defined": "0",
     "name": "KS ASA-CF",

@@ -24,7 +24,8 @@
     "hot_plate_temp_initial_layer": [
         "95"
     ],
-    "inherits": "My Generic PA-CF",
+    "instantiation": "true",
+    "inherits": "Generic PA-CF @System",
     "is_custom_defined": "0",
     "name": "KS-PP_CF",
     "nozzle_temperature": [

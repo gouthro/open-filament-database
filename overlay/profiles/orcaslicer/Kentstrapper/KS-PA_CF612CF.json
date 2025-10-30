@@ -228,7 +228,8 @@
     "idle_temperature": [
         "0"
     ],
-    "inherits": "My Generic PA-CF",
+    "instantiation": "true",
+    "inherits": "Generic PA-CF @System",
     "internal_bridge_fan_speed": [
         "-1"
     ],

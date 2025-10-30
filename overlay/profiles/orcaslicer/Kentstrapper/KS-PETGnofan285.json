@@ -36,7 +36,8 @@
     "hot_plate_temp_initial_layer": [
         "70"
     ],
-    "inherits": "My Generic PETG",
+    "instantiation": "true",
+    "inherits": "Generic PETG @System",
     "is_custom_defined": "0",
     "name": "KS-PETGnofan285",
     "nozzle_temperature": [

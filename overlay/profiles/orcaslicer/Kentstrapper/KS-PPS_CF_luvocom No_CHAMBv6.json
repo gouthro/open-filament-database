@@ -228,7 +228,8 @@
     "idle_temperature": [
         "0"
     ],
-    "inherits": "My Generic ABS",
+    "instantiation": "true",
+    "inherits": "Generic ABS @System",
     "internal_bridge_fan_speed": [
         "-1"
     ],

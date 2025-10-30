@@ -42,6 +42,7 @@
     "hot_plate_temp_initial_layer": [
         "80"
     ],
+    "instantiation": "true",
     "inherits": "PolyLite ASA @System",
     "is_custom_defined": "0",
     "name": "KS-ABSrev",

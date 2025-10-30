@@ -228,7 +228,8 @@
     "idle_temperature": [
         "0"
     ],
-    "inherits": "My Generic TPU",
+    "instantiation": "true",
+    "inherits": "Generic TPU @System",
     "internal_bridge_fan_speed": [
         "-1"
     ],

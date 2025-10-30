@@ -21,7 +21,8 @@
         "KS-PA_CF"
     ],
     "from": "User",
-    "inherits": "My Generic PA-CF",
+    "instantiation": "true",
+    "inherits": "Generic PA-CF @System",
     "is_custom_defined": "0",
     "name": "KS-PA_CF",
     "nozzle_temperature": [

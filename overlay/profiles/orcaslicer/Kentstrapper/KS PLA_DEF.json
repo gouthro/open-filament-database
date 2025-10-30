@@ -21,6 +21,7 @@
     "hot_plate_temp_initial_layer": [
         "60"
     ],
+    "instantiation": "true",
     "inherits": "Bambu PLA Basic @System",
     "is_custom_defined": "0",
     "name": "KS PLA_DEF",

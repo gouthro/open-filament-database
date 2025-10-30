@@ -228,7 +228,8 @@
     "idle_temperature": [
         "0"
     ],
-    "inherits": "My Generic ASA",
+    "instantiation": "true",
+    "inherits": "Generic ASA @System",
     "internal_bridge_fan_speed": [
         "-1"
     ],

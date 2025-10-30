@@ -36,6 +36,7 @@
     "hot_plate_temp_initial_layer": [
         "70"
     ],
+    "instantiation": "true",
     "inherits": "Fiberon PA6-GF @System",
     "is_custom_defined": "0",
     "name": "KS PA6-GF25",
