@@ -58,7 +58,7 @@
         "30"
     ],
     "fan_max_speed": [
-        "60"
+        "40"
     ],
     "fan_min_speed": [
         "20"
@@ -99,8 +99,8 @@
         "nil"
     ],
     "filament_max_volumetric_speed": [
-        "16",
-        "16"
+        "21",
+        "28"
     ],
     "filament_ramming_volumetric_speed": [
         "-1",
@@ -132,8 +132,8 @@
         "nil"
     ],
     "filament_retraction_length": [
-        "nil",
-        "nil"
+        "0.4",
+        "0.4"
     ],
     "filament_retraction_minimum_travel": [
         "nil",
@@ -156,23 +156,23 @@
         "Bambu Lab"
     ],
     "filament_wipe": [
-        "nil",
-        "nil"
+        "1",
+        "1"
     ],
     "filament_wipe_distance": [
-        "nil",
-        "nil"
+        "1",
+        "1"
     ],
     "filament_prime_volume": [
         "45"
     ],
     "filament_z_hop": [
-        "nil",
-        "nil"
+        "0.2",
+        "0.2"
     ],
     "filament_z_hop_types": [
-        "nil",
-        "nil"
+        "Spiral Lift",
+        "Spiral Lift"
     ],
     "full_fan_speed_layer": [
         "0"
@@ -239,11 +239,11 @@
         "270"
     ],
     "nozzle_temperature": [
-        "255",
+        "250",
         "255"
     ],
     "nozzle_temperature_initial_layer": [
-        "255",
+        "245",
         "255"
     ],
     "overhang_fan_speed": [
@@ -281,7 +281,7 @@
         "10"
     ],
     "temperature_vitrification": [
-        "70"
+        "60"
     ],
     "textured_plate_temp": [
         "70"
@@ -315,6 +315,22 @@
     ],
     "filament_id": "GFG00",
     "description": "To get better transparent or translucent results with the corresponding filament, please refer to this wiki: Printing tips for transparent PETG.",
+    "filament_prime_volume_nc": [
+        "60"
+    ],
+    "first_x_layer_fan_speed": [
+        "0"
+    ],
+    "filament_change_length": [
+        "10"
+    ],
+    "filament_change_length_nc": [
+        "10"
+    ],
+    "override_process_overhang_speed": [
+        "0",
+        "0"
+    ],
     "setting_id": "GFSG00_21",
     "pre_start_fan_time": [
         "2"
