@@ -135,7 +135,7 @@
         idPrefix="color_hex"
         title="Color hexes"
         description="Choose the color(s) or enter the hex code that best represents this filament color"
-        bind:formVar={$form.color_hex}
+        bind:hexes={$form.color_hex}
         errorVar={$errors.color_hex}
         required={true}
       />
