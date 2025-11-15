@@ -23,7 +23,7 @@
   }
 
   if (hexes) {
-    var transformHexes = [];
+    let transformHexes = [];
 
     if (typeof hexes == "string" || hexes instanceof String) {
       hexes = [

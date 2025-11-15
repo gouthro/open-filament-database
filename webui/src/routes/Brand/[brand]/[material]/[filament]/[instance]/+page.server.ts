@@ -113,7 +113,7 @@ export const actions = {
     try {
       let filteredData = removeUndefined(form.data);
 
-      if (Array.isArray(filteredData.color_hex) && filteredData.color_hex.length == 1) {
+      if (Array.isArray(filteredData.color_hex) && filteredData.color_hex.length === 1) {
         filteredData.color_hex = filteredData.color_hex[0];
       }
 
