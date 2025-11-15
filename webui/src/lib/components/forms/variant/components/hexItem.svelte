@@ -14,7 +14,7 @@
     bind:formVar={formVar}
     id="{idPrefix}{index}"
     placeholder="#000000"
-    errorVar={null}
+    errorVar={errors}
   />
   <button
     type="button"
