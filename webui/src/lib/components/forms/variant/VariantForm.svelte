@@ -132,7 +132,7 @@
       />
 
       <HexesList
-        idPrefix="color_hex"
+        idPrefix="color_hex_"
         title="Color hexes"
         description="Choose the color(s) or enter the hex code that best represents this filament color"
         bind:hexes={$form.color_hex}

@@ -76,6 +76,7 @@
               idPrefix={idPrefix}
               index={index}
               removeHex={() => removeHex(index)}
+              errors={null}
             />
           {/each}
         </div>
