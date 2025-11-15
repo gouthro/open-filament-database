@@ -42,7 +42,7 @@ export const filamentVariantHex = z.string().regex(/^#?[a-fA-F0-9]{6}$/, 'Must b
 
 export const filamentVariantSchema = z.object({
   color_name: z.string(),
-  color_hex: z.union([filamentVariantHex, z.array(filamentVariantHex).min(1)]).default(""),
+  color_hex: z.union([filamentVariantHex, z.array(filamentVariantHex).min(1)]).default("#000000"),
   discontinued: z.boolean().default(false),
   traits: traitsSchema.optional(),
   sizes: filamentSizesSchema,
