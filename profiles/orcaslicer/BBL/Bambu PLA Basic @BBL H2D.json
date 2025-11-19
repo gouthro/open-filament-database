@@ -49,10 +49,10 @@
         "50"
     ],
     "eng_plate_temp": [
-        "0"
+        "55"
     ],
     "eng_plate_temp_initial_layer": [
-        "0"
+        "55"
     ],
     "fan_cooling_layer_time": [
         "100"
@@ -100,7 +100,7 @@
     ],
     "filament_max_volumetric_speed": [
         "25",
-        "35"
+        "40"
     ],
     "filament_ramming_volumetric_speed": [
         "-1",

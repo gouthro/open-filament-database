@@ -61,7 +61,7 @@
         "40"
     ],
     "fan_min_speed": [
-        "10"
+        "20"
     ],
     "filament_cost": [
         "24.99"
@@ -92,8 +92,8 @@
         "0"
     ],
     "filament_long_retractions_when_cut": [
-        "0",
-        "0"
+        "nil",
+        "nil"
     ],
     "filament_long_retractions_when_ec": [
         "nil"
@@ -125,8 +125,8 @@
         "nil"
     ],
     "filament_retraction_distances_when_cut": [
-        "10",
-        "10"
+        "nil",
+        "nil"
     ],
     "filament_retraction_distances_when_ec": [
         "nil"
@@ -229,8 +229,8 @@
         "13.6"
     ],
     "long_retractions_when_ec": [
-        "0",
-        "0"
+        "1",
+        "1"
     ],
     "nozzle_temperature_range_low": [
         "230"
@@ -239,18 +239,18 @@
         "270"
     ],
     "nozzle_temperature": [
-        "255",
-        "255"
+        "250",
+        "250"
     ],
     "nozzle_temperature_initial_layer": [
-        "255",
-        "255"
+        "245",
+        "245"
     ],
     "overhang_fan_speed": [
         "90"
     ],
     "overhang_fan_threshold": [
-        "10%"
+        "25%"
     ],
     "reduce_fan_stop_start_freq": [
         "1"
@@ -259,8 +259,8 @@
         "3"
     ],
     "retraction_distances_when_ec": [
-        "0",
-        "0"
+        "10",
+        "10"
     ],
     "supertack_plate_temp": [
         "70"
@@ -278,7 +278,7 @@
         "10"
     ],
     "temperature_vitrification": [
-        "70"
+        "60"
     ],
     "textured_plate_temp": [
         "70"
@@ -311,5 +311,24 @@
     ],
     "filament_id": "GFG00",
     "description": "To get better transparent or translucent results with the corresponding filament, please refer to this wiki: Printing tips for transparent PETG.",
-    "setting_id": "GFSG00_11"
+    "filament_prime_volume_nc": [
+        "60"
+    ],
+    "first_x_layer_fan_speed": [
+        "0"
+    ],
+    "filament_change_length": [
+        "10"
+    ],
+    "filament_change_length_nc": [
+        "10"
+    ],
+    "override_process_overhang_speed": [
+        "0",
+        "0"
+    ],
+    "setting_id": "GFSG00_11",
+    "pre_start_fan_time": [
+        "0"
+    ]
 }
