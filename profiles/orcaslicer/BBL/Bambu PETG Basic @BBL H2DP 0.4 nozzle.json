@@ -58,10 +58,10 @@
         "30"
     ],
     "fan_max_speed": [
-        "40"
+        "30"
     ],
     "fan_min_speed": [
-        "10"
+        "20"
     ],
     "filament_cost": [
         "24.99"
@@ -99,8 +99,8 @@
         "nil"
     ],
     "filament_max_volumetric_speed": [
-        "13",
-        "13"
+        "18",
+        "21"
     ],
     "filament_ramming_volumetric_speed": [
         "-1",
@@ -132,8 +132,8 @@
         "nil"
     ],
     "filament_retraction_length": [
-        "nil",
-        "nil"
+        "0.4",
+        "0.4"
     ],
     "filament_retraction_minimum_travel": [
         "nil",
@@ -156,12 +156,12 @@
         "Bambu Lab"
     ],
     "filament_wipe": [
-        "nil",
-        "nil"
+        "1",
+        "1"
     ],
     "filament_wipe_distance": [
-        "nil",
-        "nil"
+        "1",
+        "1"
     ],
     "filament_prime_volume": [
         "45"
@@ -171,8 +171,8 @@
         "nil"
     ],
     "filament_z_hop_types": [
-        "nil",
-        "nil"
+        "Spiral Lift",
+        "Spiral Lift"
     ],
     "full_fan_speed_layer": [
         "0"
@@ -239,12 +239,12 @@
         "270"
     ],
     "nozzle_temperature": [
-        "255",
-        "255"
+        "250",
+        "250"
     ],
     "nozzle_temperature_initial_layer": [
-        "255",
-        "255"
+        "245",
+        "245"
     ],
     "overhang_fan_speed": [
         "90"
@@ -278,7 +278,7 @@
         "10"
     ],
     "temperature_vitrification": [
-        "70"
+        "60"
     ],
     "textured_plate_temp": [
         "70"
@@ -311,6 +311,22 @@
     ],
     "filament_id": "GFG00",
     "description": "To get better transparent or translucent results with the corresponding filament, please refer to this wiki: Printing tips for transparent PETG.",
+    "filament_prime_volume_nc": [
+        "60"
+    ],
+    "first_x_layer_fan_speed": [
+        "0"
+    ],
+    "filament_change_length": [
+        "10"
+    ],
+    "filament_change_length_nc": [
+        "10"
+    ],
+    "override_process_overhang_speed": [
+        "0",
+        "0"
+    ],
     "setting_id": "GFSG00_19",
     "pre_start_fan_time": [
         "2"
