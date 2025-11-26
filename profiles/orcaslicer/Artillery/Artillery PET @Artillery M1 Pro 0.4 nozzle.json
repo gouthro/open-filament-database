@@ -25,7 +25,7 @@
         "10%"
     ],
     "overhang_fan_speed": [
-        "90"
+        "100"
     ],
     "slow_down_for_layer_cooling": [
         "1"
@@ -37,7 +37,7 @@
         "; filament end gcode \n"
     ],
     "filament_flow_ratio": [
-        "1.029"
+        "0.97"
     ],
     "reduce_fan_stop_start_freq": [
         "1"
@@ -155,16 +155,18 @@
     "during_print_exhaust_fan_speed": [
         "60"
     ],
+    "is_custom_defined": "0",
     "enable_pressure_advance": [
         "1"
     ],
     "pressure_advance": [
-        "0.063"
+        "0.08"
     ],
     "textured_plate_temp": [
         "80"
     ],
     "textured_plate_temp_initial_layer": [
         "80"
-    ]
+    ],
+    "version": "2.1.2.2"
 }

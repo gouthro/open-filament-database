@@ -37,7 +37,7 @@
         "; filament end gcode \n"
     ],
     "filament_flow_ratio": [
-        "0.95"
+        "0.98"
     ],
     "reduce_fan_stop_start_freq": [
         "1"
@@ -127,7 +127,7 @@
         ""
     ],
     "nozzle_temperature": [
-        "210"
+        "220"
     ],
     "temperature_vitrification": [
         "60"
@@ -152,6 +152,8 @@
     "during_print_exhaust_fan_speed": [
         "60"
     ],
+    "is_custom_defined": "0",
+    "version": "2.1.2.2",
     "enable_pressure_advance": [
         "1"
     ],
