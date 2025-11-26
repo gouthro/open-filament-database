@@ -73,7 +73,7 @@
         "nil"
     ],
     "filament_retraction_length": [
-        "1.1"
+        "0.8"
     ],
     "filament_z_hop": [
         "0.4"
@@ -139,7 +139,7 @@
         "230"
     ],
     "additional_cooling_fan_speed": [
-        "100"
+        "50"
     ],
     "setting_id": "GFSA04",
     "filament_id": "GFL99",
@@ -152,6 +152,8 @@
     "during_print_exhaust_fan_speed": [
         "60"
     ],
+    "is_custom_defined": "0",
+    "version": "2.1.2.2",
     "textured_plate_temp": [
         "55"
     ],

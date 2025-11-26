@@ -37,7 +37,7 @@
         "; filament end gcode \n"
     ],
     "filament_flow_ratio": [
-        "1.029"
+        "0.95"
     ],
     "reduce_fan_stop_start_freq": [
         "1"
@@ -106,7 +106,7 @@
         "Cool Plate"
     ],
     "nozzle_temperature_initial_layer": [
-        "240"
+        "250"
     ],
     "full_fan_speed_layer": [
         "0"
@@ -127,7 +127,7 @@
         "; filament start gcode "
     ],
     "nozzle_temperature": [
-        "240"
+        "250"
     ],
     "temperature_vitrification": [
         "70"
@@ -152,6 +152,7 @@
     "during_print_exhaust_fan_speed": [
         "60"
     ],
+    "is_custom_defined": "0",
     "textured_plate_temp": [
         "70"
     ],

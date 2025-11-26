@@ -152,6 +152,8 @@
     "during_print_exhaust_fan_speed": [
         "100"
     ],
+    "is_custom_defined": "0",
+    "version": "2.1.1.0",
     "enable_pressure_advance": [
         "1"
     ],
