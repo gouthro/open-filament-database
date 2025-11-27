@@ -121,6 +121,7 @@
   </div>
 
   <BigCheck
+    idPrefix="size_"
     description="Select if this size is discontinued"
     bind:formVar={size.discontinued}
     errorVar={$errors?.sizes?.[sizeIndex]?.discontinued}
