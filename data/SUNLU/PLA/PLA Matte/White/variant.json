@@ -1,8 +1,6 @@
 {
   "color_name": "White",
-  "color_hex": [
-    "#ffffff"
-  ],
+  "color_hex": "#ffffff",
   "traits": {
     "matte": true
   }
