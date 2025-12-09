@@ -1,6 +1,5 @@
 {
     "name": "Basic",
     "diameter_tolerance": 0.02,
-    "density": 1.05,
-    "discontinued": false
+    "density": 1.05
   }
