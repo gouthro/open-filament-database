@@ -2,7 +2,7 @@
   "id": "microcenter",
   "name": "Microcenter",
   "storefront_url": "https://microcenter.com",
-  "logo": "microcenter.svg",
+  "logo": "microcenter.png",
   "ships_from": [],
   "ships_to": []
 }
