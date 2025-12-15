@@ -5,8 +5,8 @@
     "purchase_links": [
       {
         "store_id": "polymaker",
-        "url": "https://us.polymaker.com/products/polylite-pla-pro",
-        "affiliate": false
+        "url": "https://us.polymaker.com/products/polylite-pla-pro?aff=1306&utm_source=affiliately&utm_campaign=aff",
+        "affiliate": true
       }
     ]
   },
@@ -16,8 +16,8 @@
     "purchase_links": [
       {
         "store_id": "polymaker",
-        "url": "https://us.polymaker.com/products/polylite-pla-pro",
-        "affiliate": false
+        "url": "https://us.polymaker.com/products/polylite-pla-pro?aff=1306&utm_source=affiliately&utm_campaign=aff",
+        "affiliate": true
       }
     ]
   },
@@ -31,8 +31,8 @@
     "purchase_links": [
       {
         "store_id": "polymaker",
-        "url": "https://us.polymaker.com/products/polylite-pla-pro",
-        "affiliate": false
+        "url": "https://us.polymaker.com/products/polylite-pla-pro?aff=1306&utm_source=affiliately&utm_campaign=aff",
+        "affiliate": true
       }
     ]
   },

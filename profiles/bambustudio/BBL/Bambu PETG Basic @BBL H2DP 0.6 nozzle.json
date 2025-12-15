@@ -58,10 +58,13 @@
         "30"
     ],
     "fan_max_speed": [
-        "60"
+        "40"
     ],
     "fan_min_speed": [
         "20"
+    ],
+    "filament_cooling_before_tower": [
+        "10"
     ],
     "filament_cost": [
         "24.99"
@@ -70,40 +73,37 @@
         "1.25"
     ],
     "filament_deretraction_speed": [
-        "nil",
         "nil"
     ],
     "filament_diameter": [
         "1.75"
     ],
     "filament_flow_ratio": [
-        "0.95",
         "0.95"
     ],
     "filament_flush_temp": [
-        "0",
         "0"
     ],
     "filament_flush_volumetric_speed": [
-        "0",
         "0"
     ],
     "filament_is_support": [
         "0"
     ],
     "filament_long_retractions_when_cut": [
-        "nil",
         "nil"
     ],
     "filament_long_retractions_when_ec": [
         "nil"
     ],
     "filament_max_volumetric_speed": [
-        "16",
-        "16"
+        "21",
+        "28"
     ],
     "filament_ramming_volumetric_speed": [
-        "-1",
+        "-1"
+    ],
+    "filament_ramming_volumetric_speed_nc": [
         "-1"
     ],
     "filament_minimal_purge_on_wipe_tower": [
@@ -113,34 +113,28 @@
         "3"
     ],
     "filament_retract_before_wipe": [
-        "nil",
         "nil"
     ],
     "filament_retract_restart_extra": [
-        "nil",
         "nil"
     ],
     "filament_retract_when_changing_layer": [
-        "nil",
         "nil"
     ],
     "filament_retraction_distances_when_cut": [
-        "nil",
         "nil"
     ],
     "filament_retraction_distances_when_ec": [
         "nil"
     ],
     "filament_retraction_length": [
-        "nil",
-        "nil"
+        "0.4",
+        "0.4"
     ],
     "filament_retraction_minimum_travel": [
-        "nil",
         "nil"
     ],
     "filament_retraction_speed": [
-        "nil",
         "nil"
     ],
     "filament_settings_id": [
@@ -156,30 +150,32 @@
         "Bambu Lab"
     ],
     "filament_wipe": [
-        "nil",
-        "nil"
+        "1",
+        "1"
     ],
     "filament_wipe_distance": [
-        "nil",
-        "nil"
+        "1",
+        "1"
     ],
     "filament_prime_volume": [
         "45"
     ],
+    "filament_prime_volume_nc": [
+        "60"
+    ],
     "filament_z_hop": [
-        "nil",
-        "nil"
+        "0.2",
+        "0.2"
     ],
     "filament_z_hop_types": [
-        "nil",
-        "nil"
+        "Spiral Lift",
+        "Spiral Lift"
     ],
     "full_fan_speed_layer": [
         "0"
     ],
     "filament_extruder_variant": [
-        "Direct Drive Standard",
-        "Direct Drive High Flow"
+        "Direct Drive Standard"
     ],
     "filament_scarf_seam_type": [
         "none"
@@ -197,12 +193,20 @@
         "100%"
     ],
     "filament_pre_cooling_temperature": [
-        "0",
+        "0"
+    ],
+    "filament_pre_cooling_temperature_nc": [
         "0"
     ],
     "filament_ramming_travel_time": [
         "0",
         "0"
+    ],
+    "filament_ramming_travel_time_nc": [
+        "0"
+    ],
+    "filament_retract_length_nc": [
+        "14"
     ],
     "hot_plate_temp": [
         "70"
@@ -229,8 +233,7 @@
         "13.6"
     ],
     "long_retractions_when_ec": [
-        "1",
-        "1"
+        "0"
     ],
     "nozzle_temperature_range_low": [
         "230"
@@ -239,11 +242,11 @@
         "270"
     ],
     "nozzle_temperature": [
-        "255",
+        "250",
         "255"
     ],
     "nozzle_temperature_initial_layer": [
-        "255",
+        "245",
         "255"
     ],
     "overhang_fan_speed": [
@@ -259,8 +262,7 @@
         "3"
     ],
     "retraction_distances_when_ec": [
-        "10",
-        "10"
+        "0"
     ],
     "supertack_plate_temp": [
         "70"
@@ -271,6 +273,9 @@
     "slow_down_for_layer_cooling": [
         "1"
     ],
+    "no_slow_down_for_cooling_on_outwalls": [
+        "0"
+    ],
     "slow_down_layer_time": [
         "12"
     ],
@@ -278,13 +283,16 @@
         "10"
     ],
     "temperature_vitrification": [
-        "70"
+        "60"
     ],
     "textured_plate_temp": [
         "70"
     ],
     "textured_plate_temp_initial_layer": [
         "70"
+    ],
+    "filament_change_length": [
+        "10"
     ],
     "filament_velocity_adaptation_factor": [
         "1"
@@ -300,11 +308,9 @@
         "; filament end gcode \n"
     ],
     "filament_adaptive_volumetric_speed": [
-        "0",
         "0"
     ],
     "volumetric_speed_coefficients": [
-        "0 0 0 0 0 0",
         "0 0 0 0 0 0"
     ],
     "filament_adhesiveness_category": [
@@ -312,7 +318,16 @@
     ],
     "filament_id": "GFG00",
     "description": "To get better transparent or translucent results with the corresponding filament, please refer to this wiki: Printing tips for transparent PETG.",
+    "first_x_layer_fan_speed": [
+        "0"
+    ],
+    "filament_change_length_nc": [
+        "10"
+    ],
     "setting_id": "GFSG00_21",
+    "include": [
+        "fdm_filament_template_direct_dual"
+    ],
     "pre_start_fan_time": [
         "2"
     ]

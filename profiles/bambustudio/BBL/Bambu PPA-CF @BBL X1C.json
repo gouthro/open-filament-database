@@ -63,6 +63,9 @@
     "fan_min_speed": [
         "10"
     ],
+    "filament_cooling_before_tower": [
+        "10"
+    ],
     "filament_cost": [
         "20"
     ],
@@ -76,6 +79,7 @@
         "1.75"
     ],
     "filament_flow_ratio": [
+        "0.96",
         "0.96"
     ],
     "filament_flush_temp": [
@@ -94,9 +98,13 @@
         "nil"
     ],
     "filament_max_volumetric_speed": [
-        "8"
+        "8",
+        "12"
     ],
     "filament_ramming_volumetric_speed": [
+        "-1"
+    ],
+    "filament_ramming_volumetric_speed_nc": [
         "-1"
     ],
     "filament_minimal_purge_on_wipe_tower": [
@@ -121,7 +129,8 @@
         "nil"
     ],
     "filament_retraction_length": [
-        "nil"
+        "nil",
+        "1.2"
     ],
     "filament_retraction_minimum_travel": [
         "nil"
@@ -150,8 +159,12 @@
     "filament_prime_volume": [
         "45"
     ],
+    "filament_prime_volume_nc": [
+        "60"
+    ],
     "filament_z_hop": [
-        "nil"
+        "nil",
+        "0.8"
     ],
     "filament_z_hop_types": [
         "nil"
@@ -180,8 +193,18 @@
     "filament_pre_cooling_temperature": [
         "0"
     ],
-    "filament_ramming_travel_time": [
+    "filament_pre_cooling_temperature_nc": [
         "0"
+    ],
+    "filament_ramming_travel_time": [
+        "0",
+        "0"
+    ],
+    "filament_ramming_travel_time_nc": [
+        "0"
+    ],
+    "filament_retract_length_nc": [
+        "14"
     ],
     "hot_plate_temp": [
         "100"
@@ -208,6 +231,7 @@
         "4.3"
     ],
     "long_retractions_when_ec": [
+        "0",
         "0"
     ],
     "nozzle_temperature_range_low": [
@@ -217,9 +241,11 @@
         "320"
     ],
     "nozzle_temperature": [
+        "290",
         "290"
     ],
     "nozzle_temperature_initial_layer": [
+        "290",
         "290"
     ],
     "overhang_fan_speed": [
@@ -235,6 +261,7 @@
         "40"
     ],
     "retraction_distances_when_ec": [
+        "0",
         "0"
     ],
     "supertack_plate_temp": [
@@ -245,6 +272,9 @@
     ],
     "slow_down_for_layer_cooling": [
         "1"
+    ],
+    "no_slow_down_for_cooling_on_outwalls": [
+        "0"
     ],
     "slow_down_layer_time": [
         "2"
@@ -261,6 +291,9 @@
     "textured_plate_temp_initial_layer": [
         "100"
     ],
+    "filament_change_length": [
+        "10"
+    ],
     "filament_velocity_adaptation_factor": [
         "1"
     ],
@@ -269,14 +302,8 @@
         "Bambu Lab X1 0.4 nozzle",
         "Bambu Lab X1 0.8 nozzle",
         "Bambu Lab X1 0.6 nozzle",
-        "Bambu Lab X1 Carbon 0.6 nozzle",
-        "Bambu Lab X1 Carbon 0.8 nozzle",
         "Bambu Lab P1P 0.4 nozzle",
-        "Bambu Lab P1P 0.6 nozzle",
-        "Bambu Lab P1P 0.8 nozzle",
-        "Bambu Lab P1S 0.6 nozzle",
-        "Bambu Lab P1S 0.4 nozzle",
-        "Bambu Lab P1S 0.8 nozzle"
+        "Bambu Lab P1S 0.4 nozzle"
     ],
     "filament_start_gcode": [
         "; Filament gcode\n{if activate_air_filtration[current_extruder] && support_air_filtration}\nM106 P3 S{during_print_exhaust_fan_speed_num[current_extruder]} \n{endif}"
@@ -292,5 +319,8 @@
     ],
     "filament_id": "GFN06",
     "description": "When printing this filament, there's a risk of nozzle clogging, oozing, warping and low layer adhesion strength. To get better results, please refer to this wiki: Printing Tips for High Temp / Engineering materials.",
-    "setting_id": "GFSN06_00"
+    "setting_id": "GFSN06_00",
+    "include": [
+        "fdm_filament_template_direct_dual"
+    ]
 }

@@ -55,12 +55,15 @@
         "70"
     ],
     "fan_cooling_layer_time": [
-        "30"
+        "15"
     ],
     "fan_max_speed": [
-        "40"
+        "35"
     ],
     "fan_min_speed": [
+        "20"
+    ],
+    "filament_cooling_before_tower": [
         "10"
     ],
     "filament_cost": [
@@ -97,6 +100,9 @@
         "1"
     ],
     "filament_ramming_volumetric_speed": [
+        "-1"
+    ],
+    "filament_ramming_volumetric_speed_nc": [
         "-1"
     ],
     "filament_minimal_purge_on_wipe_tower": [
@@ -150,6 +156,9 @@
     "filament_prime_volume": [
         "45"
     ],
+    "filament_prime_volume_nc": [
+        "60"
+    ],
     "filament_z_hop": [
         "nil"
     ],
@@ -180,8 +189,17 @@
     "filament_pre_cooling_temperature": [
         "0"
     ],
+    "filament_pre_cooling_temperature_nc": [
+        "0"
+    ],
     "filament_ramming_travel_time": [
         "0"
+    ],
+    "filament_ramming_travel_time_nc": [
+        "0"
+    ],
+    "filament_retract_length_nc": [
+        "14"
     ],
     "hot_plate_temp": [
         "70"
@@ -226,7 +244,7 @@
         "90"
     ],
     "overhang_fan_threshold": [
-        "10%"
+        "25%"
     ],
     "reduce_fan_stop_start_freq": [
         "1"
@@ -246,20 +264,26 @@
     "slow_down_for_layer_cooling": [
         "1"
     ],
+    "no_slow_down_for_cooling_on_outwalls": [
+        "0"
+    ],
     "slow_down_layer_time": [
-        "12"
+        "7"
     ],
     "slow_down_min_speed": [
         "10"
     ],
     "temperature_vitrification": [
-        "70"
+        "60"
     ],
     "textured_plate_temp": [
         "70"
     ],
     "textured_plate_temp_initial_layer": [
         "70"
+    ],
+    "filament_change_length": [
+        "10"
     ],
     "filament_velocity_adaptation_factor": [
         "1"
@@ -284,8 +308,14 @@
     ],
     "filament_id": "GFG00",
     "description": "To get better transparent or translucent results with the corresponding filament, please refer to this wiki: Printing tips for transparent PETG.",
+    "first_x_layer_fan_speed": [
+        "0"
+    ],
+    "filament_change_length_nc": [
+        "10"
+    ],
     "setting_id": "GFSG00_07",
     "pre_start_fan_time": [
-        "2"
+        "0"
     ]
 }

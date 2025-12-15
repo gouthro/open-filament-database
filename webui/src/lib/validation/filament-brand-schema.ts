@@ -22,7 +22,10 @@ export const brandSchema = z.object({
       return url.startsWith('http://') || url.startsWith('https://');
     }, 'URL must use HTTP or HTTPS protocol')
     .default('https://'),
-  origin: z.string().min(2, "Requires at least a country code"),
+  origin: z.union([
+    z.literal("Unknown"),
+    z.string().regex(/^[A-Z]{2}$/, "Must be an uppercase two-letter string or Unknown"),
+  ]),
   logo: z
     .instanceof(File, {
       message: 'Please upload a file.'

@@ -24,6 +24,7 @@ python data_validator.py --store-ids # Validates store ids.
 if this gives an error about `python` not being installed try replacing every instance of `python` with `python3`
 ```bash
 python3 data_validator.py --folder-names # Validates folder names.
+python3 data_validator.py --logo-files # Validates logo files.
 python3 data_validator.py --json-files # Validates json files.
 python3 data_validator.py --store-ids # Validates store ids.
 ```

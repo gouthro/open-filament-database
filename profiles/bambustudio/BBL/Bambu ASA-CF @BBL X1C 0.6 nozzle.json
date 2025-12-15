@@ -63,6 +63,9 @@
     "fan_min_speed": [
         "10"
     ],
+    "filament_cooling_before_tower": [
+        "10"
+    ],
     "filament_cost": [
         "36.99"
     ],
@@ -76,6 +79,7 @@
         "1.75"
     ],
     "filament_flow_ratio": [
+        "0.9",
         "0.9"
     ],
     "filament_flush_temp": [
@@ -94,9 +98,13 @@
         "nil"
     ],
     "filament_max_volumetric_speed": [
+        "18",
         "18"
     ],
     "filament_ramming_volumetric_speed": [
+        "-1"
+    ],
+    "filament_ramming_volumetric_speed_nc": [
         "-1"
     ],
     "filament_minimal_purge_on_wipe_tower": [
@@ -150,6 +158,9 @@
     "filament_prime_volume": [
         "45"
     ],
+    "filament_prime_volume_nc": [
+        "60"
+    ],
     "filament_z_hop": [
         "nil"
     ],
@@ -180,8 +191,18 @@
     "filament_pre_cooling_temperature": [
         "0"
     ],
-    "filament_ramming_travel_time": [
+    "filament_pre_cooling_temperature_nc": [
         "0"
+    ],
+    "filament_ramming_travel_time": [
+        "0",
+        "0"
+    ],
+    "filament_ramming_travel_time_nc": [
+        "0"
+    ],
+    "filament_retract_length_nc": [
+        "14"
     ],
     "hot_plate_temp": [
         "100"
@@ -208,6 +229,7 @@
         "9.4"
     ],
     "long_retractions_when_ec": [
+        "0",
         "0"
     ],
     "nozzle_temperature_range_low": [
@@ -217,9 +239,11 @@
         "280"
     ],
     "nozzle_temperature": [
+        "275",
         "275"
     ],
     "nozzle_temperature_initial_layer": [
+        "275",
         "275"
     ],
     "overhang_fan_speed": [
@@ -235,6 +259,7 @@
         "3"
     ],
     "retraction_distances_when_ec": [
+        "0",
         "0"
     ],
     "supertack_plate_temp": [
@@ -245,6 +270,9 @@
     ],
     "slow_down_for_layer_cooling": [
         "1"
+    ],
+    "no_slow_down_for_cooling_on_outwalls": [
+        "0"
     ],
     "slow_down_layer_time": [
         "12"
@@ -260,6 +288,9 @@
     ],
     "textured_plate_temp_initial_layer": [
         "100"
+    ],
+    "filament_change_length": [
+        "10"
     ],
     "filament_velocity_adaptation_factor": [
         "1"
@@ -290,5 +321,8 @@
         "200"
     ],
     "filament_id": "GFB51",
-    "setting_id": "GFSB51_01"
+    "setting_id": "GFSB51_01",
+    "include": [
+        "fdm_filament_template_direct_dual"
+    ]
 }

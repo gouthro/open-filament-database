@@ -26,14 +26,14 @@ export const createStore = async (storeData: z.infer<typeof storeSchema>) => {
     const buffer = Buffer.from(arrayBuffer);
     logoPath = path.join(storeDir, storeData.logo.name);
     fs.writeFileSync(logoPath, buffer);
-    logoUrl = `/stores/${folderName}/${storeData.logo.name}`;
+    logoUrl = `${storeData.logo.name}`;
   }
 
   const storeJson = {
     id: storeData.id,
     name: storeData.name,
     storefront_url: storeData.storefront_url,
-    affiliate: storeData.affiliate ? storeData.affiliate : false,
+    storefront_affiliate_link: storeData.storefront_affiliate_link ? storeData.storefront_affiliate_link : "",
     logo: logoUrl,
     ships_from: storeData.ships_from,
     ships_to: storeData.ships_to,
@@ -66,7 +66,7 @@ export async function updateStore(storeData: z.infer<typeof storeSchema>) {
     id: storeData.id,
     name: storeData.name,
     storefront_url: storeData.storefront_url,
-    affiliate: storeData.affiliate ? storeData.affiliate : false,
+    storefront_affiliate_link: storeData.storefront_affiliate_link ? storeData.storefront_affiliate_link : "",
     logo: storeData.logo,
     ships_from: storeData.ships_from,
     ships_to: storeData.ships_to,

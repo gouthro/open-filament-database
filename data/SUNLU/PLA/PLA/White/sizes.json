@@ -5,8 +5,8 @@
     "purchase_links": [
       {
         "store_id": "sunlu",
-        "url": "https://www.sunlu.com/products/best-halloween-gift-250g-pla-silk-filament-1-75mm-moq-24-rolls",
-        "affiliate": false
+        "url": "https://www.sunlu.com/products/best-halloween-gift-250g-pla-silk-filament-1-75mm-moq-24-rolls?sca_ref=9781188.Ca9wv9CZ1J",
+        "affiliate": true
       }
     ]
   },
@@ -20,8 +20,8 @@
     "purchase_links": [
       {
         "store_id": "sunlu",
-        "url": "https://www.sunlu.com/products/over-6kg-of-pla-pla-meta-3d-filaments-1kg-2-2lbs-fit-most-of-fdm-printer",
-        "affiliate": false
+        "url": "https://www.sunlu.com/products/over-6kg-of-pla-pla-meta-3d-filaments-1kg-2-2lbs-fit-most-of-fdm-printer?sca_ref=9781188.Ca9wv9CZ1J",
+        "affiliate": true
       }
     ]
   },
@@ -39,8 +39,8 @@
     "purchase_links": [
       {
         "store_id": "sunlu",
-        "url": "https://www.sunlu.com/products/5kg-large-spool-pla-abs-petg-and-pla-3d-printer-filament",
-        "affiliate": false
+        "url": "https://www.sunlu.com/products/5kg-large-spool-pla-abs-petg-and-pla-3d-printer-filament?sca_ref=9781188.Ca9wv9CZ1J",
+        "affiliate": true
       }
     ]
   },

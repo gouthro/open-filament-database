@@ -63,6 +63,9 @@
     "fan_min_speed": [
         "50"
     ],
+    "filament_cooling_before_tower": [
+        "10"
+    ],
     "filament_cost": [
         "0"
     ],
@@ -70,12 +73,14 @@
         "1.40"
     ],
     "filament_deretraction_speed": [
-        "nil"
+        "nil",
+        "40"
     ],
     "filament_diameter": [
         "1.75"
     ],
     "filament_flow_ratio": [
+        "0.98",
         "0.98"
     ],
     "filament_flush_temp": [
@@ -88,15 +93,20 @@
         "0"
     ],
     "filament_long_retractions_when_cut": [
+        "1",
         "1"
     ],
     "filament_long_retractions_when_ec": [
         "nil"
     ],
     "filament_max_volumetric_speed": [
-        "16"
+        "16",
+        "21"
     ],
     "filament_ramming_volumetric_speed": [
+        "-1"
+    ],
+    "filament_ramming_volumetric_speed_nc": [
         "-1"
     ],
     "filament_minimal_purge_on_wipe_tower": [
@@ -115,19 +125,22 @@
         "nil"
     ],
     "filament_retraction_distances_when_cut": [
+        "18",
         "18"
     ],
     "filament_retraction_distances_when_ec": [
         "nil"
     ],
     "filament_retraction_length": [
-        "nil"
+        "nil",
+        "0.4"
     ],
     "filament_retraction_minimum_travel": [
         "nil"
     ],
     "filament_retraction_speed": [
-        "nil"
+        "nil",
+        "40"
     ],
     "filament_settings_id": [
         ""
@@ -150,11 +163,16 @@
     "filament_prime_volume": [
         "45"
     ],
+    "filament_prime_volume_nc": [
+        "60"
+    ],
     "filament_z_hop": [
-        "nil"
+        "nil",
+        "0.6"
     ],
     "filament_z_hop_types": [
-        "nil"
+        "nil",
+        "Spiral Lift"
     ],
     "full_fan_speed_layer": [
         "0"
@@ -180,8 +198,18 @@
     "filament_pre_cooling_temperature": [
         "0"
     ],
-    "filament_ramming_travel_time": [
+    "filament_pre_cooling_temperature_nc": [
         "0"
+    ],
+    "filament_ramming_travel_time": [
+        "0",
+        "0"
+    ],
+    "filament_ramming_travel_time_nc": [
+        "0"
+    ],
+    "filament_retract_length_nc": [
+        "14"
     ],
     "hot_plate_temp": [
         "65"
@@ -208,6 +236,7 @@
         "6.6"
     ],
     "long_retractions_when_ec": [
+        "0",
         "0"
     ],
     "nozzle_temperature_range_low": [
@@ -217,9 +246,11 @@
         "240"
     ],
     "nozzle_temperature": [
+        "220",
         "220"
     ],
     "nozzle_temperature_initial_layer": [
+        "220",
         "220"
     ],
     "overhang_fan_speed": [
@@ -235,6 +266,7 @@
         "3"
     ],
     "retraction_distances_when_ec": [
+        "0",
         "0"
     ],
     "supertack_plate_temp": [
@@ -245,6 +277,9 @@
     ],
     "slow_down_for_layer_cooling": [
         "1"
+    ],
+    "no_slow_down_for_cooling_on_outwalls": [
+        "0"
     ],
     "slow_down_layer_time": [
         "8"
@@ -261,12 +296,14 @@
     "textured_plate_temp_initial_layer": [
         "65"
     ],
+    "filament_change_length": [
+        "10"
+    ],
     "filament_velocity_adaptation_factor": [
         "1"
     ],
     "compatible_printers": [
         "Bambu Lab P1P 0.4 nozzle",
-        "Bambu Lab P1P 0.6 nozzle",
         "Bambu Lab P1P 0.8 nozzle"
     ],
     "filament_start_gcode": [
@@ -285,5 +322,8 @@
         "100"
     ],
     "filament_id": "GFA18",
-    "setting_id": "GFSA18_03"
+    "setting_id": "GFSA18_03",
+    "include": [
+        "fdm_filament_template_direct_dual"
+    ]
 }

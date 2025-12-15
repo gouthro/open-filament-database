@@ -63,6 +63,9 @@
     "fan_min_speed": [
         "100"
     ],
+    "filament_cooling_before_tower": [
+        "10"
+    ],
     "filament_cost": [
         "41.99"
     ],
@@ -70,12 +73,13 @@
         "1.22"
     ],
     "filament_deretraction_speed": [
-        "nil"
+        "10"
     ],
     "filament_diameter": [
         "1.75"
     ],
     "filament_flow_ratio": [
+        "1",
         "1"
     ],
     "filament_flush_temp": [
@@ -94,9 +98,13 @@
         "nil"
     ],
     "filament_max_volumetric_speed": [
+        "12",
         "12"
     ],
     "filament_ramming_volumetric_speed": [
+        "-1"
+    ],
+    "filament_ramming_volumetric_speed_nc": [
         "-1"
     ],
     "filament_minimal_purge_on_wipe_tower": [
@@ -121,13 +129,14 @@
         "nil"
     ],
     "filament_retraction_length": [
+        "0.8",
         "0.8"
     ],
     "filament_retraction_minimum_travel": [
         "nil"
     ],
     "filament_retraction_speed": [
-        "nil"
+        "10"
     ],
     "filament_settings_id": [
         ""
@@ -149,6 +158,9 @@
     ],
     "filament_prime_volume": [
         "45"
+    ],
+    "filament_prime_volume_nc": [
+        "60"
     ],
     "filament_z_hop": [
         "nil"
@@ -180,8 +192,18 @@
     "filament_pre_cooling_temperature": [
         "0"
     ],
-    "filament_ramming_travel_time": [
+    "filament_pre_cooling_temperature_nc": [
         "0"
+    ],
+    "filament_ramming_travel_time": [
+        "0",
+        "0"
+    ],
+    "filament_ramming_travel_time_nc": [
+        "0"
+    ],
+    "filament_retract_length_nc": [
+        "14"
     ],
     "hot_plate_temp": [
         "35"
@@ -208,6 +230,7 @@
         "86.3"
     ],
     "long_retractions_when_ec": [
+        "0",
         "0"
     ],
     "nozzle_temperature_range_low": [
@@ -217,9 +240,11 @@
         "250"
     ],
     "nozzle_temperature": [
+        "230",
         "230"
     ],
     "nozzle_temperature_initial_layer": [
+        "230",
         "230"
     ],
     "overhang_fan_speed": [
@@ -235,6 +260,7 @@
         "3"
     ],
     "retraction_distances_when_ec": [
+        "0",
         "0"
     ],
     "supertack_plate_temp": [
@@ -245,6 +271,9 @@
     ],
     "slow_down_for_layer_cooling": [
         "1"
+    ],
+    "no_slow_down_for_cooling_on_outwalls": [
+        "0"
     ],
     "slow_down_layer_time": [
         "8"
@@ -260,6 +289,9 @@
     ],
     "textured_plate_temp_initial_layer": [
         "35"
+    ],
+    "filament_change_length": [
+        "10"
     ],
     "filament_velocity_adaptation_factor": [
         "1"
@@ -286,5 +318,8 @@
     ],
     "filament_id": "GFU00",
     "description": "This filament is too soft and not compatible with the AMS. Printing it is of many requirements, and to get better printing quality, please refer to this wiki: TPU printing guide.",
-    "setting_id": "GFSU00_04"
+    "setting_id": "GFSU00_04",
+    "include": [
+        "fdm_filament_template_direct_dual"
+    ]
 }

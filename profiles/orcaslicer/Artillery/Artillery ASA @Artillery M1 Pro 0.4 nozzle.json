@@ -158,6 +158,7 @@
     "filament_retract_lift_below": [
         "259"
     ],
+    "is_custom_defined": "0",
     "enable_pressure_advance": [
         "1"
     ],
@@ -169,5 +170,6 @@
     ],
     "textured_plate_temp_initial_layer": [
         "100"
-    ]
+    ],
+    "version": "2.1.2.2"
 }

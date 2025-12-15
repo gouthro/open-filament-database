@@ -77,5 +77,7 @@
     "slowdown_below_layer_time": "4",
     "start_filament_gcode": "\"; Filament gcode\\nM900 K0.011 T0.03\\n\"",
     "temperature": "260",
-    "chamber_temperature": "60"
+    "chamber_temperature": "60",
+    "cooling_slowdown_logic": "consistent_surface",
+    "cooling_perimeter_transition_distance": "3"
 }

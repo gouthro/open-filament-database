@@ -28,7 +28,7 @@ export const load: PageServerLoad = async ({ params, parent }) => {
     id: "",
     name: "",
     storefront_url: "",
-    affiliate: "",
+    storefront_affiliate_link: "",
     logo: undefined,
     ships_from: [],
     ships_to: []

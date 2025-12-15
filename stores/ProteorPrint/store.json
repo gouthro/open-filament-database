@@ -2,8 +2,7 @@
   "id": "ProteorPrint",
   "name": "Proteor Print",
   "storefront_url": "https://www.proteordigital.com/category/all-products",
-  "affiliate": false,
-  "logo": "/stores/ProteorPrint/PROTEOR-PRINT-Full.png",
+  "logo": "proteor_print.png",
   "ships_from": [
     "US"
   ],

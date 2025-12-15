@@ -2,7 +2,6 @@
   "id": "gadgethuset",
   "name": "Gadgethuset",
   "storefront_url": "https://www.gadgethuset.dk/",
-  "affiliate": false,
   "logo": "gadgethuset.jpg",
   "ships_from": "DK",
   "ships_to": []

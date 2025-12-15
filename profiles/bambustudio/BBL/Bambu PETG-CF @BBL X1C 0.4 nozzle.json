@@ -63,6 +63,9 @@
     "fan_min_speed": [
         "5"
     ],
+    "filament_cooling_before_tower": [
+        "10"
+    ],
     "filament_cost": [
         "34.99"
     ],
@@ -88,15 +91,20 @@
         "0"
     ],
     "filament_long_retractions_when_cut": [
-        "1"
+        "1",
+        "nil"
     ],
     "filament_long_retractions_when_ec": [
         "nil"
     ],
     "filament_max_volumetric_speed": [
-        "11.5"
+        "11.5",
+        "20"
     ],
     "filament_ramming_volumetric_speed": [
+        "-1"
+    ],
+    "filament_ramming_volumetric_speed_nc": [
         "-1"
     ],
     "filament_minimal_purge_on_wipe_tower": [
@@ -115,7 +123,8 @@
         "nil"
     ],
     "filament_retraction_distances_when_cut": [
-        "18"
+        "18",
+        "nil"
     ],
     "filament_retraction_distances_when_ec": [
         "nil"
@@ -142,13 +151,18 @@
         "Bambu Lab"
     ],
     "filament_wipe": [
-        "nil"
+        "nil",
+        "1"
     ],
     "filament_wipe_distance": [
-        "nil"
+        "nil",
+        "2"
     ],
     "filament_prime_volume": [
         "45"
+    ],
+    "filament_prime_volume_nc": [
+        "60"
     ],
     "filament_z_hop": [
         "nil"
@@ -180,8 +194,18 @@
     "filament_pre_cooling_temperature": [
         "0"
     ],
-    "filament_ramming_travel_time": [
+    "filament_pre_cooling_temperature_nc": [
         "0"
+    ],
+    "filament_ramming_travel_time": [
+        "0",
+        "0"
+    ],
+    "filament_ramming_travel_time_nc": [
+        "0"
+    ],
+    "filament_retract_length_nc": [
+        "14"
     ],
     "hot_plate_temp": [
         "70"
@@ -208,6 +232,7 @@
         "10.7"
     ],
     "long_retractions_when_ec": [
+        "0",
         "0"
     ],
     "nozzle_temperature_range_low": [
@@ -217,10 +242,12 @@
         "270"
     ],
     "nozzle_temperature": [
-        "255"
+        "255",
+        "275"
     ],
     "nozzle_temperature_initial_layer": [
-        "255"
+        "255",
+        "275"
     ],
     "overhang_fan_speed": [
         "100"
@@ -235,6 +262,7 @@
         "40"
     ],
     "retraction_distances_when_ec": [
+        "0",
         "0"
     ],
     "supertack_plate_temp": [
@@ -245,6 +273,9 @@
     ],
     "slow_down_for_layer_cooling": [
         "1"
+    ],
+    "no_slow_down_for_cooling_on_outwalls": [
+        "0"
     ],
     "slow_down_layer_time": [
         "6"
@@ -261,14 +292,17 @@
     "textured_plate_temp_initial_layer": [
         "70"
     ],
+    "filament_change_length": [
+        "10"
+    ],
     "filament_velocity_adaptation_factor": [
         "1"
     ],
     "compatible_printers": [
         "Bambu Lab X1 Carbon 0.4 nozzle",
         "Bambu Lab X1 0.4 nozzle",
-        "Bambu Lab P1S 0.4 nozzle",
-        "Bambu Lab X1E 0.4 nozzle"
+        "Bambu Lab X1E 0.4 nozzle",
+        "Bambu Lab P1S 0.4 nozzle"
     ],
     "filament_start_gcode": [
         "; filament start gcode\n{if (bed_temperature[current_extruder] >80)||(bed_temperature_initial_layer[current_extruder] >80)}M106 P3 S255\n{elsif (bed_temperature[current_extruder] >60)||(bed_temperature_initial_layer[current_extruder] >60)}M106 P3 S180\n{endif}\n\n{if activate_air_filtration[current_extruder] && support_air_filtration}\nM106 P3 S{during_print_exhaust_fan_speed_num[current_extruder]} \n{endif}"
@@ -286,5 +320,8 @@
         "300"
     ],
     "filament_id": "GFG50",
-    "setting_id": "GFSG50_02"
+    "setting_id": "GFSG50_02",
+    "include": [
+        "fdm_filament_template_direct_dual"
+    ]
 }

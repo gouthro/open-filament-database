@@ -5,8 +5,8 @@
     "purchase_links": [
       {
         "store_id": "polymaker",
-        "url": "https://us.polymaker.com/products/fiberon-pps-cf10",
-        "affiliate": false
+        "url": "https://us.polymaker.com/products/fiberon-pps-cf10?aff=1306&utm_source=affiliately&utm_campaign=aff",
+        "affiliate": true
       }
     ]
   },
@@ -16,8 +16,8 @@
     "purchase_links": [
       {
         "store_id": "polymaker",
-        "url": "https://us.polymaker.com/products/fiberon-pps-cf10",
-        "affiliate": false
+        "url": "https://us.polymaker.com/products/fiberon-pps-cf10?aff=1306&utm_source=affiliately&utm_campaign=aff",
+        "affiliate": true
       }
     ]
   }
