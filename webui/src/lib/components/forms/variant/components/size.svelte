@@ -121,7 +121,6 @@
       bind:formVar={size.gtin}
       errorVar={$errors?.sizes?.[sizeIndex]?.gtin}
     />
-    
     <TextField
       id="article_number_{sizeIndex}"
       title="Article number"
