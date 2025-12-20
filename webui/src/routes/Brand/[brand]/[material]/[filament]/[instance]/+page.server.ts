@@ -82,7 +82,6 @@ export const load: PageServerLoad = async ({ params, parent }) => {
   };
 
   let stores: string[] = [];
-
   Object.values(filamentData.stores).forEach((value) => {
     stores.push(value.id);
   });
@@ -112,6 +111,8 @@ export const actions = {
     
     try {
       let filteredData = removeUndefined(form.data);
+
+      console.log(filteredData);
 
       if (Array.isArray(filteredData.color_hex) && filteredData.color_hex.length === 1) {
         filteredData.color_hex = filteredData.color_hex[0];
