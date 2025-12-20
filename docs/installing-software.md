@@ -7,6 +7,7 @@ In this document we'll go through what we need to install and how to do it, depe
 - [NodeJS/NPM](#nodejsnpm)
 
 ## Git
+You'll need git installed to be able to share your changes with us, please follow the instructions below depending on your operating system (If you're in doubt you're properly on Windows)
 
 <details>
 <summary><strong>Windows</strong></summary>
@@ -56,6 +57,7 @@ If you don't have homebrew you can also use the [latest macOS Git Installer](htt
 </details>
 
 ## Python
+You'll need python to run our data validator, please follow the instructions below depending on your operating system (If you're in doubt you're properly on Windows)
 
 <details>
 <summary><strong>Windows</strong></summary>
@@ -77,7 +79,7 @@ Click `Open Microsoft Store` if prompted and click `Get`
     ```
 - **Debian/Ubuntu**
     ```bash
-    sudo apt install python3
+    sudo apt install python3 python3-venv
     # Optional or you'll have to replace python with python3 yourself in all commands
     sudo apt install python-is-python3
     ```
@@ -110,7 +112,35 @@ Once the download is complete, double-click the package to start installing Pyth
 
 ## Python Requirements
 
-After installing Python, you need to install the project's Python dependencies. Open a terminal/command prompt in the `open-filament-database` folder and run:
+After installing Python, you need to set up a virtual environment and install the project's Python dependencies. Open a terminal/command prompt in the `open-filament-database` folder.
+
+### Creating a Virtual Environment
+
+<details>
+<summary><strong>Windows</strong></summary>
+
+```bash
+python -m venv .venv
+.venv\Scripts\activate
+```
+
+</details>
+
+<details>
+<summary><strong>Linux / macOS</strong></summary>
+
+```bash
+python3 -m venv .venv
+source .venv/bin/activate
+```
+
+</details>
+
+You'll know the virtual environment is active when you see `(.venv)` at the beginning of your command prompt.
+
+### Installing Dependencies
+
+With the virtual environment activated, install the requirements:
 
 ```bash
 pip install -r requirements.txt
@@ -121,7 +151,10 @@ On some systems you may need to use `pip3` instead:
 pip3 install -r requirements.txt
 ```
 
+> **Note:** You'll need to activate the virtual environment each time you open a new terminal to run the validator.
+
 ## NodeJS/NPM
+You'll need NodeJS to be able to run our WebUI for easy editing of the data, please follow the instructions below depending on your operating system (If you're in doubt you're properly on Windows)
 
 <details>
 <summary><strong>Windows</strong></summary>
