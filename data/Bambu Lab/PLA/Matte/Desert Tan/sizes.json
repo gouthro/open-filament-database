@@ -2,7 +2,6 @@
   {
     "filament_weight": 1000,
     "diameter": 1.75,
-    "ean": "921139781713",
     "purchase_links": [
       {
         "store_id": "BBLStore",
@@ -10,12 +9,12 @@
         "spool_refill": true,
         "affiliate": false
       }
-    ]
+    ],
+    "gtin": "921139781713"
   },
   {
     "filament_weight": 1000,
     "diameter": 1.75,
-    "ean": "921188139080",
     "purchase_links": [
       {
         "store_id": "3deksperten",
@@ -23,6 +22,7 @@
         "spool_refill": true,
         "affiliate": false
       }
-    ]
+    ],
+    "gtin": "921188139080"
   }
 ]
