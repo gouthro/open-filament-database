@@ -2,7 +2,8 @@
   {
     "filament_weight": 1000,
     "diameter": 1.75,
-    "article_number": "45496288510141",
+    "ean": "45496288510141",
+    "article_number": "",
     "purchase_links": [
       {
         "store_id": "Anycubic",

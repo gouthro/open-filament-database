@@ -4,7 +4,8 @@
     "diameter": 1.75,
     "empty_spool_weight": 127,
     "spool_core_diameter": 58,
-    "article_number": "44902426869949",
+    "ean": "44902426869949",
+    "article_number": "ahpepo-101",
     "purchase_links": [
       {
         "store_id": "Anycubic",
