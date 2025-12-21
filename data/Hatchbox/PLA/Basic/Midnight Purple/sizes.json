@@ -4,13 +4,13 @@
     "diameter": 1.75,
     "empty_spool_weight": 244,
     "spool_core_diameter": 55,
-    "ean": "191314037711",
     "purchase_links": [
       {
         "store_id": "amazon",
         "url": "https://amzn.to/475Mioe",
         "affiliate": true
       }
-    ]
+    ],
+    "gtin": "191314037711"
   }
 ]
