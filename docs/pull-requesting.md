@@ -2,7 +2,7 @@
 To make a pull request we assume you have your data in the cloud already so let's get started!
 
 To begin with we'll go to this link, the pull requests tab of the main database
-https://github.com/SimplyPrint/open-filament-database/pulls
+https://github.com/OpenFilamentCollective/open-filament-database/pulls
 If you've pushed a yellowish banner will appear, click the compare and pull request button.  
 ![](img/pullRequesting01.png)  
 You should be brought to a page that looks like this, simply change the title to whatever describes what you've changed and write a short description about the same  
@@ -24,3 +24,11 @@ Click the "Create pull request" button
 ![](img/pullRequesting08.png)
 And then you just fill it out with whatever info you think we need and wait for someone to come merge it, or be ready for some feedback \:D
 ![](img/pullRequesting02.png)
+
+### Using PR Templates
+When creating a pull request, you can use one of our templates to help structure your submission:
+
+- **Data Addition** - Use this when adding new brands, materials, filaments, variants, or stores. It includes checklists for validation and data quality.
+- **WebUI Changes** - Use this when making changes to the web interface code.
+
+To use a template, look for the "Choose a template" option when creating your PR, or you can find them in the `.github/PULL_REQUEST_TEMPLATE/` folder.

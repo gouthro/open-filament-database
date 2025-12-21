@@ -1,5 +1,5 @@
-# Open Filament Database by SimplyPrint
-The Open Filament Database, facilitated by SimplyPrint.
+# Open Filament Database
+The Open Filament Database, hosted by the new "Open Filament Collective" group, currently facilitated by SimplyPrint.
 
 ## ✅ Contributing: how to add to the database
 The beautiful thing about the database is that it's open source so anyone can contribute, whether you're a hobbyist, print farm or brand.
@@ -44,6 +44,7 @@ and access it in your browser at http://localhost:5173
 Once you've finished modifying the database you can use these commands or [this guide](docs/validation.md) to make sure your data is correct, fix any errors that pop up
 ```bash
 python data_validator.py --folder-names # Validates folder names.
+python data_validator.py --logo-files # Validates logo files.
 python data_validator.py --json-files # Validates json files.
 python data_validator.py --store-ids # Validates store ids.
 ```
@@ -58,6 +59,6 @@ git commit -m "COMMIT_MESSAGE"
 ```
 When that's done you can run this command to upload your stuff
 ```bash
-git push -u origin main
+git push -u origin YOUR_BRANCHNAME
 ```
 Afterwards you can make a pull request [using this guide](docs/pull-requesting.md)
