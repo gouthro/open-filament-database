@@ -4,6 +4,7 @@
     "diameter": 1.75,
     "empty_spool_weight": 125,
     "spool_core_diameter": 52,
+    "ean": "44831258837181",
     "purchase_links": [
       {
         "store_id": "Anycubic",
@@ -11,7 +12,6 @@
         "spool_refill": true,
         "affiliate": true
       }
-    ],
-    "article_number": "44831258837181"
+    ]
   }
 ]

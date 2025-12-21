@@ -4,7 +4,8 @@
     "diameter": 1.75,
     "empty_spool_weight": 127,
     "spool_core_diameter": 58,
-    "article_number": "45760708214946",
+    "ean": "45760708214946",
+    "article_number": "ahpetl-101",
     "purchase_links": [
       {
         "store_id": "Anycubic",
