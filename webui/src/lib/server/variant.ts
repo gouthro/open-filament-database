@@ -161,7 +161,7 @@ function transformVariant(variantData: z.infer<typeof filamentVariantSchema>): v
   }
   
   // Add any additional fields you want in variant.json
-  if (variantData.discontinued) tempData.discontinued = tempData.discontinued;
+  if (variantData.discontinued) tempData.discontinued = variantData.discontinued;
 
   return {
     variant: tempData,
